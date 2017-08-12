@@ -1,6 +1,7 @@
 // Libs
 import React          from 'react';
 import firebase       from 'firebase';
+import PropTypes      from 'prop-types';
 // Files
 
 export default class Feed extends React.Component {
@@ -15,7 +16,11 @@ export default class Feed extends React.Component {
 
     render() {
         return (
+            <div className={this.props.navIsOpen ? "feed-wrapper" : "feed-wrapper padded"}>
+                <div className={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
 
+                </div>
+            </div>
         );
     }
 
@@ -33,6 +38,6 @@ export default class Feed extends React.Component {
 
 // ============= PropTypes ==============
 
-HiddenNav.propTypes = {
-
+Feed.propTypes = {
+    navIsOpen: PropTypes.bool.isRequired,
 };

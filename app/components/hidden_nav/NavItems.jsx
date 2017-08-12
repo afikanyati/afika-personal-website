@@ -1,5 +1,6 @@
-import React   from 'react';
-import NavItem from './NavItem';
+import React            from 'react';
+import NavItem          from './NavItem';
+import PropTypes        from 'prop-types';
 
 export default class NavItems extends React.Component {
 
@@ -30,6 +31,7 @@ export default class NavItems extends React.Component {
                             navItem={item}
                             index={index}
                             toggleContent={this.props.toggleContent}
+                            navIsOpen={this.props.navIsOpen}
                          />
                     );
                 })}
@@ -69,6 +71,7 @@ export default class NavItems extends React.Component {
 // ============= PropTypes ==============
 
 NavItems.propTypes = {
-    navItems: React.PropTypes.array.isRequired,
-    toggleContent: React.PropTypes.func.isRequired
+    navIsOpen: PropTypes.bool.isRequired,
+    navItems: PropTypes.array.isRequired,
+    toggleContent: PropTypes.func.isRequired
 };

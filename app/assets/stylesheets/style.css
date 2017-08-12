@@ -74,6 +74,7 @@ button {
     height: 100vh;
     width: 60vw;
     background: #ffffff;
+    z-index: 1;
     transition: left 0.3s;
     -webkit-transition: left 0.3s;
     -moz-transition: left 0.3s;
@@ -105,10 +106,26 @@ button {
 .nav-item {
 	position: relative;
 	padding: 0;
-	z-index: 2;
 	cursor: pointer;
     padding: 13px 0;
+    animation: FadeIn 0.2s linear;
+    animation-fill-mode: both;
 }
+
+.nav-item.remove {
+    opacity: 0;
+    transform: scale(.1);
+    transform: translate(-50px,50px);
+    animation: FadeOut 0.1s linear;
+    animation-fill-mode: both;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.05s }
+.nav-item:nth-child(2) { animation-delay: 0.1s }
+.nav-item:nth-child(3) { animation-delay: 0.15s }
+.nav-item:nth-child(4) { animation-delay: 0.2s }
+.nav-item:nth-child(5) { animation-delay: 0.25s }
+.nav-item:nth-child(6) { animation-delay: 0.3s }
 
 .nav-item > div {
     border-left: 3px solid var(--dark-purple);
@@ -202,10 +219,10 @@ button {
     position: fixed;
     top: 25px;
     right: 40px;
-    z-index: 10;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 3;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -348,7 +365,6 @@ button {
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -357,8 +373,166 @@ button {
 
 .site-overlay.open {
 	display: block;
-	z-index: 20;
 }
+
+/*========================================== */
+
+/* Feed */
+
+.feed-wrapper {
+    position: absolute;
+    top: 0;
+    right: 113px; /* 121px - 8px where 121 (25 + 71 + 25) */
+    height: 96vh;
+    width: 60vw;
+    margin: 2vh 0;
+    padding: 0;
+    z-index: 2;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.feed-wrapper .feed-box {
+    position: relative;
+    height: 96vh;
+    width: 60vw;
+    background: white;
+    border: 8px solid var(--dark-gray);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.feed-wrapper .feed-box.enlarge {
+    width: 100%;
+    transition: all 0.3 0.3s;
+    -webkit-transition: all 0.3 0.3s;
+    -moz-transition: all 0.3 0.3s;
+    -ms-transition: all 0.3 0.3s;
+}
+
+.feed-wrapper.padded {
+    right: 0;
+    width: 100vw;
+    padding: 0 113px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3 0.3s;
+    -moz-transition: all 0.3 0.3s;
+    -ms-transition: all 0.3 0.3s;
+}
+
+/*========================================== */
+
+/* Social Bar */
+
+.social-bar {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    width: 71px;
+    height: 326px;
+    margin: 0;
+    border: 3px solid var(--white);
+    padding: 0;
+    transition: right 0.3s 0.4s;
+	-webkit-transition: right 0.3s 0.4s;
+	-moz-transition: right 0.3s 0.4s;
+	-ms-transition: right 0.3s 0.4s;
+}
+
+.social-bar.remove {
+    right: -71px;
+    transition: right 0.3s;
+	-webkit-transition: right 0.3s;
+	-moz-transition: right 0.3s;
+	-ms-transition: right 0.3s;
+}
+
+.social-button {
+    width: 65px;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.social-button:first-child {
+    padding-top: 20px;
+}
+.social-button:last-child {
+    padding-bottom: 20px;
+}
+
+.social-button svg {
+    width: 25px;
+    height: 25px;
+}
+
+.social-button svg > path,
+.social-button svg > rect,
+.social-button svg > polygon {
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.social-button:hover svg > path,
+.social-button:hover svg > rect,
+.social-button:hover svg > polygon {
+    fill: var(--light-purple);
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+/*========================================== */
+
+/* Animations */
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+    transform: translate(-50px,50px);
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+    transform: translate(0px,0px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    transform: scale(1);
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+    transform: translate(0px,0px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    transform: scale(.1);
+    transform: translate(-50px,50px);
+  }
+}
+
+
 
 /*========================================== */
 

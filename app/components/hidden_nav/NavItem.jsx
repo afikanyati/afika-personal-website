@@ -1,4 +1,5 @@
-import React  from 'react';
+import React            from 'react';
+import PropTypes        from 'prop-types';
 
 export default class NavItem extends React.Component {
 
@@ -15,7 +16,7 @@ export default class NavItem extends React.Component {
 
         return (
             <li
-                className="nav-item"
+                className={this.props.navIsOpen ? "nav-item" : "nav-item remove"}
                 onClick={this.props.toggleContent.bind({}, this.props.index)}>
     			<div
                     style={this.props.navItem.contentVisible ?
@@ -53,7 +54,8 @@ export default class NavItem extends React.Component {
 // ============= PropTypes ==============
 
 NavItem.propTypes = {
-    navItem: React.PropTypes.object.isRequired,
-    toggleContent: React.PropTypes.func.isRequired,
-    index: React.PropTypes.number.isRequired,
+    navIsOpen: PropTypes.bool.isRequired,
+    navItem: PropTypes.object.isRequired,
+    toggleContent: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
 };

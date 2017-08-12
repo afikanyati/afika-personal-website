@@ -1,6 +1,8 @@
 // Libs
 import React          from 'react';
 import firebase       from 'firebase';
+import PropTypes      from 'prop-types';
+
 // Files
 import NavItems       from './NavItems';
 
@@ -22,6 +24,7 @@ export default class HiddenNav extends React.Component {
                 className={this.props.navIsOpen ? "navigation" : "navigation closed"}>
                 <img id="afika-logo" src="assets/images/my_logos/afika_logo_gray.svg"/>
                 <NavItems
+                    navIsOpen={this.props.navIsOpen}
                     navItems={this.props.navItems}
                     toggleContent={this.props.toggleContent} />
             </nav>
@@ -43,8 +46,8 @@ export default class HiddenNav extends React.Component {
 // ============= PropTypes ==============
 
 HiddenNav.propTypes = {
-    navIsOpen: React.PropTypes.bool.isRequired,
-    navItems: React.PropTypes.object,
-    toggleContent: React.PropTypes.func
+    navIsOpen: PropTypes.bool.isRequired,
+    navItems: PropTypes.array.isRequired,
+    toggleContent: PropTypes.func.isRequired
 
 };

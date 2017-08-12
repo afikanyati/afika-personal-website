@@ -59,7 +59,7 @@ const common = {
                 include: PATHS.app
             },
             {
-                test: /\.ttf$/,
+                test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
                 loader: 'url?limit=200000',
                 include: PATHS.fonts
             },

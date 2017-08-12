@@ -7,8 +7,12 @@
     "test": "npm run testfront",
     "testfront": "nightwatch tests/frontend/e-to-e",
     "build": "webpack",
-    "start": "webpack-dev-server --https --port 8000 --cert tests/cert/selfsigned.crt --cacert tests/cert/selfsigned.csr --key tests/cert/selfsigned.key",
+    "start": "webpack-dev-server",
     "lint": "eslint serv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anyati/afika-personal-website.git"
   },
   "keywords": [
     "afika nyati",
@@ -34,7 +38,7 @@
     "firebase-admin": "^4.2.1",
     "imports-loader": "^0.6.5",
     "material-ui": "^0.16.7",
-    "node-uuid": "^1.4.7",
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.3.0",
     "react-addons-shallow-compare": "^15.3.0",
@@ -55,6 +59,7 @@
     "css-loader": "^0.23.1",
     "dotenv": "^2.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.2",
     "mocha": "^3.1.2",
     "nightwatch": "^0.9.12",
     "npm-install-webpack-plugin": "^4.0.3",
@@ -62,6 +67,7 @@
     "react-tap-event-plugin": "^2.0.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "uuid": "^3.1.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"

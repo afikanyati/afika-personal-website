@@ -83,7 +83,14 @@ button {
 
 .navigation.closed {
     left: -60vw;
-    cursor: pointer;
+    transition: left 0.3s;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -ms-transition: left 0.3s;
+}
+
+.navigation.contact-open {
+    left: -60vw;
     transition: left 0.3s;
     -webkit-transition: left 0.3s;
     -moz-transition: left 0.3s;
@@ -104,6 +111,8 @@ button {
 }
 
 .nav-item {
+    visibility: visible;
+    opacity: 1;
 	position: relative;
 	padding: 0;
 	cursor: pointer;
@@ -113,6 +122,7 @@ button {
 }
 
 .nav-item.remove {
+    visibility: hidden;
     opacity: 0;
     transform: scale(.1);
     transform: translate(-50px,50px);
@@ -223,6 +233,14 @@ button {
     height: 40px;
     cursor: pointer;
     z-index: 3;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.nav-trigger-icon.contact-open {
+    opacity: 0;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -394,6 +412,14 @@ button {
     -ms-transition: all 0.3s;
 }
 
+.feed-wrapper.contact-open {
+    top: -100vh;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
 .feed-wrapper .feed-box {
     position: relative;
     height: 96vh;
@@ -455,6 +481,14 @@ button {
 	-ms-transition: right 0.3s;
 }
 
+.social-bar.contact-open {
+    right: -71px;
+    transition: right 0.3s;
+	-webkit-transition: right 0.3s;
+	-moz-transition: right 0.3s;
+	-ms-transition: right 0.3s;
+}
+
 .social-button {
     width: 65px;
     display: block;
@@ -491,6 +525,223 @@ button {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
+}
+
+/*========================================== */
+
+/* Message Interface */
+
+.contact-icon-wrapper {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-icon-wrapper.remove {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+#contact-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 43px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 4;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+#contact-icon:hover > path {
+    fill: var(--light-purple);
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-form-wrapper {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-gray);
+    transition: all 0.3s;
+	-webkit-transition: all 1s 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-form-wrapper.remove {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-form-logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 80px;
+}
+
+.contact-form {
+    margin-top: 130px;
+    padding: 50px;
+}
+
+.contact-form .left-form,
+.contact-form .right-form {
+    width: 48%;
+    float: left;
+}
+
+.contact-form .right-form {
+    float: right;
+}
+
+.contact-form .left-form p,
+.contact-form .right-form p {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.7em;
+    line-height: 1.5;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    color: var(--white);
+}
+
+.contact-form .left-form span.asterisk {
+    color: var(--light-purple);
+}
+
+.form-input-wrapper {
+    position: relative;
+}
+
+.contact-form .left-form input,
+.contact-form .right-form input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid var(--white);
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: var(--cream);
+    font-size: 1.8em;
+}
+
+.contact-form .right-form textarea {
+    position: relative;
+    top: 2.7em;
+    width: 100%;
+    height: 9.6em;
+    border: 3px solid var(--white);
+    background-color: transparent;
+    padding: 5px 12px;
+    font-family: var(--body-font);
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cream);
+    resize: none;
+}
+
+.contact-form .right-form button {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 1.2em;
+    font-family: var(--heading-font);
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: var(--white);
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-form.sent .right-form button {
+    cursor: default;
+}
+
+.contact-form.sent .right-form button span {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.contact-form .right-form button #contact-form-send-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+
+}
+
+.contact-form .right-form button:hover h3 {
+    color: var(--light-purple);
+}
+
+.contact-form.sent .right-form button #contact-form-send-icon {
+    animation: FlyArrow 1s linear;
+    animation-fill-mode: both;
+}
+
+.contact-form .right-form button:hover #contact-form-send-icon path {
+    fill: var(--light-purple);
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+/*========================================== */
+
+/* Snackbar Style */
+
+.snackbar-error {
+	text-align: center !important;
+	background: var(--light-purple);
+}
+
+.snackbar-error span {
+	font-family: var(--heading-font);
+	font-size: 1em;
+	font-weight: var(--heading-weight);
+	color: var(--white);
+}
+
+.snackbar-error > div {
+	margin: 20px !important;
+	height: auto !important;
+	line-height: 1.5em !important;
+    background: var(--light-purple) !important;
 }
 
 /*========================================== */
@@ -532,7 +783,22 @@ button {
   }
 }
 
+@keyframes FlyArrow {
+  0% {
+      position: relative;
+      transform: scale(1) translateX(-100px);
+  }
 
+  80% {
+      position: relative;
+      transform: scale(20) translateX(100px);
+  }
+
+  100% {
+      position: relative;
+      opacity: 0;
+  }
+}
 
 /*========================================== */
 

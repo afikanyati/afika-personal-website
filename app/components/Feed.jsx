@@ -16,7 +16,14 @@ export default class Feed extends React.Component {
 
     render() {
         return (
-            <div className={this.props.navIsOpen ? "feed-wrapper" : "feed-wrapper padded"}>
+            <div className={
+                    this.props.contactIsOpen ?
+                        "feed-wrapper contact-open"
+                    :
+                        this.props.navIsOpen ?
+                            "feed-wrapper"
+                            :
+                            "feed-wrapper padded"}>
                 <div className={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
 
                 </div>
@@ -40,4 +47,5 @@ export default class Feed extends React.Component {
 
 Feed.propTypes = {
     navIsOpen: PropTypes.bool.isRequired,
+    contactIsOpen: PropTypes.bool.isRequired
 };

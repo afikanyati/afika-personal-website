@@ -16,7 +16,14 @@ export default class SocialBar extends React.Component {
 
     render() {
         return (
-            <div className={this.props.navIsOpen ? "social-bar" : "social-bar remove"}>
+            <div className={
+                    this.props.contactIsOpen ?
+                        "social-bar contact-open"
+                    :
+                        this.props.navIsOpen ?
+                            "social-bar"
+                        :
+                            "social-bar remove"}>
                 <a
                     className="social-button"
                     href="https://www.facebook.com/public/Afika-Nyati"
@@ -183,4 +190,5 @@ export default class SocialBar extends React.Component {
 
 SocialBar.propTypes = {
     navIsOpen: PropTypes.bool.isRequired,
+    contactIsOpen: PropTypes.bool.isRequired
 };

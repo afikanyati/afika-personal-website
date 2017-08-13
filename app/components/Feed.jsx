@@ -25,7 +25,22 @@ export default class Feed extends React.Component {
                             :
                             "feed-wrapper padded"}>
                 <div className={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
-
+                    <article className="feed-item">
+                        <div className="feed-image">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Flife%2Fafika_front.png?alt=media&token=32909dcb-a2ef-44e9-9f90-ab92eb1fb905" />
+                        </div>
+                        <div className="feed-overlay">
+                            <div className="feed-overlay-info">
+                                <div className="feed-overlay-icon">
+                                    <img src ="assets/images/icons/vr_cream.svg" />
+                                </div>
+                                <div className="feed-overlay-text">
+                                    <h3 className="feed-overlay-title">Life</h3>
+                                    <h4 className="feed-overlay-description">VR Short Film</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         );

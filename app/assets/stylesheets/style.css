@@ -4,11 +4,14 @@
 :root {
     --dark-gray: #212323;
     --dark-purple: #190f27;
+    --transluscent-dark-purple: rgba(25, 15, 39, 0.8);
     --light-purple: #5a4570;
+    --transluscent-light-purple: rgba(90,69,112, 0.8);
     --mid-gray: #989898;
     --light-gray: #dededd;
     --cream : #dbd7cf;
     --white: #ffffff;
+    --transluscent-white: rgba(255, 255, 255, 0.8);
     --body-text-color: rgba(35,31,32, 0.87);
     --heading-font: "ArcaMajora" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     --heading-weight: 800;
@@ -426,6 +429,7 @@ button {
     width: 60vw;
     background: white;
     border: 8px solid var(--dark-gray);
+    overflow: scroll;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -450,6 +454,130 @@ button {
     -ms-transition: all 0.3 0.3s;
 }
 
+.feed-item {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    max-width: 275px;
+    min-width: 165px;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.feed-item.dark {
+    background: var(--dark-purple);
+}
+
+.feed-item.mid {
+    background: var(--light-purple);
+}
+
+.feed-item.light {
+    background: var(--white);
+}
+
+.feed-image img {
+    width: 100%;
+}
+
+.feed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--transluscent-light-purple);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.feed-overlay.dark-purple {
+    background: var(--transluscent-dark-purple);
+}
+
+.feed-overlay.white {
+    background: var(--transluscent-white);
+}
+
+.feed-overlay-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.feed-overlay-icon {
+    display: inline-block;
+    vertical-align: bottom;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.feed-overlay-icon img {
+    width: 50px;
+}
+
+.feed-overlay-text {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.feed-overlay-description, .feed-overlay-title {
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.feed-overlay-title {
+    margin-bottom: 0;
+}
+
+.feed-overlay-description {
+    font-size: .8em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.feed-overlay-title.light-purple,
+.feed-overlay-title.white {
+    color: var(--dark-purple);
+}
+
+.feed-overlay-description.dark-purple {
+    color: var(--cream);
+}
+
+.feed-overlay-description.white {
+    color: var(--light-purple);
+}
+
+.feed-item:hover .feed-overlay .feed-overlay-description,
+.feed-item:hover .feed-overlay .feed-overlay-title,
+.feed-item:hover .feed-overlay .feed-overlay-icon {
+	transform: translateY(0px);
+	opacity: 1;
+	transition: all 0.3s;
+  	-webkit-transition: all 0.3s;
+  	-moz-transition: all 0.3s;
+  	-ms-transition: all 0.3s;
+}
 /*========================================== */
 
 /* Social Bar */

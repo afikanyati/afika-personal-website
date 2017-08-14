@@ -2,9 +2,11 @@
 import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
+import Img              from 'react-image';
 
 // Files
 import Block            from '../Block';
+import ImagePlaceholder from './ImagePlaceholder';
 
 export default class FeedItem extends React.Component {
 
@@ -61,7 +63,7 @@ export default class FeedItem extends React.Component {
                         {randomColor == "dark-purple" ?
                             <div
                                 className="feed-overlay-text">
-                                <h4 className="feed-overlay-title cream">{this.props.item.category}</h4>
+                                <h4 className="feed-overlay-title no-thumbnail cream">{this.props.item.category}</h4>
                             </div>
                         :
                         <div
@@ -81,7 +83,9 @@ export default class FeedItem extends React.Component {
         return (
             <article className="feed-item">
                 <div className="feed-image">
-                    <img src={this.props.item.thumbnail} />
+                    <Img
+                        src={this.props.item.thumbnail}
+                        loader={<ImagePlaceholder category={category}/>} />
                 </div>
                 <div className="feed-overlay">
                     <div className="feed-overlay-info">
@@ -112,5 +116,5 @@ export default class FeedItem extends React.Component {
 // ============= PropTypes ==============
 
 FeedItem.propTypes = {
-
+    item: PropTypes.object.isRequired
 };

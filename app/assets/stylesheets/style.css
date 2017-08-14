@@ -409,6 +409,7 @@ button {
     margin: 2vh 0;
     padding: 0;
     z-index: 2;
+    background: var(--dark-gray);
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -427,7 +428,6 @@ button {
     position: relative;
     height: 96vh !important;
     width: 60vw;
-    background: var(--dark-gray);
     border: 8px solid var(--dark-gray);
     overflow: scroll;
     transition: all 0.3s;
@@ -456,6 +456,7 @@ button {
 
 .feed-item {
     display: inline-block;
+    position: relative;
     width: 50%;
     min-width: 165px;
     /* box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
@@ -483,6 +484,12 @@ button {
 
 .feed-item.light {
     background: var(--white);
+}
+
+.feed-image {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .feed-image img {
@@ -584,8 +591,12 @@ button {
 .feed-overlay-text.white .feed-overlay-description {
     color: var(--light-purple);
 }
+.feed-overlay-text .feed-overlay-title.no-thumbnail {
+    font-family: var(--heading-font);
+    font-size: 1.3em;
+}
 
-.feed-overlay-text .feed-overlay-title.cream{
+.feed-overlay-text .feed-overlay-title.no-thumbnail.cream{
     color: var(--cream);
 }
 
@@ -655,6 +666,28 @@ button {
 
 .thumb-writing.dark-purple {
     color: var(--dark-purple);
+}
+
+.img-placeholder {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 30vw;
+    display: block;
+    position: relative;
+}
+
+.img-placeholder img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
 }
 
 /*========================================== */
@@ -939,6 +972,14 @@ button {
 
 /*========================================== */
 
+/* Tooltip */
+
+.tooltip {
+	font-family: var(--body-font);
+}
+
+/*========================================== */
+
 /* Snackbar Style */
 
 .snackbar-error {
@@ -958,6 +999,49 @@ button {
 	height: auto !important;
 	line-height: 1.5em !important;
     background: var(--light-purple) !important;
+}
+
+/*========================================== */
+
+/* Spinner */
+
+.square-split .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+.square-split .loader > div {
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+.square-split .loader > div::after {
+    content: '';
+    display: block;
+    margin: 50% 0 0 50%;
+    width: 50%;
+    height: 50%;
+    background: var(--light-purple);
+    animation: squareSplit 2s infinite ease-in-out alternate;
+}
+
+.square-split .loader .square-2 {
+    transform: rotate(90deg);
+}
+
+.square-split .loader .square-3 {
+    transform: rotate(270deg);
+    animation-direction: reverse;
+}
+
+.square-split .loader .square-4 {
+    transform: rotate(180deg);
+    animation-direction: reverse;
 }
 
 /*========================================== */
@@ -1014,6 +1098,36 @@ button {
       position: relative;
       opacity: 0;
   }
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+@keyframes squareSplit {
+    20% {
+        transform: rotate(0deg);
+        margin: 50% 0 0 50%;
+    }
+    50% {
+        transform: rotate(90deg);
+        margin: 0px;
+    }
+
+    80% {
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
 }
 
 /*========================================== */

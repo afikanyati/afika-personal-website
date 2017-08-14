@@ -425,9 +425,9 @@ button {
 
 .feed-wrapper .feed-box {
     position: relative;
-    height: 96vh;
+    height: 96vh !important;
     width: 60vw;
-    background: white;
+    background: var(--dark-gray);
     border: 8px solid var(--dark-gray);
     overflow: scroll;
     transition: all 0.3s;
@@ -455,10 +455,8 @@ button {
 }
 
 .feed-item {
-    position: relative;
     display: inline-block;
     width: 50%;
-    max-width: 275px;
     min-width: 165px;
     /* box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
     transition: all .3s;
@@ -467,6 +465,12 @@ button {
     -ms-transition: all .3s;
     cursor: pointer;
     overflow: hidden;
+    border: 8px solid var(--dark-gray);
+    background: var(--light-purple);
+}
+
+.feed-item.no-thumbnail {
+    width: 100%;
 }
 
 .feed-item.dark {
@@ -489,10 +493,16 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--transluscent-light-purple);
+    right: 0;
+    bottom: 0;
+    background: none;
     overflow: hidden;
     height: 100%;
     width: 100%;
+    transition: all 0.3s;
+  	-webkit-transition: all 0.3s;
+  	-moz-transition: all 0.3s;
+  	-ms-transition: all 0.3s;
 }
 
 .feed-overlay.dark-purple {
@@ -510,11 +520,13 @@ button {
     padding: 20px;
     padding-bottom: 20px;
     width: 100%;
+    height: 100%;
 }
 
 .feed-overlay-icon {
-    display: inline-block;
-    vertical-align: bottom;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     transform: translateY(10px);
     opacity: 0;
     transition: all .5s;
@@ -524,15 +536,16 @@ button {
 }
 
 .feed-overlay-icon img {
-    width: 50px;
+    width: 40px;
 }
 
 .feed-overlay-text {
-    display: inline-block;
-    margin-left: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
-.feed-overlay-description, .feed-overlay-title {
+.feed-overlay-text .feed-overlay-description, .feed-overlay-text .feed-overlay-title {
     color: var(--white);
     font-size: 1.5em;
     font-weight: 600;
@@ -544,33 +557,41 @@ button {
     -ms-transition: all .5s;
 }
 
-.feed-overlay-title {
+.feed-overlay-text .feed-overlay-title {
     margin-bottom: 0;
+    font-family: var(--heading-font);
 }
 
-.feed-overlay-description {
+.feed-overlay-text .feed-overlay-description {
     font-size: .8em;
     font-weight: 300;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.feed-overlay-title.light-purple,
-.feed-overlay-title.white {
-    color: var(--dark-purple);
-}
-
-.feed-overlay-description.dark-purple {
+    font-family: var(--body-font);
+    text-transform: capitalize;
     color: var(--cream);
 }
 
-.feed-overlay-description.white {
+.feed-overlay-text.light-purple .feed-overlay-title,
+.feed-overlay-text.white .feed-overlay-title {
+    color: var(--dark-purple);
+}
+
+.feed-overlay-text.dark-purple .feed-overlay-description {
+    color: var(--cream);
+}
+
+.feed-overlay-text.white .feed-overlay-description {
     color: var(--light-purple);
 }
 
-.feed-item:hover .feed-overlay .feed-overlay-description,
-.feed-item:hover .feed-overlay .feed-overlay-title,
-.feed-item:hover .feed-overlay .feed-overlay-icon {
+.feed-overlay-text .feed-overlay-title.cream{
+    color: var(--cream);
+}
+
+.feed-item:hover .feed-overlay-description,
+.feed-item:hover .feed-overlay-title,
+.feed-item:hover .feed-overlay-icon {
 	transform: translateY(0px);
 	opacity: 1;
 	transition: all 0.3s;
@@ -578,6 +599,64 @@ button {
   	-moz-transition: all 0.3s;
   	-ms-transition: all 0.3s;
 }
+
+.feed-item:hover .feed-overlay {
+    background: var(--transluscent-dark-purple);
+    transition: all 0.3s;
+  	-webkit-transition: all 0.3s;
+  	-moz-transition: all 0.3s;
+  	-ms-transition: all 0.3s;
+}
+
+.generate-thumb {
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+}
+
+.generate-thumb.white {
+    background: var(--white);
+}
+
+.generate-thumb.light-purple {
+    background: var(--light-purple);
+}
+
+.generate-thumb.dark-purple {
+    background: var(--dark-purple);
+}
+
+.thumb-writing-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.thumb-writing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 2em;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.thumb-writing.white {
+    color: var(--white);
+}
+
+.thumb-writing.light-purple {
+    color: var(--light-purple);
+}
+
+.thumb-writing.dark-purple {
+    color: var(--dark-purple);
+}
+
 /*========================================== */
 
 /* Social Bar */
@@ -830,6 +909,15 @@ button {
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 
+}
+
+.contact-form .left-form input:focus,
+.contact-form .right-form input:focus {
+    border-bottom: 3px solid var(--light-purple);
+}
+
+.contact-form .right-form textarea:focus {
+    border: 3px solid var(--light-purple);
 }
 
 .contact-form .right-form button:hover h3 {

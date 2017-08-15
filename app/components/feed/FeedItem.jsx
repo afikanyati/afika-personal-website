@@ -28,6 +28,10 @@ export default class FeedItem extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.feedScroll == 0;
+    }
+
     generateThumbnail = () => {
         let thumbnailColors = ["white", "light-purple", "dark-purple"];
         let randomColorIndex = Math.floor(Math.random() * thumbnailColors.length);
@@ -81,7 +85,9 @@ export default class FeedItem extends React.Component {
         let category = this.props.item.path.split("/")[0];
 
         return (
-            <article className="feed-item">
+            <article
+                className="feed-item"
+                onClick={this.props.openItem.bind({}, this.props.item)}>
                 <div className="feed-image">
                     <Img
                         src={this.props.item.thumbnail}

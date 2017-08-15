@@ -45,7 +45,7 @@ export default class ContactView extends React.Component {
                     <div className="left-form">
                         <p>
                             Name<span className="asterisk"> *</span><br/>
-                            <span class="form-input-wrapper">
+                        <span className="form-input-wrapper">
                                 <input
                                     type="text"
                                     id="contact-name"
@@ -60,7 +60,7 @@ export default class ContactView extends React.Component {
                         </p>
                         <p>
                             Email<span className="asterisk"> *</span><br/>
-                            <span class="form-input-wrapper">
+                        <span className="form-input-wrapper">
                                 <input
                                     type="email"
                                     id="contact-email"
@@ -73,7 +73,7 @@ export default class ContactView extends React.Component {
                         </p>
                         <p>
                             Subject<br/>
-                            <span class="form-input-wrapper">
+                        <span className="form-input-wrapper">
                                 <input
                                     type="text"
                                     id="contact-subject"
@@ -89,9 +89,9 @@ export default class ContactView extends React.Component {
                         </p>
                     </div>
                     <div className="right-form">
-                        <p class="message">
+                        <p className="message">
                             Message<br/>
-                            <span class="form-input-wrapper">
+                        <span className="form-input-wrapper">
                                 <textarea
                                     id="contact-message"
                                     ref="message"
@@ -114,7 +114,7 @@ export default class ContactView extends React.Component {
                                     width="50px"
                                     height="50px"
                                     viewBox="0 0 50 50"
-                                    enable-background="new 0 0 50 50">
+                                    enableBackground="new 0 0 50 50">
                                     <path fill="#FFFFFF" d="M25,0l-4.406,4.406l17.438,17.469H0v6.25h38.031L20.594,45.594L25,50l25-25L25,0z"/>
                                 </svg>
                             </button>

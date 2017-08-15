@@ -30,7 +30,7 @@ export default class NavItem extends React.Component {
     				<h3 className="nav-writing">
                         {this.props.navItem.item}
                         <div
-                            className={this.props.navItem.contentVisible ? "crossbar": "crossbar show"}/>
+                            className={this.props.navItem.contentVisible ? "crossbar": "crossbar appear"}/>
                     </h3>
                     <h4 className="nav-verb">{this.props.navItem.verb}</h4>
     			</div>

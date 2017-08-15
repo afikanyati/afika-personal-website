@@ -1,5 +1,6 @@
 // Libs
 import React            from 'react';
+import ReactDOM         from 'react-dom';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 import uuid             from 'uuid';
@@ -7,6 +8,7 @@ import ReactList        from 'react-list';
 
 // Files
 import FeedItem         from './FeedItem';
+import Loader           from '../Loader';
 
 export default class Feed extends React.Component {
 
@@ -28,10 +30,17 @@ export default class Feed extends React.Component {
 
     componentDidMount() {
         console.log("+++++Feed");
+        const feed = ReactDOM.findDOMNode(this.refs.feed);
+        feed.addEventListener('scroll', this.scrolled);
     }
 
     componentWillReceiveProps(nextProps) {
         //pass
+    }
+
+    componentWillUnmount() {
+        const feed = ReactDOM.findDOMNode(this.refs.feed);
+        feed.removeEventListener('scroll', this.scrolled);
     }
 
     loadingView = () => {
@@ -44,20 +53,17 @@ export default class Feed extends React.Component {
                             "feed-wrapper"
                             :
                             "feed-wrapper padded"}>
-                <div className="square-split">
-                    <div className="loader">
-        				<div className="square-1"></div>
-        				<div className="square-2"></div>
-        				<div className="square-3"></div>
-        				<div className="square-4"></div>
-        			</div>
+                <div
+                    id="feed"
+                    ref="feed"
+                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
+                    <Loader size="large" />
                 </div>
             </div>
         );
     }
 
     feed = () => {
-
         return (
             <div className={
                     this.props.contactIsOpen ?
@@ -68,6 +74,8 @@ export default class Feed extends React.Component {
                             :
                             "feed-wrapper padded"}>
                 <div
+                    id="feed"
+                    ref="feed"
                     className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
                     <ReactList
                         itemRenderer={this.renderItem}
@@ -82,8 +90,19 @@ export default class Feed extends React.Component {
         return (
             <FeedItem
                 key={key}
-                item={this.props.feed[index]} />
+                item={this.props.feed[index]}
+                openItem={this.props.openItem} />
         );
+    }
+
+    scrolled = () => {
+        let element = this.refs.feed;
+        if (element) {
+            let scrollTop = element.scrollTop;
+            if (scrollTop < 15) {
+                this.props.updateFeedScroll(element.scrollTop);
+            }
+        }
     }
 
 }
@@ -93,5 +112,8 @@ export default class Feed extends React.Component {
 Feed.propTypes = {
     feed: PropTypes.array.isRequired,
     navIsOpen: PropTypes.bool.isRequired,
-    contactIsOpen: PropTypes.bool.isRequired
+    contactIsOpen: PropTypes.bool.isRequired,
+    feedScroll: PropTypes.number.isRequired,
+    updateFeedScroll: PropTypes.func.isRequired,
+    openItem: PropTypes.func.isRequired
 };

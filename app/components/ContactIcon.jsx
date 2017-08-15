@@ -25,7 +25,14 @@ export default class ContactIcon extends React.Component {
 
         return (
             <div
-                className={this.props.navIsOpen ? "contact-icon-wrapper" : "contact-icon-wrapper remove"}>
+                className={
+                    this.props.contactIsOpen || this.props.feedScroll == 0 ?
+                        "contact-icon-wrapper contact-open"
+                    :
+                        this.props.navIsOpen ?
+                            "contact-icon-wrapper"
+                        :
+                            "contact-icon-wrapper remove"}>
                 <OverlayTrigger
                         placement   ="left"
                         overlay     ={contactTooltip}>
@@ -38,7 +45,7 @@ export default class ContactIcon extends React.Component {
                     	width="50px"
                         height="50px"
                         viewBox="0 0 50 50"
-                        enable-background="new 0 0 50 50">
+                        enableBackground="new 0 0 50 50">
                         <path fill="#FFFFFF" d="M44.999,0H5.001c-2.75,0-5,2.25-5,5v44.998l10-10h34.998c2.75,0,5-2.25,5-5V5C49.999,2.25,47.749,0,44.999,0
                         	z M44.999,34.998H10.001l-5,5V5h39.998V34.998z"/>
                     </svg>

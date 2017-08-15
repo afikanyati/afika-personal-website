@@ -25,7 +25,7 @@ export default class ScrollButton extends React.Component {
         );
 
         return (
-            <div className={this.props.contactIsOpen || this.props.feedScroll == 0 ? "remove" : null }>
+            <div className={this.props.contactIsOpen || this.props.feedScroll == 0 ? "remove" : "show" }>
                 <OverlayTrigger
                         placement   ="left"
                         overlay     ={scrollTooltip}>

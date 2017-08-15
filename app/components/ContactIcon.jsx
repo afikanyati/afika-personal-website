@@ -26,13 +26,13 @@ export default class ContactIcon extends React.Component {
         return (
             <div
                 className={
-                    this.props.contactIsOpen || this.props.feedScroll == 0 ?
-                        "contact-icon-wrapper contact-open"
-                    :
-                        this.props.navIsOpen ?
-                            "contact-icon-wrapper"
+                    this.props.navIsOpen ?
+                        this.props.contactIsOpen || this.props.feedScroll == 0 ?
+                            "contact-icon-wrapper contact-open"
                         :
-                            "contact-icon-wrapper remove"}>
+                            "contact-icon-wrapper"
+                    :
+                        "contact-icon-wrapper remove"}>
                 <OverlayTrigger
                         placement   ="left"
                         overlay     ={contactTooltip}>

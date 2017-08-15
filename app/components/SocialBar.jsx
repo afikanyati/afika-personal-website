@@ -23,7 +23,7 @@ export default class SocialBar extends React.Component {
                         this.props.navIsOpen ?
                             "social-bar"
                         :
-                            "social-bar remove"}>
+                            "social-bar remove"}  ref="articleBody">
                 <a
                     className="social-button"
                     href="https://www.facebook.com/public/Afika-Nyati"

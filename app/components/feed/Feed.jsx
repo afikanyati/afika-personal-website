@@ -21,10 +21,18 @@ export default class Feed extends React.Component {
     }
 
     render() {
-        if(this.props.feed.length == 0) {
+        if(this.props.feed.length == 0 &&
+            !this.props.navItems[0]["contentVisible"] &&
+            !this.props.navItems[1]["contentVisible"] &&
+            !this.props.navItems[2]["contentVisible"] &&
+            !this.props.navItems[3]["contentVisible"] &&
+            !this.props.navItems[4]["contentVisible"] &&
+            !this.props.navItems[5]["contentVisible"]) {
+            return this.logoView();
+        } else if (this.props.feed.length == 0) {
             return this.loadingView();
         } else {
-            return this.feed();
+            return this.feedView();
         }
     }
 
@@ -41,6 +49,28 @@ export default class Feed extends React.Component {
     componentWillUnmount() {
         const feed = ReactDOM.findDOMNode(this.refs.feed);
         feed.removeEventListener('scroll', this.scrolled);
+    }
+
+    logoView = () => {
+        return (
+            <div className={
+                    this.props.contactIsOpen ?
+                        "feed-wrapper contact-open"
+                    :
+                        this.props.navIsOpen ?
+                            "feed-wrapper"
+                            :
+                            "feed-wrapper padded"}>
+                <div
+                    id="feed"
+                    ref="feed"
+                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
+                    <img
+                        id="afika-logo-no-feed"
+                        src="assets/images/my_logos/afika_logo_white.svg" />
+                </div>
+            </div>
+        );
     }
 
     loadingView = () => {
@@ -63,7 +93,7 @@ export default class Feed extends React.Component {
         );
     }
 
-    feed = () => {
+    feedView = () => {
         return (
             <div className={
                     this.props.contactIsOpen ?
@@ -113,7 +143,6 @@ Feed.propTypes = {
     feed: PropTypes.array.isRequired,
     navIsOpen: PropTypes.bool.isRequired,
     contactIsOpen: PropTypes.bool.isRequired,
-    feedScroll: PropTypes.number.isRequired,
     updateFeedScroll: PropTypes.func.isRequired,
     openItem: PropTypes.func.isRequired
 };

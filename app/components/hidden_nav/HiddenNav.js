@@ -29,7 +29,7 @@ export default class HiddenNav extends React.Component {
                             "navigation"
                         :
                             "navigation closed"}>
-                <img id="afika-logo" src="assets/images/my_logos/afika_logo_gray.svg"/>
+                <img id="afika-logo-nav" src="assets/images/my_logos/afika_logo_gray.svg"/>
                 <NavItems
                     navIsOpen={this.props.navIsOpen}
                     navItems={this.props.navItems}

@@ -9,17 +9,16 @@ import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 // Files
 import DialogTypes     from '../../constants/dialogTypes';
 import CloseButton     from '../buttons/CloseButton';
-import Loader          from '../Loader';
 import ArrowButton     from '../buttons/ArrowButton';
 
-export default class ImageDialog extends React.Component {
+export default class MusicDialog extends React.Component {
 
     constructor(props) {
         super(props);
     }
 
     componentWillMount() {
-        console.log("-----ImageDialog");
+        console.log("-----MusicDialog");
     }
 
     render() {
@@ -37,8 +36,8 @@ export default class ImageDialog extends React.Component {
                 <MuiThemeProvider muiTheme={getMuiTheme()}>
                     <Dialog
                         modal                       ={true}
-                        onRequestClose              ={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)}
-                        open                        ={this.props.imageDialogIsOpen}
+                        onRequestClose              ={this.props.toggleDialog.bind({}, DialogTypes.MUSIC)}
+                        open                        ={this.props.musicDialogIsOpen}
                         titleClassName              ="image-dialog-title"
                         actionsContainerClassName   ="image-dialog-actions"
                         bodyClassName               ="image-dialog-body"
@@ -51,41 +50,31 @@ export default class ImageDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)} />
-                        <Loader size="medium" />
-                        <div className="image-wrapper">
-                            <div className="image"
-                                style={{
-                                    backgroundImage: `url(${this.props.currentItem.data})`
-                                }} />
-                        </div>
-                        <h3 className="image-description">
-                            {this.props.currentItem.title} <span>{this.props.currentItem.date}</span>
-                        </h3>
-                        {showLeftArrow ?
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.MUSIC)} />
+                            {showLeftArrow ?
+                                <ArrowButton
+                                    position={"absolute"}
+                                    top={"50%"}
+                                    bottom={"auto"}
+                                    left={20}
+                                    right={"auto"}
+                                    direction="left"
+                                    vertCenter={true}
+                                    horCenter={false}
+                                    onClick={this.props.browseTo.bind({}, "left")} />
+                            :
+                                null
+                            }
                             <ArrowButton
                                 position={"absolute"}
                                 top={"50%"}
                                 bottom={"auto"}
-                                left={20}
-                                right={"auto"}
-                                direction="left"
+                                left={"auto"}
+                                right={20}
+                                direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "left")} />
-                        :
-                            null
-                        }
-                        <ArrowButton
-                            position={"absolute"}
-                            top={"50%"}
-                            bottom={"auto"}
-                            left={"auto"}
-                            right={20}
-                            direction="right"
-                            vertCenter={true}
-                            horCenter={false}
-                            onClick={this.props.browseTo.bind({}, "right")} />
+                                onClick={this.props.browseTo.bind({}, "right")} />
                     </Dialog>
                 </MuiThemeProvider>
             </div>
@@ -93,7 +82,7 @@ export default class ImageDialog extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++ImageDialog");
+        console.log("+++++MusicDialog");
     }
 
     componentWillReceiveProps(nextProps) {
@@ -103,8 +92,8 @@ export default class ImageDialog extends React.Component {
 
 // ============= PropTypes ==============
 
-ImageDialog.propTypes = {
-    imageDialogIsOpen: PropTypes.bool.isRequired,
+MusicDialog.propTypes = {
+    musicDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
     currentItem: PropTypes.object.isRequired
 };

@@ -16,17 +16,26 @@ export default class CloseButton extends React.Component {
     }
 
     render() {
+        let transform = "none";
+        if (this.props.vertCenter && this.props.horCenter) {
+            transform = "translate(-50%, -50%)";
+        } else if (this.props.vertCenter) {
+            transform = "translateY(-50%)";
+        } else if (this.props.horCenter) {
+            transform = "translateX(-50%)";
+        }
 
         return (
             <button
                 onClick={this.props.onClick}
                 className="close-button"
                 style={{
+                    position: this.props.position,
                     top: this.props.top,
                     bottom: this.props.bottom,
                     left: this.props.left,
                     right: this.props.right,
-                    transform: this.props.transform
+                    transform: transform
                 }}>
                 Close
             </button>
@@ -46,21 +55,23 @@ export default class CloseButton extends React.Component {
 
 CloseButton.propTypes = {
     onClick: PropTypes.func.isRequired,
+    position: PropTypes.string.isRequired,
     top: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+            PropTypes.string.isRequired,
+            PropTypes.number.isRequired
     ]),
     bottom: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+            PropTypes.string.isRequired,
+            PropTypes.number.isRequired
     ]),
     left: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+            PropTypes.string.isRequired,
+            PropTypes.number.isRequired
     ]),
     right: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+            PropTypes.string.isRequired,
+            PropTypes.number.isRequired
     ]),
-    transform: PropTypes.string
+    vertCenter: PropTypes.bool.isRequired,
+    horCenter: PropTypes.bool.isRequired
 };

@@ -54,12 +54,23 @@ export default class Block extends React.Component {
 Block.propTypes = {
     position: PropTypes.string.isRequired,
     top: PropTypes.oneOfType([
-        PropTypes.string.isRequired,
-        PropTypes.number.isRequired
+        PropTypes.string,
+        PropTypes.number
     ]),
-    left: PropTypes.number.isRequired,
-    vertCenter: PropTypes.bool.isRequired,
-    horCenter: PropTypes.bool.isRequired,
+    bottom: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+    ]),
+    left: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    right: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+    ]),
+    vertCenter: PropTypes.bool,
+    horCenter: PropTypes.bool,
     width: PropTypes.oneOfType([
         PropTypes.string.isRequired,
         PropTypes.number.isRequired

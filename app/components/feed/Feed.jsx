@@ -3,7 +3,6 @@ import React            from 'react';
 import ReactDOM         from 'react-dom';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
-import uuid             from 'uuid';
 import ReactList        from 'react-list';
 
 // Files
@@ -38,6 +37,8 @@ export default class Feed extends React.Component {
 
     componentDidMount() {
         console.log("+++++Feed");
+        const feed = ReactDOM.findDOMNode(this.refs.feed);
+        feed.addEventListener('scroll', this.scrolled);
     }
 
     componentWillReceiveProps(nextProps) {

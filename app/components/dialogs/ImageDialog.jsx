@@ -14,6 +14,10 @@ import ArrowButton     from '../buttons/ArrowButton';
 
 export default class ImageDialog extends React.Component {
 
+    state = {
+        lengthArtList: 0
+    }
+
     constructor(props) {
         super(props);
     }
@@ -24,12 +28,15 @@ export default class ImageDialog extends React.Component {
 
     render() {
         let showLeftArrow;
+        let showRightArrow;
 
         if (this.props.currentItem.path) {
             let str = this.props.currentItem.path;
             let lastSlash = str.lastIndexOf("/");
             let imageIndex = parseInt(str.substring(lastSlash + 1, str.length));
-            showLeftArrow = imageIndex != "0";
+            showLeftArrow = imageIndex > 3; // Artworks start at index 3
+
+            showRightArrow = imageIndex < this.state.lengthArtList - 1;
         }
 
         return (
@@ -76,16 +83,20 @@ export default class ImageDialog extends React.Component {
                         :
                             null
                         }
-                        <ArrowButton
-                            position={"absolute"}
-                            top={"50%"}
-                            bottom={"auto"}
-                            left={"auto"}
-                            right={20}
-                            direction="right"
-                            vertCenter={true}
-                            horCenter={false}
-                            onClick={this.props.browseTo.bind({}, "right")} />
+                        {showRightArrow ?
+                            <ArrowButton
+                                position={"absolute"}
+                                top={"50%"}
+                                bottom={"auto"}
+                                left={"auto"}
+                                right={20}
+                                direction="right"
+                                vertCenter={true}
+                                horCenter={false}
+                                onClick={this.props.browseTo.bind({}, "right")} />
+                            :
+                                null
+                        }
                     </Dialog>
                 </MuiThemeProvider>
             </div>
@@ -94,6 +105,21 @@ export default class ImageDialog extends React.Component {
 
     componentDidMount() {
         console.log("+++++ImageDialog");
+
+        // Get length of artworks list
+        firebase.database().ref('content/art').once(
+            'value',
+            (snapshot) => {
+                let lenArt = snapshot.val().length;
+
+                this.setState({
+                    lengthArtList: lenArt
+                });
+            },
+            () => {
+                return;
+            }
+        );
     }
 
     componentWillReceiveProps(nextProps) {

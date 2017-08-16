@@ -7,6 +7,5 @@ export default {
     DICTIONARY: "dictionary",
     LIST: "list",
     SLIDER: "slider",
-    CODE: "code",
-    SECTION_END: "section_end"
+    SECTION_DIVIDER: "section_divider"
 };

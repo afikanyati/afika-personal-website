@@ -5,12 +5,14 @@ import PropTypes        from 'prop-types';
 import JsxParser        from 'react-jsx-parser';
 import YouTube          from 'react-youtube';
 import Img              from 'react-image';
+import uuid             from 'uuid';
 
 // Files
 import AssetTypes       from '../../constants/assetTypes.js';
-import Italic           from './Italic.jsx';
-import Bold             from './Bold.jsx';
-import Link             from './Link.jsx';
+import Italic           from './Italic';
+import Bold             from './Bold';
+import Link             from './Link';
+import Code             from './Code';
 import ImagePlaceholder from '../feed/ImagePlaceholder';
 import Block            from '../Block';
 
@@ -41,10 +43,8 @@ export default class ArticleAsset extends React.Component {
             return this.listAsset();
         } else if (this.props.asset.type == AssetTypes.SLIDER) {
             return this.sliderAsset();
-        } else if (this.props.asset.type == AssetTypes.CODE) {
-            return this.codeAsset();
-        } else if (this.props.asset.type == AssetTypes.SECTION_END) {
-            return this.sectionEndAsset();
+        } else if (this.props.asset.type == AssetTypes.SECTION_DIVIDER) {
+            return this.sectionDividerAsset();
         } else {
             // should not reach this point
             return (
@@ -66,7 +66,7 @@ export default class ArticleAsset extends React.Component {
             <div className="paragraph-asset">
                 <JsxParser
                     bindings={{}}
-                    components={{Italic, Link, Bold}}
+                    components={{Italic, Link, Bold, Code}}
                     jsx={this.props.asset.asset.data}/>
             </div>
         );
@@ -123,7 +123,10 @@ export default class ArticleAsset extends React.Component {
                     height={"100%"}
                     color={"#989898"}/>
                 <div className="quote">
-                    {this.props.asset.asset.data}
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.data}/>
                 </div>
                 <h3 className="reference">
                     {this.props.asset.asset.reference}
@@ -178,7 +181,7 @@ export default class ArticleAsset extends React.Component {
                 <p className="dic-definition">
                     <JsxParser
                         bindings={{}}
-                        components={{Italic, Link, Bold}}
+                        components={{Italic, Link, Bold, Code}}
                         jsx={entireDef}/>
                 </p>
             </div>
@@ -200,18 +203,39 @@ export default class ArticleAsset extends React.Component {
 
     listAsset = () => {
         return (
-            <div></div>
-        );
-    }
-    codeAsset = () => {
-        return (
-            <div></div>
+            <div>
+                {this.props.asset.asset.kind == "bullets" ?
+                    <ul className="list-asset">
+                        {this.props.asset.asset.data.map(item => {
+                            return (
+                                <JsxParser
+                                    bindings={{}}
+                                    components={{Italic, Link, Bold, Code}}
+                                    jsx={`<li>${item}</li>`}/>
+                            );
+                        })}
+                    </ul>
+                :
+                    <ol className="list-asset">
+                        {this.props.asset.asset.data.map(item => {
+                            return (
+                                <JsxParser
+                                    bindings={{}}
+                                    components={{Italic, Link, Bold, Code}}
+                                    jsx={`<li>${item}</li>`}/>
+                            );
+                        })}
+                    </ol>
+                }
+            </div>
         );
     }
 
-    sectionEndAsset = () => {
+    sectionDividerAsset = () => {
         return (
-            <div></div>
+            <div className="section-divider-asset">
+                <hr />
+            </div>
         );
     }
 }

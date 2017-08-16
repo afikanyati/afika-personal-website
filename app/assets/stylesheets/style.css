@@ -18,6 +18,7 @@
     --subheading-weight: 400;
     --body-font: "Lato" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --body-font-italic: "LatoItalic" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --code-font: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
 * {
@@ -425,11 +426,23 @@ button {
     -ms-transition: all 0.3s;
 }
 
+.feed-wrapper.padded {
+    right: 0;
+    width: 100vw;
+    padding: 0 113px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3 0.3s;
+    -moz-transition: all 0.3 0.3s;
+    -ms-transition: all 0.3 0.3s;
+}
+
 .feed-wrapper .feed-box {
     position: relative;
     height: 96vh !important;
     width: 60vw;
     border: 8px solid var(--dark-gray);
+    border-top: 16px solid var(--dark-gray);
+    border-bottom: 16px solid var(--dark-gray);
     overflow: scroll;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -440,16 +453,6 @@ button {
 .feed-wrapper .feed-box.enlarge {
     width: 100%;
     transition: all 0.3 0.3s;
-    -webkit-transition: all 0.3 0.3s;
-    -moz-transition: all 0.3 0.3s;
-    -ms-transition: all 0.3 0.3s;
-}
-
-.feed-wrapper.padded {
-    right: 0;
-    width: 100vw;
-    padding: 0 113px;
-    transition: all 0.3s;
     -webkit-transition: all 0.3 0.3s;
     -moz-transition: all 0.3 0.3s;
     -ms-transition: all 0.3 0.3s;
@@ -469,6 +472,14 @@ button {
     overflow: hidden;
     border: 8px solid var(--dark-gray);
     background: var(--dark-gray);
+}
+
+.feed-item:first-child {
+    border-top: none;
+}
+
+.feed-item:last-child {
+    border-bottom: none;
 }
 
 .feed-item.no-thumbnail {
@@ -1339,7 +1350,7 @@ button {
 .article-date {
     font-family: var(--subheading-font);
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--cream);
     margin-left: 60px;
 }
@@ -1355,7 +1366,7 @@ button {
     transform: translateX(-50%);
     width: 100%;
     max-width: 700px;
-    font-family: "Lato";
+    font-family: var(--body-font);
     font-weight: 300;
     font-size: 1.2em;
     color: var(--dark-gray);
@@ -1518,9 +1529,80 @@ button {
 
 }
 
+.list-asset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 700px;
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    line-height: 1.8em; /* 1.2 * 1.5 */
+    margin: 29px 0;
+    margin-top: 0;
+}
+
+.list-asset li {
+    margin: 1.2em 0;
+}
+
+.list-asset li:first-child {
+    margin-top: 0;
+}
+
+.section-divider-asset hr {
+    margin-top: 52px;
+    margin-bottom: 42px;
+    border: none;
+    text-align: center;
+}
+
+.section-divider-asset hr:before {
+    --x-height-multiplier: 0.363;
+    --baseline-multiplier: 0.157;
+    font-family: var(--body-font-italic);
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: .6em;
+    content: '...';
+    display: inline-block;
+    margin-left: .6em;
+    color: var(--mid-gray);
+    position: relative;
+    top: -30px;
+}
+
+span.code {
+    font-family: var(--code-font);
+}
+
 /*========================================== */
 
 /* Animations */
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
 
 @keyframes FadeIn {
   0% {

@@ -58,7 +58,7 @@ export default class ArticleDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.ARTICLE)} />
+                            onClick={this.closeDialog} />
                         <div className="article-wrapper">
                             <h1 className="article-title">
                                 {this.props.currentItem.title}
@@ -137,7 +137,8 @@ export default class ArticleDialog extends React.Component {
 
         if (this.props.currentItem.assets) {
             this.setState({
-                assets: this.props.currentItem.assets
+                assets: this.props.currentItem.assets,
+                currentSlide: 0
             });
         }
 
@@ -152,6 +153,14 @@ export default class ArticleDialog extends React.Component {
     }
 
     // ======== METHODS ========
+    closeDialog = () => {
+        this.setState({
+            currentSlide: 0
+        });
+
+        this.props.toggleDialog(DialogTypes.ARTICLE);
+    }
+
     nextSlide = () => {
         let newIndex = this.state.currentSlide + 1;
         let lenSlides = this.state.assets[0]["asset"]["data"].length;

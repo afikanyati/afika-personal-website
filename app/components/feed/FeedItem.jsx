@@ -56,7 +56,7 @@ export default class FeedItem extends React.Component {
 
         return (
             <article
-                className="feed-item no-thumbnail"
+                className="feed-item no-thumbnail animated fadeInUp"
                 onClick={this.props.openItem.bind({}, this.props.item)}
                 onTouchTap={this.props.openItem.bind({}, this.props.item)}>
                 <div className={`generate-thumb ${this.state.randomColor}`}>
@@ -95,7 +95,7 @@ export default class FeedItem extends React.Component {
 
         return (
             <article
-                className="feed-item"
+                className="feed-item animated fadeInUp"
                 onClick={this.props.openItem.bind({}, this.props.item)}
                 onTouchTap={this.props.openItem.bind({}, this.props.item)}>
                 <div className="feed-image">

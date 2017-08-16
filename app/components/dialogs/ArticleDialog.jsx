@@ -69,6 +69,7 @@ export default class ArticleDialog extends React.Component {
                             <div className="article-date-wrapper">
                                 <Block
                                     position={"absolute"}
+                                    display={"block"}
                                     top={"50%"}
                                     bottom={"auto"}
                                     left={0}
@@ -132,8 +133,6 @@ export default class ArticleDialog extends React.Component {
 
     componentDidMount() {
         console.log("+++++ArticleDialog");
-
-        console.log(this.refs);
 
         if (this.props.currentItem.assets) {
             this.setState({

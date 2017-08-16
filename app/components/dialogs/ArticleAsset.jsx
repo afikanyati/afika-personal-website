@@ -113,6 +113,7 @@ export default class ArticleAsset extends React.Component {
             <div className="quote-asset">
                 <Block
                     position={"absolute"}
+                    display={"block"}
                     top={"50%"}
                     bottom={"auto"}
                     left={0}
@@ -169,6 +170,7 @@ export default class ArticleAsset extends React.Component {
             <div className="dictionary-asset">
                 <Block
                     position={"absolute"}
+                    display={"block"}
                     top={"50%"}
                     bottom={"auto"}
                     left={0}

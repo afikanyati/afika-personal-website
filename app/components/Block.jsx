@@ -29,6 +29,7 @@ export default class Block extends React.Component {
             <div
                 style={{
                     position: this.props.position,
+                    display: this.props.display,
                     top: this.props.top,
                     left: this.props.left,
                     transform: transform,
@@ -79,5 +80,6 @@ Block.propTypes = {
         PropTypes.string.isRequired,
         PropTypes.number.isRequired
     ]),
-    color: PropTypes.string.isRequired
+    color: PropTypes.string.isRequired,
+    display: PropTypes.string.isRequired
 };

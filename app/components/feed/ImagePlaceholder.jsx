@@ -18,7 +18,11 @@ export default class ImagePlaceholder extends React.Component {
     render() {
 
         return (
-            <div className="img-placeholder">
+            <div
+                className="img-placeholder"
+                style={{
+                    height: this.props.height
+                }}>
                 <img src ={`assets/images/icons/${this.props.category}_gray.svg`} />
             </div>
         );
@@ -37,5 +41,9 @@ export default class ImagePlaceholder extends React.Component {
 // ============= PropTypes ==============
 
 ImagePlaceholder.propTypes = {
-    category: PropTypes.string.isRequired
+    category: PropTypes.string.isRequired,
+    height: PropTypes.oneOfType([
+            PropTypes.string.isRequired,
+            PropTypes.number.isRequired
+    ])
 };

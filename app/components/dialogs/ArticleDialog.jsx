@@ -3,20 +3,25 @@ import React                from 'react';
 import ReactDOM             from 'react-dom';
 import firebase             from 'firebase';
 import PropTypes            from 'prop-types';
+import uuid                 from 'uuid';
 import Dialog               from 'material-ui/Dialog';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
+
 
 // Files
 import DialogTypes      from '../../constants/dialogTypes';
 import CloseButton      from '../buttons/CloseButton';
 import Block            from '../Block';
 import ArticleAsset     from './ArticleAsset';
+import ArrowButton      from '../buttons/ArrowButton';
+import AssetTypes       from '../../constants/assetTypes.js';
 
 export default class ArticleDialog extends React.Component {
 
     state = {
-        assets: []
+        assets: [],
+        currentSlide: 0
     }
 
     constructor(props) {
@@ -28,6 +33,11 @@ export default class ArticleDialog extends React.Component {
     }
 
     render() {
+        let lenSlides = -1;
+        if (this.state.assets.length == 1) {
+            lenSlides = this.state.assets[0]["asset"]["data"].length;
+        }
+
         return (
             <div>
                 <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -35,6 +45,7 @@ export default class ArticleDialog extends React.Component {
                         modal                       ={true}
                         onRequestClose              ={this.props.toggleDialog.bind({}, DialogTypes.ARTICLE)}
                         open                        ={this.props.articleDialogIsOpen}
+                        autoScrollBodyContent       ={true}
                         titleClassName              ="article-dialog-title"
                         actionsContainerClassName   ="article-dialog-actions"
                         bodyClassName               ="article-dialog-body"
@@ -72,14 +83,46 @@ export default class ArticleDialog extends React.Component {
                                 </h4>
                             </div>
                             <div
+                                ref="articleBody"
                                 className="article-body"
                                 >
                                 {this.state.assets.map(asset => {
                                     return (
-                                        <ArticleAsset asset={asset} />
+                                        <ArticleAsset
+                                            key={uuid.v4()}
+                                            asset={asset}
+                                            currentSlide={this.state.currentSlide} />
                                     );
                                 })}
                             </div>
+                            {this.state.currentSlide > 0 && this.state.assets[0]["type"] == AssetTypes.SLIDER ?
+                                <ArrowButton
+                                    position={"fixed"}
+                                    top={"50%"}
+                                    bottom={"auto"}
+                                    left={20}
+                                    right={"auto"}
+                                    direction="left"
+                                    vertCenter={true}
+                                    horCenter={false}
+                                    onClick={this.previousSlide} />
+                            :
+                                null
+                            }
+                            {this.state.currentSlide < lenSlides && this.state.assets[0]["type"] == AssetTypes.SLIDER ?
+                                <ArrowButton
+                                    position={"fixed"}
+                                    top={"50%"}
+                                    bottom={"auto"}
+                                    left={"auto"}
+                                    right={20}
+                                    direction="right"
+                                    vertCenter={true}
+                                    horCenter={false}
+                                    onClick={this.nextSlide} />
+                            :
+                                null
+                            }
                         </div>
                     </Dialog>
                 </MuiThemeProvider>
@@ -89,6 +132,8 @@ export default class ArticleDialog extends React.Component {
 
     componentDidMount() {
         console.log("+++++ArticleDialog");
+
+        console.log(this.refs);
 
         if (this.props.currentItem.assets) {
             this.setState({
@@ -104,6 +149,32 @@ export default class ArticleDialog extends React.Component {
                 assets: nextProps.currentItem.assets
             });
         }
+    }
+
+    // ======== METHODS ========
+    nextSlide = () => {
+        let newIndex = this.state.currentSlide + 1;
+        let lenSlides = this.state.assets[0]["asset"]["data"].length;
+
+        if (newIndex == lenSlides) {
+            return;
+        }
+
+        this.setState({
+            currentSlide: newIndex
+        });
+    }
+
+    previousSlide = () => {
+        let newIndex = this.state.currentSlide - 1;
+
+        if (newIndex < 0) {
+            return;
+        }
+
+        this.setState({
+            currentSlide: newIndex
+        });
     }
 }
 

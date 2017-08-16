@@ -3,7 +3,6 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 import Img              from 'react-image';
-import _                from 'lodash';
 
 // Files
 import ImagePlaceholder from './ImagePlaceholder';
@@ -102,7 +101,7 @@ export default class FeedItem extends React.Component {
                 <div className="feed-image">
                     <Img
                         src={this.props.item.thumbnail}
-                        loader={<ImagePlaceholder category={category}/>} />
+                        loader={<ImagePlaceholder category={category} height={"30vw"}/>} />
                 </div>
                 <div className="feed-overlay">
                     <div className="feed-overlay-info">

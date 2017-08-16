@@ -12,10 +12,12 @@
     --white: #ffffff;
     --transluscent-white: rgba(255, 255, 255, 0.8);
     --body-text-color: rgba(35,31,32, 0.87);
-    --heading-font: "ArcaMajora" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    --heading-font: "ArcaMajora" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --heading-weight: 800;
-    --body-font: "MontserratAlternates" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --body-weight: 400;
+    --subheading-font: "MontserratAlternates" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --subheading-weight: 400;
+    --body-font: "Lato" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body-font-italic: "LatoItalic" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -565,7 +567,7 @@ button {
     font-weight: 300;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     text-transform: capitalize;
     color: var(--cream);
 }
@@ -668,7 +670,6 @@ button {
     background: #f6f7f8;
     background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
     background-size: 800px 104px;
-    height: 30vw;
     display: block;
     position: relative;
 }
@@ -889,7 +890,7 @@ button {
     outline: none;
     border: none;
     border-bottom: 3px solid var(--white);
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     font-weight: 500;
     color: var(--cream);
     font-size: 1.8em;
@@ -903,7 +904,7 @@ button {
     border: 3px solid var(--white);
     background-color: transparent;
     padding: 5px 12px;
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     font-size: 1em;
     font-weight: 500;
     color: var(--cream);
@@ -982,7 +983,7 @@ button {
 /* Tooltip */
 
 .tooltip {
-	font-family: var(--body-font);
+	font-family: var(--subheading-font);
 }
 
 /*========================================== */
@@ -1131,13 +1132,14 @@ button {
 	background: none;
 	cursor: pointer;
     color: var(--light-purple);
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     font-weight: 400;
     font-size: 0.8em;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
+    z-index: 1;
 }
 
 .close-button:hover {
@@ -1241,7 +1243,7 @@ button {
 .image-description {
     position: absolute;
     bottom: 20px;
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     font-weight: 300;
     color: var(--dark-purple);
     font-size: 1.2em;
@@ -1284,6 +1286,7 @@ button {
 	-moz-align-items: center;
 	align-items: center;
     flex-direction: column;
+    overflow-x: visible !important;
 }
 
 .article-dialog-actions {
@@ -1293,12 +1296,14 @@ button {
 .article-wrapper {
     width: 80%;
     margin-top: 20px;
-    overflow: scroll;
 }
 
 .article-title {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 700px;
     font-family: var(--heading-font);
     font-weight: var(--heading-weight);
     font-size: 2.3em;
@@ -1308,8 +1313,12 @@ button {
 }
 
 .article-description {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    font-family: var(--body-font);
+    max-width: 700px;
+    font-family: var(--subheading-font);
     font-weight: 300;
     font-size: 1.3em;
     color: var(--mid-gray);
@@ -1319,12 +1328,16 @@ button {
 
 .article-date-wrapper {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
     width: 100%;
+    max-width: 700px;
     margin-top: 20px;
 }
 
 .article-date {
-    font-family: var(--body-font);
+    font-family: var(--subheading-font);
     font-weight: 300;
     font-size: 1.5em;
     color: var(--cream);
@@ -1340,14 +1353,170 @@ button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 700px;
-    font-family: var(--body-font);
+    width: 100%;
+    max-width: 700px;
+    font-family: "Lato";
     font-weight: 300;
     font-size: 1.2em;
     color: var(--dark-gray);
     line-height: 1.8em; /* 1.2 * 1.5 */
+    margin: 29px 0;
 }
 
+.article-bold {
+    font-weight: 700;
+}
+
+.article-italic {
+    font-family: var(--body-font-italic);
+}
+
+.article-link {
+    text-decoration: underline;
+    text-decoration-color: var(--light-purple);
+    color: var(--body-text-color);
+}
+
+.article-link:hover {
+    color: var(--light-purple);
+}
+
+.heading-asset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 700px;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 1.5em;
+    color: var(--dark-purple);
+    line-height: 1.5em;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.youtube-asset,
+.image-asset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px 0;
+}
+
+.youtube-asset.standard,
+.image-asset.standard {
+    width: 100%;
+    max-width: 700px;
+}
+
+.youtube-asset.elongated,
+.image-asset.elongated {
+    width: 80vw;
+}
+
+.youtube-asset.full,
+.image-asset.full {
+    width: 90vw;
+}
+
+.youtube-video,
+.image-asset > img {
+    width: 100%;
+}
+
+.youtube-caption,
+.image-caption {
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--mid-gray);
+    line-height: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.quote-asset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 700px;
+    font-family: var(--body-font);
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.quote-asset .quote {
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    line-height: 1.8em; /* 1.2 * 1.5 */
+    margin-left: 40px;
+}
+
+.quote-asset .reference {
+    font-family: var(--body-font-italic);
+    font-weight: 300;
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    margin-left: 40px;
+}
+
+.dictionary-asset {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    font-family: var(--body-font);
+    font-weight: 300;
+}
+
+.dictionary-asset .dic-definition {
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    line-height: 1.8em; /* 1.2 * 1.5 */
+    margin-left: 40px;
+}
+
+.slider-asset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+}
+
+.slider-asset.standard {
+    width: 100%;
+    max-width: 700px;
+}
+
+.slider-asset.elongated {
+    width: 80vw;
+}
+
+.slider-asset.full {
+    width: 90vw;
+}
+
+.slider-asset > img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72vw;
+}
+
+.slide-count {
+    position: relative;
+    width: 100%;
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
 
 /*========================================== */
 
@@ -1506,5 +1675,117 @@ font-weight: 200;
 @font-face {
 font-family: MontserratAlternates;
 src: url(../fonts/montserrat_alternates/MontserratAlternates-Thin.otf);
+font-weight: 100;
+}
+
+/* Lato */
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Black.ttf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Heavy.ttf);
+font-weight: 800;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Bold.ttf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Semibold.ttf);
+font-weight: 600;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Medium.ttf);
+font-weight: 500;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Regular.ttf);
+font-weight: 400;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Light.ttf);
+font-weight: 300;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Thin.ttf);
+font-weight: 200;
+}
+
+@font-face {
+font-family: Lato;
+src: url(../fonts/lato/Lato-Hairline.ttf);
+font-weight: 100;
+}
+
+/* Italic */
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-BlackItalic.ttf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-HeavyItalic.ttf);
+font-weight: 800;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-BoldItalic.ttf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-SemiboldItalic.ttf);
+font-weight: 600;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-MediumItalic.ttf);
+font-weight: 500;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-Italic.ttf);
+font-weight: 400;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-LightItalic.ttf);
+font-weight: 300;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-ThinItalic.ttf);
+font-weight: 200;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(../fonts/lato/Lato-HairlineItalic.ttf);
 font-weight: 100;
 }

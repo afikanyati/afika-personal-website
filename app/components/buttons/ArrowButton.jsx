@@ -28,6 +28,7 @@ export default class ArrowButton extends React.Component {
         return (
             <button
                 onClick={this.props.onClick}
+                onTouchTap={this.props.onClick}
                 className="arrow-button"
                 style={{
                     position: this.props.position,

@@ -56,25 +56,23 @@ export default class FeedItem extends React.Component {
      * effectively for readability purposes.
      */
     generateRandomColorAndFont = () => {
-        if (this.props.item.thumbnail == "-1") {
-            let thumbnailColors = ["white", "light-purple", "dark-purple"];
-            let randomColorIndex = Math.floor(Math.random() * thumbnailColors.length);
-            let randomColor = thumbnailColors[randomColorIndex];
+        let thumbnailColors = ["white", "light-purple", "dark-purple"];
+        let randomColorIndex = Math.floor(Math.random() * thumbnailColors.length);
+        let randomColor = thumbnailColors[randomColorIndex];
 
-            let randomFontColor = "white";
-            let randomFontIndex;
+        let randomFontColor = "white";
+        let randomFontIndex;
 
-            if (randomColor != "light-purple") {
-                thumbnailColors.splice(randomColorIndex,1);
-                randomFontIndex = Math.floor(Math.random() * thumbnailColors.length);
-                randomFontColor = thumbnailColors[randomFontIndex];
-            }
-
-            this.setState({
-                randomColor: randomColor,
-                randomFontColor: randomFontColor
-            });
+        if (randomColor != "light-purple") {
+            thumbnailColors.splice(randomColorIndex,1);
+            randomFontIndex = Math.floor(Math.random() * thumbnailColors.length);
+            randomFontColor = thumbnailColors[randomFontIndex];
         }
+
+        this.setState({
+            randomColor: randomColor,
+            randomFontColor: randomFontColor
+        });
     }
 
     /**

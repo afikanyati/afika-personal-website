@@ -372,8 +372,14 @@ export default class MusicDialog extends React.Component {
      * @param  {float} percent ratio of time elapsed and track duration
      */
     updateScrubber = (percent) => {
-        let convertedPercent = percent * 100;
-        let stringPercent = convertedPercent.toString().concat("%");
+        let stringPercent = 0;
+
+        // Only update if song has not ended
+        if (percent != 1) {
+            let convertedPercent = percent * 100;
+            stringPercent = convertedPercent.toString().concat("%");
+        }
+
         this.setState({
             scrubberWidth: stringPercent
         });
@@ -433,12 +439,15 @@ export default class MusicDialog extends React.Component {
      */
     moveScrubber = (e) => {
         let targetRect = e.target.getBoundingClientRect();
+        console.log("targetRect: ", targetRect);
         let clickPosX = e.clientX;
+        console.log("clickPosX: ", clickPosX);
 
         if(targetRect.left <= clickPosX && clickPosX <= targetRect.right) {
             let lengthLeftSideTarget = clickPosX - targetRect.left;
             let totalLengthTarget = targetRect.right - targetRect.left;
             let percent = lengthLeftSideTarget/totalLengthTarget;
+            console.log("Percent: ", percent);
 
             let audio = this.refs.audio;
             let duration = audio.duration;

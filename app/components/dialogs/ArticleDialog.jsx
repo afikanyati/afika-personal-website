@@ -43,7 +43,7 @@ export default class ArticleDialog extends React.Component {
                 <MuiThemeProvider muiTheme={getMuiTheme()}>
                     <Dialog
                         modal                       ={true}
-                        onRequestClose              ={this.props.toggleDialog.bind({}, DialogTypes.ARTICLE)}
+                        onRequestClose              ={this.closeDialog}
                         open                        ={this.props.articleDialogIsOpen}
                         autoScrollBodyContent       ={true}
                         titleClassName              ="article-dialog-title"
@@ -83,10 +83,7 @@ export default class ArticleDialog extends React.Component {
                                     {this.props.currentItem.date}
                                 </h4>
                             </div>
-                            <div
-                                ref="articleBody"
-                                className="article-body"
-                                >
+                            <div className="article-body">
                                 {this.state.assets.map(asset => {
                                     return (
                                         <ArticleAsset

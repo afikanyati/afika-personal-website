@@ -35,7 +35,6 @@ export default class ImageDialog extends React.Component {
             let lastSlash = str.lastIndexOf("/");
             let imageIndex = parseInt(str.substring(lastSlash + 1, str.length));
             showLeftArrow = imageIndex > 3; // Artworks start at index 3
-
             showRightArrow = imageIndex < this.state.lengthArtList - 1;
         }
 
@@ -111,7 +110,6 @@ export default class ImageDialog extends React.Component {
             'value',
             (snapshot) => {
                 let lenArt = snapshot.val().length;
-
                 this.setState({
                     lengthArtList: lenArt
                 });
@@ -132,5 +130,6 @@ export default class ImageDialog extends React.Component {
 ImageDialog.propTypes = {
     imageDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
-    currentItem: PropTypes.object.isRequired
+    currentItem: PropTypes.object.isRequired,
+    browseTo: PropTypes.func.isRequired
 };

@@ -1,16 +1,20 @@
 // Libs
-import React          from 'react';
-import firebase       from 'firebase';
-import PropTypes      from 'prop-types';
+import React            from 'react';
+import firebase         from 'firebase';
+import PropTypes        from 'prop-types';
 import Snackbar         from 'material-ui/Snackbar';
 import getMuiTheme      from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// Files
 
+/**
+ * ContactView is a component that houses a form that allows web application
+ * visitors to send their details to Afika Nyati through Firebase. It is summoned
+ * into view by clicking the ContactIcon component.
+ */
 export default class ContactView extends React.Component {
 
     state = {
-        errors          : [],                   // Used to store Auth errors from Firebase and Registration errors
+        errors          : [],                   // Used to store errors in contact form completion
         errorType       : {},                   // Used to keep track of the type of error encountered to highlight relevant input field
         currentError    : "",                   // Used to store the current error to be displayed in the snackbar
         contactSent: false                      // Used by Send Arrow to know when to animate
@@ -104,7 +108,8 @@ export default class ContactView extends React.Component {
                             <button
                                 id="contact-submit-button"
                                 type="submit"
-                                onClick={this.createContact}>
+                                onClick={this.createContact}
+                                onTouchTap={this.createContact}>
                                 <span>SEND</span>
                                 <svg
                                     version="1.1"
@@ -144,6 +149,11 @@ export default class ContactView extends React.Component {
 
     // ========== Methods ===========
 
+    /**
+     * Collects contact form data and checks it for accuracy
+     * Sends to Firebase database upon successful completion
+     * @param  {obj} e click event
+     */
     createContact = (e) => {
         e.preventDefault();
 
@@ -200,32 +210,29 @@ export default class ContactView extends React.Component {
 
                 this.props.saveContact(contact);
                 this.clearForm();
-                this.setState({
-                    contactSent: true
-                });
-
                 this.state.errors.push("Thanks for reaching out. I look forward to connecting with you!");
                 this.setState({
+                    contactSent: true,
                     currentError: "Thanks for reaching out. I look forward to connecting with you!"
+                }, () => {
+                    // Clear Errors
+                    setTimeout(() => {
+                        this.setState({
+                            errors: [],
+                            errorType: {},
+                            currentError: ""
+                        });
+                    }, 4000);
                 });
-
-                // Clear Errors
-                setTimeout(() => {
-                    this.setState({
-                        errors: [],
-                        errorType: {},
-                        currentError: ""
-                    });
-                }, 4000);
-            }
-
-            for(let i = 0; i < this.state.errors.length; i++) {
-                setTimeout(() => {
-                    this.setState({
-                        currentError: this.state.errors[i]
-                    });
-                    console.log(this.state.errors[i]);
-                }, 3000 * i);
+            } else {
+                for(let i = 0; i < this.state.errors.length; i++) {
+                    setTimeout(() => {
+                        this.setState({
+                            currentError: this.state.errors[i]
+                        });
+                        console.log(this.state.errors[i]);
+                    }, 3000 * i);
+                }
             }
         }
     }

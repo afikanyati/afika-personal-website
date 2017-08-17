@@ -6,16 +6,20 @@ import Dialog               from 'material-ui/Dialog';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 
-// Files
-import DialogTypes     from '../../constants/dialogTypes';
-import CloseButton     from '../buttons/CloseButton';
-import Loader          from '../Loader';
-import ArrowButton     from '../buttons/ArrowButton';
+// Components
+import DialogTypes          from '../../constants/dialogTypes';
+import CloseButton          from '../buttons/CloseButton';
+import Loader               from '../Loader';
+import ArrowButton          from '../buttons/ArrowButton';
 
+/**
+ * The ImageDialog is one of various Dialog components used to render
+ * Image assets. It makes use of the Material UI Dialog Component.
+ */
 export default class ImageDialog extends React.Component {
 
     state = {
-        lengthArtList: 0
+        lengthArtList: 0    // Keeps track of the number of images in album/collection
     }
 
     constructor(props) {
@@ -57,7 +61,8 @@ export default class ImageDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)}
+                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)} />
                         <Loader size="medium" />
                         <div className="image-wrapper">
                             <div className="image"
@@ -78,7 +83,8 @@ export default class ImageDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "left")} />
+                                onClick={this.props.browseTo.bind({}, "left")}
+                                onTouchTap={this.props.browseTo.bind({}, "left")} />
                         :
                             null
                         }
@@ -92,7 +98,8 @@ export default class ImageDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "right")} />
+                                onClick={this.props.browseTo.bind({}, "right")}
+                                onTouchTap={this.props.browseTo.bind({}, "right")} />
                             :
                                 null
                         }
@@ -118,10 +125,6 @@ export default class ImageDialog extends React.Component {
                 return;
             }
         );
-    }
-
-    componentWillReceiveProps(nextProps) {
-
     }
 }
 

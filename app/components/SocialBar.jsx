@@ -2,8 +2,12 @@
 import React          from 'react';
 import firebase       from 'firebase';
 import PropTypes      from 'prop-types';
-// Files
 
+/**
+ * The SocialBar component is vertically-oriented component that sits
+ * on the far right part of the web application. It has a list of icons
+ * that are linked to Afika's various social media profile.
+ */
 export default class SocialBar extends React.Component {
 
     constructor(props) {
@@ -177,13 +181,6 @@ export default class SocialBar extends React.Component {
     componentDidMount() {
         console.log("+++++SocialBar");
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
-    // ========== Methods ===========
-
 }
 
 // ============= PropTypes ==============

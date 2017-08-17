@@ -3,8 +3,12 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * The ImagePlaceholder component is used by Img components (third-party React component)
+ * that displays a generic thumbnail in place of an image that is still laoding.
+ * Centered in the placeholder is an icon representing the type of content that is loading,
+ * namely: VR, Art, Music, Design, Resume, or Writing.
+ */
 export default class ImagePlaceholder extends React.Component {
 
     constructor(props) {
@@ -31,11 +35,6 @@ export default class ImagePlaceholder extends React.Component {
     componentDidMount() {
         console.log("+++++ImagePlaceholder");
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
 }
 
 // ============= PropTypes ==============

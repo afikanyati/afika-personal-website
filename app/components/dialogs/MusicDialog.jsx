@@ -7,26 +7,32 @@ import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import JsxParser            from 'react-jsx-parser';
 
-// Files
-import DialogTypes     from '../../constants/dialogTypes';
-import CloseButton     from '../buttons/CloseButton';
-import ArrowButton     from '../buttons/ArrowButton';
-import Block           from '../Block';
-import Italic           from './Italic';
-import Bold             from './Bold';
-import Link             from './Link';
-import Code             from './Code';
+// Components
+import DialogTypes          from '../../constants/dialogTypes';
+import CloseButton          from '../buttons/CloseButton';
+import ArrowButton          from '../buttons/ArrowButton';
+import Block                from '../Block';
+import Italic               from './Italic';
+import Bold                 from './Bold';
+import Link                 from './Link';
+import Code                 from './Code';
 
+/**
+ * The MusicDialog is one of various Dialog components used to render
+ * music assets. It makes use of the Material UI Dialog Component and contains
+ * a fully-coded music player that is cable of playing, pausing, fast-forwarding,
+ * and rewinding the music files.
+ */
 export default class MusicDialog extends React.Component {
 
     state = {
-        lengthMusicList: 0,
-        isPlaying: false,
-        duration: 0,
-        timeElapsed: "0:00",
-        timeLeft: "",
-        scrubberWidth: "0%",
-        reload: false
+        lengthMusicList: 0,     // Keeps track of the number of audio tracks
+        isPlaying: false,       // Keeps track of whether the current track is playing
+        duration: 0,            // Stores the duration of the track (in seconds)
+        timeElapsed: "0:00",    // Used to store the amount of seconds that have played
+        timeLeft: "",           // Used to store how much time is left in the song (duration - limeElapsed)
+        scrubberWidth: "0%",    // Specifies the width of playback scrubber which is proportional to timeElapsed
+        reload: false           // Informs us when new audio must be reloaded (when navigated to new track)
     }
 
     constructor(props) {
@@ -69,7 +75,8 @@ export default class MusicDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog} />
+                            onClick={this.closeDialog}
+                            onTouchTap={this.closeDialog} />
                         <div className="music-wrapper">
                             <h1 className="music-title">
                                 {this.props.currentItem.title}
@@ -169,7 +176,8 @@ export default class MusicDialog extends React.Component {
                                     <div className="media-progress-bar">
                                         <div
                                             className="media-progress"
-                                            onClick={this.moveScrubber}>
+                                            onClick={this.moveScrubber}
+                                            onTouchTap={this.moveScrubber}>
                                             <div
                                                 className="scrubber"
                                                 style={{
@@ -262,7 +270,6 @@ export default class MusicDialog extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
         // Create path to project
         let path = "";
         if (nextProps.currentItem.path) {
@@ -286,6 +293,13 @@ export default class MusicDialog extends React.Component {
         );
     }
 
+    // ========== Methods ===========
+
+    /**
+     * Fetches audio file, reloads file data if it is a new file
+     * and toggles playback by envoking <audio> methods .play() and .pause()
+     * Sets interval to update time state variables.
+     */
     togglePlayback = () => {
         let audio = this.refs.audio;
         let reload = this.state.reload; // Necessary when we navigate to new track
@@ -312,6 +326,11 @@ export default class MusicDialog extends React.Component {
         });
     }
 
+    /**
+     * Converts current time timestamp into an suitable minutes:seconds string for exhibition
+     * @param  {int} timestamp current audio time elapsed
+     * @return {str}           minutes:seconds formatted string
+     */
     convertTime = (timestamp) => {
         let minutes = Math.floor(timestamp / 60);
         let seconds = timestamp - (minutes * 60);
@@ -323,6 +342,9 @@ export default class MusicDialog extends React.Component {
         return timestamp;
     }
 
+    /**
+     * Runs logic of updating time elapsed and time left attributes
+     */
     updateTime = () => {
         let audio = this.refs.audio;
         // audio.readyState = 4 => HAVE_ENOUGH_DATA - enough data available to start playing
@@ -344,6 +366,11 @@ export default class MusicDialog extends React.Component {
         }
     }
 
+    /**
+     * Converts ratio of time elapsed and track duration to a width to
+     * be injected into scrubber element width CSS attribute
+     * @param  {float} percent ratio of time elapsed and track duration
+     */
     updateScrubber = (percent) => {
         let convertedPercent = percent * 100;
         let stringPercent = convertedPercent.toString().concat("%");
@@ -352,6 +379,10 @@ export default class MusicDialog extends React.Component {
         });
     }
 
+    /**
+     * Closes the MusicDialog component by toggling relevant value in App.jsx
+     * Also resets state variables
+     */
     closeDialog = () => {
         // Stop track if playing
         let audio = this.refs.audio;
@@ -370,6 +401,12 @@ export default class MusicDialog extends React.Component {
         }, () => {this.props.toggleDialog(DialogTypes.MUSIC)});
     }
 
+    /**
+     * Navigates to the next successive or last preceding track
+     * based on value of direction.
+     * Will pause currently playing track.
+     * @param  {str} direction left or right
+     */
     handleArrowClick = (direction) => {
         // Stop track if playing
         let audio = this.refs.audio;
@@ -389,6 +426,11 @@ export default class MusicDialog extends React.Component {
         }, () => {this.props.browseTo(direction)});
     }
 
+    /**
+     * Fast forwards or rewinds to a particular point in track based
+     * on position of mouse click/touch tap.
+     * @param  {obj} e click event object
+     */
     moveScrubber = (e) => {
         let targetRect = e.target.getBoundingClientRect();
         let clickPosX = e.clientX;

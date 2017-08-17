@@ -3,8 +3,12 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * The Block component is a convenient component used to specify a Block
+ * of defined dimensions, color, and position in the Viewport.
+ * It is used by various othe components in the web application including, but
+ * not limited to ArticleAsset, ArticleDialog, DesignDialog, MusicDialog and VideoDialog.
+ */
 export default class Block extends React.Component {
 
     constructor(props) {
@@ -43,11 +47,6 @@ export default class Block extends React.Component {
     componentDidMount() {
         console.log("+++++Block");
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
 }
 
 // ============= PropTypes ==============

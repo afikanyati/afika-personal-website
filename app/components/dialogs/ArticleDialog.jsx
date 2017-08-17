@@ -9,19 +9,24 @@ import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 
 
-// Files
-import DialogTypes      from '../../constants/dialogTypes';
-import CloseButton      from '../buttons/CloseButton';
-import Block            from '../Block';
-import ArticleAsset     from './ArticleAsset';
-import ArrowButton      from '../buttons/ArrowButton';
-import AssetTypes       from '../../constants/assetTypes.js';
+// Components
+import DialogTypes          from '../../constants/dialogTypes';
+import CloseButton          from '../buttons/CloseButton';
+import Block                from '../Block';
+import ArticleAsset         from './ArticleAsset';
+import ArrowButton          from '../buttons/ArrowButton';
+import AssetTypes           from '../../constants/assetTypes.js';
 
+/**
+ * The ArticleDialog is one of various Dialog components used to render
+ * Article assets. It makes use of the Material UI Dialog Component and renders
+ * the assets with the helper ArticleAsset component.
+ */
 export default class ArticleDialog extends React.Component {
 
     state = {
-        assets: [],
-        currentSlide: 0
+        assets: [],             // A list of various article assets used in the article
+        currentSlide: 0         // Used by slider assets to keep track of current slide
     }
 
     constructor(props) {
@@ -58,7 +63,8 @@ export default class ArticleDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog} />
+                            onClick={this.closeDialog}
+                            onTouchTap={this.closeDialog} />
                         <div className="article-wrapper">
                             <h1 className="article-title">
                                 {this.props.currentItem.title}
@@ -103,7 +109,8 @@ export default class ArticleDialog extends React.Component {
                                     direction="left"
                                     vertCenter={true}
                                     horCenter={false}
-                                    onClick={this.previousSlide} />
+                                    onClick={this.previousSlide}
+                                    onTouchTap={this.previousSlide} />
                             :
                                 null
                             }
@@ -117,7 +124,8 @@ export default class ArticleDialog extends React.Component {
                                     direction="right"
                                     vertCenter={true}
                                     horCenter={false}
-                                    onClick={this.nextSlide} />
+                                    onClick={this.nextSlide}
+                                    onTouchTap={this.nextSlide} />
                             :
                                 null
                             }
@@ -149,14 +157,20 @@ export default class ArticleDialog extends React.Component {
     }
 
     // ======== METHODS ========
+
+    /**
+     * Closes the ArticleDialog component by toggling relevant value in App.jsx
+     * Also resets currentSlide to zero to clear state
+     */
     closeDialog = () => {
         this.setState({
             currentSlide: 0
-        });
-
-        this.props.toggleDialog(DialogTypes.ARTICLE);
+        }, () => {this.props.toggleDialog(DialogTypes.ARTICLE)});
     }
 
+    /**
+     * For slider assets, it navigates to the next successive slide
+     */
     nextSlide = () => {
         let newIndex = this.state.currentSlide + 1;
         let lenSlides = this.state.assets[0]["asset"]["data"].length;
@@ -170,6 +184,9 @@ export default class ArticleDialog extends React.Component {
         });
     }
 
+    /**
+     * For slider assets, it navigates to the last preceding slide
+     */
     previousSlide = () => {
         let newIndex = this.state.currentSlide - 1;
 

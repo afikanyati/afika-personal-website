@@ -3,8 +3,11 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * Italic is a component used inline within article strings to transform sections of
+ * article text that should be italicized. It is parsed with assistance from
+ * the JsxParser library.
+ */
 export default class Italic extends React.Component {
 
     constructor(props) {
@@ -25,10 +28,6 @@ export default class Italic extends React.Component {
 
     componentDidMount() {
         console.log("+++++Italic");
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
     }
 }
 

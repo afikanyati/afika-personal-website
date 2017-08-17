@@ -5,10 +5,15 @@ import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 import ReactList        from 'react-list';
 
-// Files
+// Components
 import FeedItem         from './FeedItem';
 import Loader           from '../Loader';
 
+/**
+ * Feed is a component used to house the FeedItem components. It borrows from the UI
+ * standard of displaying content in a card-like layout a la Pinterest. With assistance
+ * from the HiddenNav component, it can filter out various different content types.
+ */
 export default class Feed extends React.Component {
 
     constructor(props) {
@@ -41,15 +46,19 @@ export default class Feed extends React.Component {
         feed.addEventListener('scroll', this.scrolled);
     }
 
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
     componentWillUnmount() {
         const feed = ReactDOM.findDOMNode(this.refs.feed);
         feed.removeEventListener('scroll', this.scrolled);
     }
 
+    // ========== Methods ===========
+
+     /**
+      * Renderer for logo view
+      * Occurs when all content types are disabled
+      * Displays Afika's signature Logotype
+      * @return React component logotype div
+      */
     logoView = () => {
         return (
             <div className={
@@ -72,6 +81,11 @@ export default class Feed extends React.Component {
         );
     }
 
+    /**
+     * Renderer for loading view
+     * Occurs when feed is empty but content types aren't disabled
+     * @return React component loading animation div
+     */
     loadingView = () => {
         return (
             <div className={
@@ -92,6 +106,10 @@ export default class Feed extends React.Component {
         );
     }
 
+    /**
+     * Renderer for regular feed view
+     * @return React component feed div
+     */
     feedView = () => {
         return (
             <div className={
@@ -115,6 +133,12 @@ export default class Feed extends React.Component {
         );
     }
 
+    /**
+     * Used by ReactList component to create a list of feed items.
+     * @param  {int} index index of item in list
+     * @param  {int} key   unique identifier of given list item
+     * @return FeedItem component       React component to be rendered
+     */
     renderItem = (index, key) => {
         return (
             <FeedItem
@@ -124,6 +148,10 @@ export default class Feed extends React.Component {
         );
     }
 
+    /**
+     * Function attached to a listener connected to feed element
+     * Computes amount feed has scrolled
+     */
     scrolled = () => {
         let element = this.refs.feed;
         if (element) {
@@ -133,7 +161,6 @@ export default class Feed extends React.Component {
             }
         }
     }
-
 }
 
 // ============= PropTypes ==============
@@ -141,7 +168,9 @@ export default class Feed extends React.Component {
 Feed.propTypes = {
     feed: PropTypes.array.isRequired,
     navIsOpen: PropTypes.bool.isRequired,
+    navItems: PropTypes.array.isRequired,
     contactIsOpen: PropTypes.bool.isRequired,
+    feedScroll: PropTypes.number.isRequired,
     updateFeedScroll: PropTypes.func.isRequired,
     openItem: PropTypes.func.isRequired
 };

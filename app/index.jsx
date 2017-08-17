@@ -3,7 +3,7 @@ import React    from 'react';
 import ReactDOM from 'react-dom';
 import App      from './components/App.jsx';
 
-// Styles
+// Stylesheets
 import './assets/stylesheets/style.css';
 import './assets/stylesheets/spinkit.css';
 

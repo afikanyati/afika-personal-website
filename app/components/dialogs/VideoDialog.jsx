@@ -6,23 +6,29 @@ import Dialog                   from 'material-ui/Dialog';
 import getMuiTheme              from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider         from 'material-ui/styles/MuiThemeProvider';
 
-// Files
-import DialogTypes     from '../../constants/dialogTypes';
-import CloseButton     from '../buttons/CloseButton';
-import ArrowButton     from '../buttons/ArrowButton';
-import Block           from '../Block';
-import Loader          from '../Loader';
+// Components
+import DialogTypes              from '../../constants/dialogTypes';
+import CloseButton              from '../buttons/CloseButton';
+import ArrowButton              from '../buttons/ArrowButton';
+import Block                    from '../Block';
+import Loader                   from '../Loader';
 
+/**
+ * The VideoDialog is one of various Dialog components used to render
+ * video assets. It makes use of the Material UI Dialog Component and contains
+ * a fully-coded video player that is cable of playing, pausing, fast-forwarding,
+ * and rewinding the video files.
+ */
 export default class VideoDialog extends React.Component {
 
     state = {
-        lengthVideoList: 3,
-        isPlaying: false,
-        duration: 0,
-        timeElapsed: "0:00",
-        timeLeft: "",
-        scrubberWidth: "0%",
-        reload: false
+        lengthVideoList: 3,     // Keeps track of the number of video files
+        isPlaying: false,       // Keeps track of whether the current video is playing
+        duration: 0,            // Stores the duration of the video (in seconds)
+        timeElapsed: "0:00",    // Used to store the amount of seconds that have played
+        timeLeft: "",           // Used to store how much time is left in the video (duration - limeElapsed)
+        scrubberWidth: "0%",    // Specifies the width of playback scrubber which is proportional to timeElapsed
+        reload: false           // Informs us when a new video must be reloaded (when navigated to new video)
     }
 
     constructor(props) {
@@ -65,7 +71,8 @@ export default class VideoDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog} />
+                            onClick={this.closeDialog}
+                            onTouchTap={this.closeDialog} />
                         <Loader size="medium" />
                         <div className="video-wrapper">
                             <h1 className="video-title">
@@ -99,7 +106,8 @@ export default class VideoDialog extends React.Component {
                                     <div className="video-playback-group">
                                         <button
                                             className="play-button video"
-                                            onClick={this.togglePlayback}>
+                                            onClick={this.togglePlayback}
+                                            onTouchTap={this.togglePlayback}>
                                             {this.state.isPlaying ?
                                                 <svg
                                                     version="1.1"
@@ -129,7 +137,8 @@ export default class VideoDialog extends React.Component {
                                         <div className="media-progress-bar video">
                                             <div
                                                 className="media-progress"
-                                                onClick={this.moveScrubber}>
+                                                onClick={this.moveScrubber}
+                                                onTouchTap={this.moveScrubber}>
                                                 <div
                                                     className="scrubber"
                                                     style={{
@@ -191,10 +200,13 @@ export default class VideoDialog extends React.Component {
         console.log("+++++VideoDialog");
     }
 
-    componentWillReceiveProps(nextProps) {
+    // ========== Methods ===========
 
-    }
-
+    /**
+     * Fetches video file, reloads file data if it is a new file
+     * and toggles playback by envoking <video> methods .play() and .pause()
+     * Sets interval to update time state variables.
+     */
     togglePlayback = () => {
         let video = this.refs.video;
         let reload = this.state.reload; // Necessary when we navigate to new video
@@ -221,6 +233,11 @@ export default class VideoDialog extends React.Component {
         });
     }
 
+    /**
+     * Converts current time timestamp into an suitable minutes:seconds string for exhibition
+     * @param  {int} timestamp current audio time elapsed
+     * @return {str}           minutes:seconds formatted string
+     */
     convertTime = (timestamp) => {
         let minutes = Math.floor(timestamp / 60);
         let seconds = timestamp - (minutes * 60);
@@ -232,6 +249,9 @@ export default class VideoDialog extends React.Component {
         return timestamp;
     }
 
+    /**
+     * Runs logic of updating time elapsed and time left attributes
+     */
     updateTime = () => {
         let video = this.refs.video;
         // video.readyState = 4 => HAVE_ENOUGH_DATA - enough data available to start playing
@@ -253,6 +273,11 @@ export default class VideoDialog extends React.Component {
         }
     }
 
+    /**
+     * Converts ratio of time elapsed and video duration to a width to
+     * be injected into scrubber element width CSS attribute.
+     * @param  {float} percent ratio of time elapsed and track duration
+     */
     updateScrubber = (percent) => {
         let convertedPercent = percent * 100;
         let stringPercent = convertedPercent.toString().concat("%");
@@ -261,6 +286,10 @@ export default class VideoDialog extends React.Component {
         });
     }
 
+    /**
+     * Closes the VideoDialog component by toggling relevant value in App.jsx
+     * Also resets state variables
+     */
     closeDialog = () => {
         // Stop video if playing
         let video = this.refs.video;
@@ -278,6 +307,12 @@ export default class VideoDialog extends React.Component {
         }, () => {this.props.toggleDialog(DialogTypes.VIDEO)});
     }
 
+    /**
+     * Navigates to the next successive or last preceding video
+     * based on value of direction.
+     * Will pause currently playing track.
+     * @param  {str} direction left or right
+     */
     handleArrowClick = (direction) => {
         // Stop video if playing
         let video = this.refs.video;
@@ -297,6 +332,11 @@ export default class VideoDialog extends React.Component {
         }, () => {this.props.browseTo(direction)});
     }
 
+    /**
+     * Fast forwards or rewinds to a particular point in track based
+     * on position of mouse click/touch tap.
+     * @param  {obj} e click event object
+     */
     moveScrubber = (e) => {
         let targetRect = e.target.getBoundingClientRect();
         let clickPosX = e.clientX;

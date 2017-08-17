@@ -3,8 +3,10 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * The Loader component simply houses the animated loading icon
+ * used in various places on the web application, such as in the Feed component.
+ */
 export default class Loader extends React.Component {
 
     constructor(props) {
@@ -31,10 +33,6 @@ export default class Loader extends React.Component {
 
     componentDidMount() {
         console.log("+++++Loader");
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
     }
 }
 

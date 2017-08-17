@@ -1,3 +1,8 @@
+/**
+ * Used by ArticleDialog and ArticleAsset components as a list of permissible enum
+ * values that represent the various article asset types
+ */
+
 export default {
     PARAGRAPH: "paragraph",
     HEADING: "heading",

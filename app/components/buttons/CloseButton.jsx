@@ -3,8 +3,11 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * The close button is a button that is primarily used within the Dialog components
+ * as a component that initiates the Dialog's closure upon click. It appears
+ * as a purple text written 'Close' at the top right corner of each Dialog.
+ */
 export default class CloseButton extends React.Component {
 
     constructor(props) {
@@ -28,6 +31,7 @@ export default class CloseButton extends React.Component {
         return (
             <button
                 onClick={this.props.onClick}
+                onTouchTap={this.props.onClick}
                 className="close-button"
                 style={{
                     position: this.props.position,
@@ -44,10 +48,6 @@ export default class CloseButton extends React.Component {
 
     componentDidMount() {
         console.log("+++++CloseButton");
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
     }
 }
 

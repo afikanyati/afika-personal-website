@@ -3,8 +3,11 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 
-// Files
-
+/**
+ * The arrow button is a button that is primarily used within the Dialog components
+ * to navigate between the various media in an album or collection. It appears
+ * as a gray arrow, either oriented left or right.
+ */
 export default class ArrowButton extends React.Component {
 
     constructor(props) {
@@ -69,10 +72,6 @@ export default class ArrowButton extends React.Component {
 
     componentDidMount() {
         console.log("+++++ArrowButton");
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
     }
 }
 

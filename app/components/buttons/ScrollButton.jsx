@@ -1,11 +1,15 @@
 // Libs
-import React            from 'react';
-import firebase         from 'firebase';
-import PropTypes        from 'prop-types';
+import React                        from 'react';
+import firebase                     from 'firebase';
+import PropTypes                    from 'prop-types';
 import {Tooltip, OverlayTrigger}    from 'react-bootstrap';
 
-// Files
-
+/**
+ * The scroll button is a button that is housed within the App component (bottom right) as appears
+ * when the Feed component has been scrolled down upon. By pressing this button,
+ * the scroll position of the Feed component returns to 0. It is a light purple square
+ * with a white triangle within it.
+ */
 export default class ScrollButton extends React.Component {
 
     constructor(props) {
@@ -54,10 +58,15 @@ export default class ScrollButton extends React.Component {
         console.log("+++++ScrollButton");
     }
 
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
+    // ========== Methods ===========
 
+    /**
+     * Animates element with 'elementID' id from current
+     * position to the 'to' positon in 'duration' seconds
+     * @param  {str} elementID HTML element ID of element to be scrolled
+     * @param  {int} to        y-value of element that must be at the top
+     * @param  {int} duration  time (in seconds) animation must take
+     */
     scrollTo = (elementID, to, duration) => {
         let element = document.getElementById(elementID);
 
@@ -84,5 +93,6 @@ export default class ScrollButton extends React.Component {
 
 ScrollButton.propTypes = {
     elementID: PropTypes.string.isRequired,
-    contactIsOpen: PropTypes.bool.isRequired
+    contactIsOpen: PropTypes.bool.isRequired,
+    feedScroll: PropTypes.number.isRequired
 };

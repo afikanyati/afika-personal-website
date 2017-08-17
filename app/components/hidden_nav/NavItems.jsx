@@ -1,11 +1,19 @@
+// Libs
 import React            from 'react';
-import NavItem          from './NavItem';
 import PropTypes        from 'prop-types';
 
+// Components
+import NavItem          from './NavItem';
+
+/**
+ * The NavItems component is used by the HiddenNav component as a intermediary
+ * component that maps a list of navigation items into a list of NavItem components
+ * to be rendered.
+ */
 export default class NavItems extends React.Component {
 
     state = {
-        navigationWidth: 500
+        navigationWidth: 500    // Stores the width of the HiddenNav proportionate nav-locker
     }
 
     constructor(props) {
@@ -51,15 +59,16 @@ export default class NavItems extends React.Component {
 
     }
 
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
     componentWillUnmount() {
         window.removeEventListener("resize", this.adjustNavWidth);
     }
 
     // ========== Methods ===========
+
+    /**
+     * Fetches with of hidden navigation element and stores
+     * in state to be used by navigation items style
+     */
     adjustNavWidth = () => {
         let navigationWidth = document.getElementById('hiddenNav').clientWidth;
         this.setState({

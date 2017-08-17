@@ -7,15 +7,19 @@ import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import Img                  from 'react-image';
 
-// Files
+// Components
 import DialogTypes          from '../../constants/dialogTypes';
 import CloseButton          from '../buttons/CloseButton';
 import Block                from '../Block';
 import ImagePlaceholder     from '../feed/ImagePlaceholder';
 
+/**
+ * The DesignDialog is one of various Dialog components used to render
+ * Design projects. It makes use of the Material UI Dialog Component.
+ */
 export default class DesignDialog extends React.Component {
     state = {
-        blocks: []
+        blocks: []          // A list of block assets: an image/video and text pairing
     }
 
     constructor(props) {
@@ -47,7 +51,8 @@ export default class DesignDialog extends React.Component {
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)}
+                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)} />
                         <div className="design-wrapper">
                             <h1 className="design-title">
                                 {this.props.currentItem.title}

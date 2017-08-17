@@ -1,6 +1,13 @@
+// Libs
 import React            from 'react';
 import PropTypes        from 'prop-types';
 
+/**
+ * The NavItem component is used by the NavItems components mapping function to
+ * render each indivial navigation item in the viewport. Clicking on a NavItem will
+ * call the App component's toggleContent function that filters out the content category
+ * in question. When this is done, the NavItem is crossed off by a cream-colored bar.
+ */
 export default class NavItem extends React.Component {
 
     constructor(props) {
@@ -12,12 +19,11 @@ export default class NavItem extends React.Component {
     }
 
     render() {
-
-
         return (
             <li
                 className={this.props.navIsOpen ? "nav-item" : "nav-item remove"}
-                onClick={this.props.toggleContent.bind({}, this.props.index)}>
+                onClick={this.props.toggleContent.bind({}, this.props.index)}
+                onTouchTap={this.props.toggleContent.bind({}, this.props.index)}>
     			<div
                     style={this.props.navItem.contentVisible ?
                         {
@@ -42,18 +48,12 @@ export default class NavItem extends React.Component {
         console.log("+++++NavItem");
 
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
-    // ========== Methods ===========
-
 }
 
 // ============= PropTypes ==============
 
 NavItem.propTypes = {
+    key: PropTypes.string.isRequired,
     navIsOpen: PropTypes.bool.isRequired,
     navItem: PropTypes.object.isRequired,
     toggleContent: PropTypes.func.isRequired,

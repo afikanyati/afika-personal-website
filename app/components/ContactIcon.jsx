@@ -3,8 +3,12 @@ import React                        from 'react';
 import firebase                     from 'firebase';
 import PropTypes                    from 'prop-types';
 import {Tooltip, OverlayTrigger}    from 'react-bootstrap';
-// Files
 
+/**
+ * ContactIcon is an icon that sits in the bottom left corner of the viewport.
+ * It is an interface into the ContactView component from the regular web app
+ * interface.
+ */
 export default class ContactIcon extends React.Component {
 
     constructor(props) {
@@ -38,6 +42,7 @@ export default class ContactIcon extends React.Component {
                         overlay     ={contactTooltip}>
                     <svg
                         onClick={this.props.toggleContact}
+                        onTouchTap={this.props.toggleContact}
                         version="1.1"
                         id="contact-icon"
                         x="0px"
@@ -57,13 +62,6 @@ export default class ContactIcon extends React.Component {
     componentDidMount() {
         console.log("+++++ContactIcon");
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
-    // ========== Methods ===========
-
 }
 
 // ============= PropTypes ==============
@@ -71,5 +69,6 @@ export default class ContactIcon extends React.Component {
 ContactIcon.propTypes = {
     navIsOpen: PropTypes.bool.isRequired,
     contactIsOpen: PropTypes.bool.isRequired,
-    toggleContact: PropTypes.func.isRequired
+    toggleContact: PropTypes.func.isRequired,
+    feedScroll: PropTypes.number.isRequired
 };

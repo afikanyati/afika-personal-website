@@ -7,7 +7,7 @@ import YouTube          from 'react-youtube';
 import Img              from 'react-image';
 import uuid             from 'uuid';
 
-// Files
+// Components
 import AssetTypes       from '../../constants/assetTypes.js';
 import Italic           from './Italic';
 import Bold             from './Bold';
@@ -16,6 +16,19 @@ import Code             from './Code';
 import ImagePlaceholder from '../feed/ImagePlaceholder';
 import Block            from '../Block';
 
+/**
+ * The ArticleAsset is a multi-purpose asset used by ArticleDialog component to display
+ * the various types of article assets used in an article, namely:
+ *  - Paragraph asset: A paragraph of text
+ *  - Heading asset: A heading within the article
+ *  - YouTube asset: An embeded YouTube video
+ *  - Image asset: An embeded image
+ *  - Quote asset: Text in a stylized quote layout
+ *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
+ *  - List asset: A numbered or bulleted list of text
+ *  - Slider asset: An image slider for Powerpoint-style presentations, etc.
+ *  - Section Divider asset: A divider used at the end of a group of related paragraphs
+ */
 export default class ArticleAsset extends React.Component {
 
     constructor(props) {
@@ -57,10 +70,12 @@ export default class ArticleAsset extends React.Component {
         console.log("+++++ArticleAsset");
     }
 
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
+    // ========== Methods ===========
 
+    /**
+     * Renderer for paragraph asset
+     * @return React component paragraph asset div
+     */
     paragraphAsset = () => {
         return (
             <div className="paragraph-asset">
@@ -72,6 +87,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for heading asset
+     * @return React component heading asset div
+     */
     headingAsset = () => {
         return (
             <h2 className="heading-asset">
@@ -80,6 +99,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for YouTube asset
+     * @return React component YouTube asset div
+     */
     youtubeAsset = () => {
         return (
             <div className={`youtube-asset ${this.props.asset.asset.layout}`}>
@@ -95,6 +118,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for image asset
+     * @return React component image asset div
+     */
     imageAsset = () => {
         return (
             <div className={`image-asset ${this.props.asset.asset.layout}`}>
@@ -108,6 +135,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for quote asset
+     * @return React component quote asset div
+     */
     quoteAsset = () => {
         return (
             <div className="quote-asset">
@@ -136,6 +167,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for dictionary asset
+     * @return React component dictionary asset div
+     */
     dictionaryAsset = () => {
         // Create string for dictionary definition
         // composed of numbered sub-definitions
@@ -190,6 +225,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for slider asset
+     * @return React component slider asset div
+     */
     sliderAsset = () => {
         return (
             <div className="slider-asset">
@@ -203,6 +242,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for list asset
+     * @return React component list asset div
+     */
     listAsset = () => {
         return (
             <div>
@@ -233,6 +276,10 @@ export default class ArticleAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for section divider asset
+     * @return React component section divider asset div
+     */
     sectionDividerAsset = () => {
         return (
             <div className="section-divider-asset">
@@ -245,5 +292,7 @@ export default class ArticleAsset extends React.Component {
 // ============= PropTypes ==============
 
 ArticleAsset.propTypes = {
-    asset: PropTypes.object.isRequired
+    key: PropTypes.string.isRequired,
+    asset: PropTypes.object.isRequired,
+    currentSlide: PropTypes.number.isRequired
 };

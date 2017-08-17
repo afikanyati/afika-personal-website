@@ -3,10 +3,16 @@ import React          from 'react';
 import firebase       from 'firebase';
 import PropTypes      from 'prop-types';
 
-// Files
+// Components
 import NavItems       from './NavItems';
 
-
+/**
+ * HiddenNav is a component used to display the various types of content on the web
+ * application. The application is single-page, so clicking a navigation item does not
+ * direct a user to a new page. Instead, it FILTERS OUT the selected type of content,
+ * leaving all the rest to be rendered within the Feed component. It can be summoned
+ * in and out of the left of the viewport by toggling the HamburgerIcon component.
+ */
 export default class HiddenNav extends React.Component {
 
     constructor(props) {
@@ -41,13 +47,6 @@ export default class HiddenNav extends React.Component {
     componentDidMount() {
         console.log("+++++HiddenNav");
     }
-
-    componentWillReceiveProps(nextProps) {
-        //pass
-    }
-
-    // ========== Methods ===========
-
 }
 
 // ============= PropTypes ==============

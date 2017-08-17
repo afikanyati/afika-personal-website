@@ -167,7 +167,9 @@ export default class MusicDialog extends React.Component {
                                         </button>
                                     </div>
                                     <div className="media-progress-bar">
-                                        <div className="music-progress">
+                                        <div
+                                            className="media-progress"
+                                            onClick={this.moveScrubber}>
                                             <div
                                                 className="scrubber"
                                                 style={{
@@ -298,8 +300,9 @@ export default class MusicDialog extends React.Component {
         } else {
             audio.play();
             // Updates timestamps ona regular interval
+            // Only issue is that setInterval will continue in background
             setInterval(() => {
-                this.updateTime(audio);
+                this.updateTime();
             }, 100);
         }
 
@@ -320,11 +323,11 @@ export default class MusicDialog extends React.Component {
         return timestamp;
     }
 
-    updateTime = (audio) => {
-
+    updateTime = () => {
+        let audio = this.refs.audio;
         // audio.readyState = 4 => HAVE_ENOUGH_DATA - enough data available to start playing
         // Should not run if music is paused
-        if (audio.readyState == 4 && this.state.isPlaying) {
+        if (audio && audio.readyState == 4 && this.state.isPlaying) {
             let duration = audio.duration;
             let currentTime = audio.currentTime;
             let timeElapsedTimestamp = Math.floor(currentTime);
@@ -350,6 +353,12 @@ export default class MusicDialog extends React.Component {
     }
 
     closeDialog = () => {
+        // Stop track if playing
+        let audio = this.refs.audio;
+        if(this.state.isPlaying) {
+            audio.pause();
+        }
+
         this.setState({
             lengthMusicList: 0,
             isPlaying: false,
@@ -378,6 +387,23 @@ export default class MusicDialog extends React.Component {
             scrubberWidth: "0%",
             reload: true
         }, () => {this.props.browseTo(direction)});
+    }
+
+    moveScrubber = (e) => {
+        let targetRect = e.target.getBoundingClientRect();
+        let clickPosX = e.clientX;
+
+        if(targetRect.left <= clickPosX && clickPosX <= targetRect.right) {
+            let lengthLeftSideTarget = clickPosX - targetRect.left;
+            let totalLengthTarget = targetRect.right - targetRect.left;
+            let percent = lengthLeftSideTarget/totalLengthTarget;
+
+            let audio = this.refs.audio;
+            let duration = audio.duration;
+            let newTime = Math.floor(duration * percent);
+            audio.currentTime = newTime;
+            this.updateTime();
+        }
     }
 }
 

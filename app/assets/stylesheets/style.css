@@ -1624,7 +1624,11 @@ span.code {
     width: 100%;
     margin: 200px 0;
     margin-bottom: 100px;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
     -webkit-align-items: center;
 	-ms-align-items: center;
 	-moz-align-items: center;
@@ -1829,6 +1833,7 @@ span.code {
 }
 
 .play-button.video {
+    flex: 0 0 50px;
     margin-top: 20px;
 }
 
@@ -1859,23 +1864,27 @@ span.code {
     width: 25px;
 }
 
-.media-progress-bar {
-
+.video-playback-group {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
 }
 
-.music-progress {
+.media-progress-bar.video {
+    margin-top: 15px;
+    margin-left: 10px;
+    flex: 1 1 auto;
+}
+
+.media-progress {
+    display: inline-block;
     width: 100%;
     height: 5px;
     background: var(--light-gray);
-    margin-top: 20px;
-}
-
-.video-progress {
-    position: relative;
-    top: -60px;
-    height: 5px;
-    background: var(--light-gray);
-    margin-left: 80px;
     margin-top: 20px;
 }
 

@@ -1,10 +1,10 @@
 // Libs
-import React                from 'react';
-import firebase             from 'firebase';
-import PropTypes            from 'prop-types';
-import Dialog               from 'material-ui/Dialog';
-import getMuiTheme          from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
+import React                    from 'react';
+import firebase                 from 'firebase';
+import PropTypes                from 'prop-types';
+import Dialog                   from 'material-ui/Dialog';
+import getMuiTheme              from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider         from 'material-ui/styles/MuiThemeProvider';
 
 // Files
 import DialogTypes     from '../../constants/dialogTypes';
@@ -16,7 +16,7 @@ import Loader          from '../Loader';
 export default class VideoDialog extends React.Component {
 
     state = {
-        lengthVideoList: 2,
+        lengthVideoList: 3,
         isPlaying: false,
         duration: 0,
         timeElapsed: "0:00",
@@ -90,55 +90,63 @@ export default class VideoDialog extends React.Component {
                             </div>
                             <div className="video-body">
                                 <div className="video-player">
-                                    <video ref="video">
+                                    <video
+                                        ref="video"
+                                        poster={this.props.currentItem.thumbnail}>
                                          <source src={this.props.currentItem.data} type="video/mp4" />
-                                        Your browser does not support HTML5 audio.
+                                        Your browser does not support HTML5 video.
                                     </video>
-                                    <button
-                                        className="play-button video"
-                                        onClick={this.togglePlayback}>
-                                        {this.state.isPlaying ?
-                                            <svg
-                                                version="1.1"
-                                                id="pause-button-icon"
-                                                x="0px"
-                                                y="0px"
-                                                width="50px"
-                                                height="50px"
-                                                viewBox="0 0 50 50"
-                                                enableBackground="new 0 0 50 50">
-                                                <path fill="#FFFFFF" d="M22.518,34.93h-4.965V15.07h4.965V34.93z M32.447,34.93h-4.965V15.07h4.965V34.93z"/>
-                                            </svg>
-                                        :
-                                            <svg
-                                                version="1.1"
-                                                id="play-button-icon"
-                                                x="0px"
-                                                y="0px"
-                                                width="50px"
-                                                height="50px"
-                                                viewBox="0 0 50 50"
-                                                enableBackground="new 0 0 50 50">
-                                                <path fill="#FFFFFF" d="M19.999,36.252V13.748L35.002,25L19.999,36.252z"/>
-                                            </svg>
-                                        }
-                                    </button>
-                                    <div className="video-progress">
-                                        <div
-                                            className="scrubber"
-                                            style={{
-                                                width: this.state.scrubberWidth
-                                            }} />
-                                        <p className="play-time left">
-                                            {this.state.timeElapsed}
-                                        </p>
-                                        <p className="play-time right">
-                                            {this.state.timeLeft == "" ?
-                                                ""
+                                    <div className="video-playback-group">
+                                        <button
+                                            className="play-button video"
+                                            onClick={this.togglePlayback}>
+                                            {this.state.isPlaying ?
+                                                <svg
+                                                    version="1.1"
+                                                    id="pause-button-icon"
+                                                    x="0px"
+                                                    y="0px"
+                                                    width="50px"
+                                                    height="50px"
+                                                    viewBox="0 0 50 50"
+                                                    enableBackground="new 0 0 50 50">
+                                                    <path fill="#FFFFFF" d="M22.518,34.93h-4.965V15.07h4.965V34.93z M32.447,34.93h-4.965V15.07h4.965V34.93z"/>
+                                                </svg>
                                             :
-                                                `-${this.state.timeLeft}`
+                                                <svg
+                                                    version="1.1"
+                                                    id="play-button-icon"
+                                                    x="0px"
+                                                    y="0px"
+                                                    width="50px"
+                                                    height="50px"
+                                                    viewBox="0 0 50 50"
+                                                    enableBackground="new 0 0 50 50">
+                                                    <path fill="#FFFFFF" d="M19.999,36.252V13.748L35.002,25L19.999,36.252z"/>
+                                                </svg>
                                             }
-                                        </p>
+                                        </button>
+                                        <div className="media-progress-bar video">
+                                            <div
+                                                className="media-progress"
+                                                onClick={this.moveScrubber}>
+                                                <div
+                                                    className="scrubber"
+                                                    style={{
+                                                        width: this.state.scrubberWidth
+                                                    }} />
+                                            </div>
+                                            <p className="play-time left">
+                                                {this.state.timeElapsed}
+                                            </p>
+                                            <p className="play-time right">
+                                                {this.state.timeLeft == "" ?
+                                                    ""
+                                                :
+                                                    `-${this.state.timeLeft}`
+                                                }
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +161,8 @@ export default class VideoDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "left")} />
+                                onClick={this.handleArrowClick.bind({}, "left")}
+                                onTouchTap={this.handleArrowClick.bind({}, "left")} />
                         :
                             null
                         }
@@ -167,7 +176,8 @@ export default class VideoDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "right")} />
+                                onClick={this.handleArrowClick.bind({}, "right")}
+                                onTouchTap={this.handleArrowClick.bind({}, "right")} />
                             :
                                 null
                         }
@@ -182,25 +192,32 @@ export default class VideoDialog extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+
     }
 
     togglePlayback = () => {
         let video = this.refs.video;
+        let reload = this.state.reload; // Necessary when we navigate to new video
+
+        if (reload) {
+            video.load();
+            reload = false;
+        }
 
         if(this.state.isPlaying) {
             video.pause();
-            // Stop updating
-
         } else {
             video.play();
-            // Call updateTime on a setInterval
+            // Updates timestamps ona regular interval
+            // Only issue is that setInterval will continue in background
             setInterval(() => {
-                this.updateTime(video);
+                this.updateTime();
             }, 100);
         }
 
         this.setState({
-            isPlaying: !this.state.isPlaying
+            isPlaying: !this.state.isPlaying,
+            reload: reload
         });
     }
 
@@ -215,20 +232,25 @@ export default class VideoDialog extends React.Component {
         return timestamp;
     }
 
-    updateTime = (video) => {
-        let duration = video.duration;
-        let currentTime = video.currentTime
-        let timeElapsedTimestamp = Math.floor(currentTime);
-        let timeLeftTimestamp = Math.floor(duration-timeElapsedTimestamp);
-        let timeElapsed = this.convertTime(timeElapsedTimestamp);
-        let timeLeft = this.convertTime(timeLeftTimestamp);
-        let percent = currentTime/duration;
+    updateTime = () => {
+        let video = this.refs.video;
+        // video.readyState = 4 => HAVE_ENOUGH_DATA - enough data available to start playing
+        // Should not run if music is paused
+        if (video && video.readyState == 4 && this.state.isPlaying) {
+            let duration = video.duration;
+            let currentTime = video.currentTime;
+            let timeElapsedTimestamp = Math.floor(currentTime);
+            let timeLeftTimestamp = Math.floor(duration-timeElapsedTimestamp);
+            let timeElapsed = this.convertTime(timeElapsedTimestamp);
+            let timeLeft = this.convertTime(timeLeftTimestamp);
+            let percent = currentTime/duration;
 
-        this.updateScrubber(percent);
-        this.setState({
-            timeElapsed: timeElapsed,
-            timeLeft: timeLeft
-        });
+            this.updateScrubber(percent);
+            this.setState({
+                timeElapsed: timeElapsed,
+                timeLeft: timeLeft
+            });
+        }
     }
 
     updateScrubber = (percent) => {
@@ -240,15 +262,56 @@ export default class VideoDialog extends React.Component {
     }
 
     closeDialog = () => {
+        // Stop video if playing
+        let video = this.refs.video;
+        if(this.state.isPlaying) {
+            video.pause();
+        }
+
         this.setState({
             isPlaying: false,
             duration: 0,
             timeElapsed: "0:00",
             timeLeft: "",
-            scrubberWidth: "0%"
-        });
+            scrubberWidth: "0%",
+            reload: true
+        }, () => {this.props.toggleDialog(DialogTypes.VIDEO)});
+    }
 
-        this.props.toggleDialog(DialogTypes.VIDEO);
+    handleArrowClick = (direction) => {
+        // Stop video if playing
+        let video = this.refs.video;
+        if(this.state.isPlaying) {
+            video.pause();
+        }
+
+        // Reload video so that new video plays
+        // Instead of the old
+        this.setState({
+            isPlaying: false,
+            duration: 0,
+            timeElapsed: "0:00",
+            timeLeft: "",
+            scrubberWidth: "0%",
+            reload: true
+        }, () => {this.props.browseTo(direction)});
+    }
+
+    moveScrubber = (e) => {
+        let targetRect = e.target.getBoundingClientRect();
+        let clickPosX = e.clientX;
+
+        if(targetRect.left <= clickPosX && clickPosX <= targetRect.right) {
+            let lengthLeftSideTarget = clickPosX - targetRect.left;
+            let totalLengthTarget = targetRect.right - targetRect.left;
+            let percent = lengthLeftSideTarget/totalLengthTarget;
+
+            let video = this.refs.video;
+            let duration = video.duration;
+            let newTime = Math.floor(duration * percent);
+            video.currentTime = newTime;
+            this.updateTime();
+        }
     }
 }
 

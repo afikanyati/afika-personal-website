@@ -438,23 +438,26 @@ export default class MusicDialog extends React.Component {
      * @param  {obj} e click event object
      */
     moveScrubber = (e) => {
+        let className = e.target.className;
         let targetRect = e.target.getBoundingClientRect();
-        console.log("targetRect: ", targetRect);
         let clickPosX = e.clientX;
-        console.log("clickPosX: ", clickPosX);
 
-        if(targetRect.left <= clickPosX && clickPosX <= targetRect.right) {
-            let lengthLeftSideTarget = clickPosX - targetRect.left;
-            let totalLengthTarget = targetRect.right - targetRect.left;
-            let percent = lengthLeftSideTarget/totalLengthTarget;
-            console.log("Percent: ", percent);
-
-            let audio = this.refs.audio;
-            let duration = audio.duration;
-            let newTime = Math.floor(duration * percent);
-            audio.currentTime = newTime;
-            this.updateTime();
+        // If we clicked the Scrubber, and not Media Progress element
+        if (className == "scrubber") {
+            // We need to get .right of parent element
+            let parentTarget = e.target.parentNode;
+            targetRect = parentTarget.getBoundingClientRect();
         }
+
+        let lengthLeftSideTarget = clickPosX - targetRect.left;
+        let totalLengthTarget = targetRect.right - targetRect.left;
+        let percent = lengthLeftSideTarget/totalLengthTarget;
+
+        let audio = this.refs.audio;
+        let duration = audio.duration;
+        let newTime = Math.floor(duration * percent);
+        audio.currentTime = newTime;
+        this.updateTime();
     }
 }
 

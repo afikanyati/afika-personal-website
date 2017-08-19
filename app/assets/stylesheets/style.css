@@ -4,7 +4,7 @@
 :root {
     --dark-gray: #212323;
     --dark-purple: #190f27;
-    --transluscent-dark-purple: rgba(25, 15, 39, 0.8);
+    --transluscent-dark-purple: rgba(25, 15, 39, 0.87);
     --light-purple: #5a4570;
     --mid-gray: #989898;
     --light-gray: #dededd;
@@ -1134,7 +1134,7 @@ button {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
-    z-index: 1;
+    z-index: 101;
 }
 
 .close-button:hover {
@@ -1670,6 +1670,7 @@ span.code {
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;
+    position: relative;
 	width: 90vw  !important;
     height: 90vh !important;
 	padding: 50px !important;
@@ -1902,6 +1903,374 @@ span.code {
     left: 50%;
     transform: translateX(-50%);
     height: 80%;
+}
+
+/*========================================== */
+
+/* Accordion */
+
+.accordion {
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+}
+
+.accordion .accordion-item {
+	margin: 0;
+    position: relative;
+    display: block;
+    height: 250px;
+	width: 100%;
+	z-index: 8;
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0 12px 12px -6px rgba(0,0,0,0.12);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.education-logo-wrapper {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    padding: 70px;
+}
+
+.education-logo-wrapper img {
+    width: 100px;
+}
+
+.education-info-wrapper {
+    max-width: 540px;
+}
+
+.accordion-item-title {
+	font-family: var(--heading-font);
+	font-size: 1.6em;
+	font-weight: var(--heading-weight);
+    color: var(--transluscent-dark-purple);
+	margin: 0;
+    margin-bottom: 20px;
+	padding: 0;
+	line-height: normal;
+}
+
+.accordion-item-subtitle {
+	font-family: var(--body-font-italic);
+	font-size: 1em;
+	font-weight: 600;
+    color: rgba(25, 15, 39, 0.54);
+    width: 80%;
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+}
+
+.education-years-wrapper {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.education-years {
+    font-family: var(--subheading-font);
+	font-size: 1.6em;
+	font-weight: 300;
+    color: var(--light-purple);
+    margin: 0;
+}
+
+.accordion .accordion-content {
+	position: relative;
+	top: -250px;
+	height: 0;
+	opacity: 0;
+	background: #ffffff;
+    margin: 0;
+	padding: 0px 50px;
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    flex-direction: column;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-item.open + .accordion-content {
+	top: 0px;
+	opacity: 1;
+	height: auto;
+    padding-top: 50px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.sub-accordion .sub-accordion-item {
+	margin: 0;
+    position: relative;
+    display: block;
+    height: 80px;
+	width: 100%;
+	z-index: 8;
+    cursor: pointer;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-accordion-item .sub-accordion-title {
+    flex: 0.5;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--light-purple);
+    margin: 0;
+}
+
+.sub-accordion-item .sub-accordion-subtitle {
+    flex: 1;
+    font-family: var(--body-font);
+    color: rgba(25, 15, 39, 0.54);
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sub-accordion-item .sub-accordion-arrow {
+    flex: 0 0 20px;
+    width: 20px;
+    margin: 30px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.sub-accordion-item.open .sub-accordion-arrow {
+    transform: rotate(90deg);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.sub-accordion .sub-accordion-content {
+	position: relative;
+	top: -80px;
+	height: 0;
+	opacity: 0;
+	background: #ffffff;
+    margin: 0;
+	padding: 0;
+    padding-top: 0px;
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-accordion div,
+.sub-accordion.open div {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-accordion-item.open + .sub-accordion-content {
+	top: 0px;
+	opacity: 1;
+	height: auto;
+    padding-top: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-accordion-content .classes-wrapper {
+    width: 100%;
+}
+
+.classes-wrapper .class {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    flex-direction: row;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+    padding: 10px 0;
+}
+
+.classes-wrapper .class .class-name,
+.classes-wrapper .class-grade {
+    flex: 1;
+    font-family: var(--body-font);
+    color: rgba(25, 15, 39, 0.54);
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.classes-wrapper .class-number {
+    flex: 1;
+    color: rgba(90, 69, 112, 0.54);
+    margin: 0;
+}
+
+.classes-wrapper .class-grade {
+    flex: 0 0 45px;
+}
+
+/*========================================== */
+
+/* Education Dialog and Skills Dialog */
+
+.education-dialog-content,
+.skills-dialog-content {
+	width: 90vw !important;
+    max-width: none !important;
+}
+
+.education-dialog-title,
+.skills-dialog-title {
+	padding-bottom: 0px !important;
+	text-align: center;
+	font-size: 1.6em !important;
+	color: #000000 !important;
+	background: var(--white);
+	font-weight: 600 !important;
+	font-family: var(--heading-font);
+}
+
+.education-dialog-body,
+.skills-dialog-body {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+	width: 100%  !important;
+    height: 90vh !important;
+	padding: 0px !important;
+}
+
+.education-dialog-actions,
+.skills-dialog-actions {
+	padding: 0 !important;
+}
+
+.education-title,
+.skills-title {
+    position: relative;
+    width: 100%;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 2.3em;
+    color: var(--dark-purple);
+    padding-top: 50px;
+    margin: 0;
+    text-align: center;
+    background: var(--white);
+    z-index: 100;
 }
 
 /*========================================== */

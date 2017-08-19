@@ -8,5 +8,7 @@ export default {
     MUSIC: 'music',
     ARTICLE: 'article',
     DESIGN: 'design',
-    VIDEO: 'video'
+    VIDEO: 'video',
+    SKILLS: 'skills',
+    EDUCATION: 'education'
 };

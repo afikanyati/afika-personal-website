@@ -35,8 +35,7 @@ export default class ScrollButton extends React.Component {
                         overlay     ={scrollTooltip}>
                     <div
                         className="scroll-button"
-                        onClick={this.scrollTo.bind({}, this.props.elementID, 0, 500)}
-                        onTouchTap={this.scrollTo.bind({}, this.props.elementID, 0, 500)}>
+                        onClick={this.scrollTo.bind({}, this.props.elementID, 0, 500)}>
                         <svg
                             version="1.1"
                             id="scroll-button-icon"

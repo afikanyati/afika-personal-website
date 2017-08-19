@@ -43,15 +43,14 @@ export default class EducationDialog extends React.Component {
                         bodyClassName               ="education-dialog-body"
                         contentClassName            ="education-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.EDUCATION)}
-                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.EDUCATION)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.EDUCATION)} />
                         <div className="education-wrapper">
                             <h1 className="education-title">
                                 Education

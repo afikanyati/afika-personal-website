@@ -50,6 +50,7 @@
     "react-bootstrap": "^0.30.1",
     "react-confirm": "^0.1.14",
     "react-dom": "^15.3.0",
+    "react-fastclick": "^3.0.2",
     "react-image": "^1.0.1",
     "react-jsx-parser": "^1.1.2",
     "react-list": "^0.8.6",

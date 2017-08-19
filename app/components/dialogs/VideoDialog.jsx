@@ -64,15 +64,14 @@ export default class VideoDialog extends React.Component {
                         bodyClassName               ="video-dialog-body"
                         contentClassName            ="video-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog}
-                            onTouchTap={this.closeDialog} />
+                            onClick={this.closeDialog} />
                         <Loader size="medium" />
                         <div className="video-wrapper">
                             <h1 className="video-title">
@@ -106,8 +105,7 @@ export default class VideoDialog extends React.Component {
                                     <div className="video-playback-group">
                                         <button
                                             className="play-button video"
-                                            onClick={this.togglePlayback}
-                                            onTouchTap={this.togglePlayback}>
+                                            onClick={this.togglePlayback}>
                                             {this.state.isPlaying ?
                                                 <svg
                                                     version="1.1"
@@ -137,8 +135,7 @@ export default class VideoDialog extends React.Component {
                                         <div className="media-progress-bar video">
                                             <div
                                                 className="media-progress"
-                                                onClick={this.moveScrubber}
-                                                onTouchTap={this.moveScrubber}>
+                                                onClick={this.moveScrubber}>
                                                 <div
                                                     className="scrubber"
                                                     style={{
@@ -170,8 +167,7 @@ export default class VideoDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.handleArrowClick.bind({}, "left")}
-                                onTouchTap={this.handleArrowClick.bind({}, "left")} />
+                                onClick={this.handleArrowClick.bind({}, "left")} />
                         :
                             null
                         }
@@ -185,8 +181,7 @@ export default class VideoDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.handleArrowClick.bind({}, "right")}
-                                onTouchTap={this.handleArrowClick.bind({}, "right")} />
+                                onClick={this.handleArrowClick.bind({}, "right")} />
                             :
                                 null
                         }

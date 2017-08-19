@@ -42,7 +42,6 @@ export default class ContactIcon extends React.Component {
                         overlay     ={contactTooltip}>
                     <svg
                         onClick={this.props.toggleContact}
-                        onTouchTap={this.props.toggleContact}
                         version="1.1"
                         id="contact-icon"
                         x="0px"

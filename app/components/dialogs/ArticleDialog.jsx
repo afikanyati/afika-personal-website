@@ -39,8 +39,13 @@ export default class ArticleDialog extends React.Component {
 
     render() {
         let lenSlides = -1;
+        let type = "";
         if (this.state.assets.length == 1) {
             lenSlides = this.state.assets[0]["asset"]["data"].length;
+        }
+
+        if (this.props.currentItem.path) {
+            type = this.props.currentItem.path.substring(0, this.props.currentItem.path.indexOf("/"));
         }
 
         return (
@@ -56,31 +61,31 @@ export default class ArticleDialog extends React.Component {
                         bodyClassName               ="article-dialog-body"
                         contentClassName            ="article-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog}
-                            onTouchTap={this.closeDialog} />
+                            onClick={this.closeDialog} />
                         <div className="article-wrapper">
-                            <h1 className="article-title">
+                            <h1 className={`article-title ${type}`}>
                                 {this.props.currentItem.title}
                             </h1>
-                            <p className="article-description">
+                            <p className={`article-description ${type}`}>
                                 {this.props.currentItem.subtitle}
                             </p>
-                            <div className="article-date-wrapper">
+                            <div className={`article-date-wrapper ${type}`}>
                                 <Block
-                                    position={"absolute"}
-                                    display={"block"}
-                                    top={"50%"}
+                                    id="article-date-block"
+                                    position={"static"}
+                                    display={"inline-block"}
+                                    top={"auto"}
                                     bottom={"auto"}
-                                    left={0}
+                                    left={"auto"}
                                     right={"auto"}
-                                    vertCenter={true}
+                                    vertCenter={false}
                                     horCenter={false}
                                     width={40}
                                     height={3}
@@ -88,6 +93,18 @@ export default class ArticleDialog extends React.Component {
                                 <h4 className="article-date">
                                     {this.props.currentItem.date}
                                 </h4>
+                                <Block
+                                    position={"static"}
+                                    display={type === "music" ? "inline-block" : "none"}
+                                    top={"auto"}
+                                    bottom={"auto"}
+                                    left={"auto"}
+                                    right={"auto"}
+                                    vertCenter={false}
+                                    horCenter={false}
+                                    width={40}
+                                    height={3}
+                                    color={"#5a4570"}/>
                             </div>
                             <div className="article-body">
                                 {this.state.assets.map(asset => {
@@ -109,8 +126,7 @@ export default class ArticleDialog extends React.Component {
                                     direction="left"
                                     vertCenter={true}
                                     horCenter={false}
-                                    onClick={this.previousSlide}
-                                    onTouchTap={this.previousSlide} />
+                                    onClick={this.previousSlide} />
                             :
                                 null
                             }
@@ -124,8 +140,7 @@ export default class ArticleDialog extends React.Component {
                                     direction="right"
                                     vertCenter={true}
                                     horCenter={false}
-                                    onClick={this.nextSlide}
-                                    onTouchTap={this.nextSlide} />
+                                    onClick={this.nextSlide} />
                             :
                                 null
                             }

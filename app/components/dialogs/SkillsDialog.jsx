@@ -52,15 +52,14 @@ export default class SkillsDialog extends React.Component {
                         bodyClassName               ="skills-dialog-body"
                         contentClassName            ="skills-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.handleClose}
-                            onTouchTap={this.handleClose} />
+                            onClick={this.handleClose} />
                         <div className="skills-wrapper">
                             <h1 className="skills-title">
                                 Skills
@@ -95,8 +94,7 @@ export default class SkillsDialog extends React.Component {
                                                 color: skill.color,
                                                 margin: skill.margin
                                             }}
-                                            onClick={this.toggleSkill.bind({}, skill)}
-                                            onTouchTap={this.toggleSkill.bind({}, skill)}>
+                                            onClick={this.toggleSkill.bind({}, skill)}>
                                             {skill.text}
                                         </h3>
                                     );

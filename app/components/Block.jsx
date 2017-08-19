@@ -31,6 +31,7 @@ export default class Block extends React.Component {
 
         return (
             <div
+                id={this.props.id}
                 style={{
                     position: this.props.position,
                     display: this.props.display,
@@ -80,5 +81,6 @@ Block.propTypes = {
         PropTypes.number.isRequired
     ]),
     color: PropTypes.string.isRequired,
-    display: PropTypes.string.isRequired
+    display: PropTypes.string.isRequired,
+    id: PropTypes.string
 };

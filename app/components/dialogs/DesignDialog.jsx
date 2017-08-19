@@ -44,15 +44,14 @@ export default class DesignDialog extends React.Component {
                         bodyClassName               ="design-dialog-body"
                         contentClassName            ="design-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)}
-                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.DESIGN)} />
                         <div className="design-wrapper">
                             <h1 className="design-title">
                                 {this.props.currentItem.title}

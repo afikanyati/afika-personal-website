@@ -108,8 +108,7 @@ export default class ContactView extends React.Component {
                             <button
                                 id="contact-submit-button"
                                 type="submit"
-                                onClick={this.createContact}
-                                onTouchTap={this.createContact}>
+                                onClick={this.createContact}>
                                 <span>SEND</span>
                                 <svg
                                     version="1.1"

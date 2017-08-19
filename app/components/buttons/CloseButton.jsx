@@ -31,7 +31,6 @@ export default class CloseButton extends React.Component {
         return (
             <button
                 onClick={this.props.onClick}
-                onTouchTap={this.props.onClick}
                 className="close-button"
                 style={{
                     position: this.props.position,

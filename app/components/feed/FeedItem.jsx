@@ -89,8 +89,7 @@ export default class FeedItem extends React.Component {
                         "feed-item no-thumbnail animated fadeInUp standalone"
                     :
                         "feed-item no-thumbnail animated fadeInUp"}
-                onClick={this.handleClick}
-                onTouchTap={this.handleClick}>
+                onClick={this.handleClick}>
                 <div
                     className={
                     this.props.item.category == "standalone" ?
@@ -150,8 +149,7 @@ export default class FeedItem extends React.Component {
                             "feed-item animated fadeInUp standalone"
                         :
                             "feed-item animated fadeInUp"}
-                onClick={this.handleClick}
-                onTouchTap={this.handleClick}>
+                onClick={this.handleClick}>
                 <div className="feed-image">
                     <Img
                         src={this.props.item.thumbnail}

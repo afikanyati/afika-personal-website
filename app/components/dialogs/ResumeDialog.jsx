@@ -37,15 +37,14 @@ export default class ResumeDialog extends React.Component {
                         bodyClassName               ="resume-dialog-body"
                         contentClassName            ="resume-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.RESUME)}
-                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.RESUME)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.RESUME)} />
                         <h1 className="resume-title">
                             Resume
                         </h1>

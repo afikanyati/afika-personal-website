@@ -22,8 +22,7 @@ export default class NavItem extends React.Component {
         return (
             <li
                 className={this.props.navIsOpen ? "nav-item" : "nav-item remove"}
-                onClick={this.props.toggleContent.bind({}, this.props.index)}
-                onTouchTap={this.props.toggleContent.bind({}, this.props.index)}>
+                onClick={this.props.toggleContent.bind({}, this.props.index)}>
     			<div
                     style={this.props.navItem.contentVisible ?
                         {

@@ -54,15 +54,14 @@ export default class ImageDialog extends React.Component {
                         bodyClassName               ="image-dialog-body"
                         contentClassName            ="image-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)}
-                            onTouchTap={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)} />
+                            onClick={this.props.toggleDialog.bind({}, DialogTypes.IMAGE)} />
                         <Loader size="medium" />
                         <div className="image-wrapper">
                             <div className="image"
@@ -83,8 +82,7 @@ export default class ImageDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "left")}
-                                onTouchTap={this.props.browseTo.bind({}, "left")} />
+                                onClick={this.props.browseTo.bind({}, "left")} />
                         :
                             null
                         }
@@ -98,8 +96,7 @@ export default class ImageDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.props.browseTo.bind({}, "right")}
-                                onTouchTap={this.props.browseTo.bind({}, "right")} />
+                                onClick={this.props.browseTo.bind({}, "right")} />
                             :
                                 null
                         }

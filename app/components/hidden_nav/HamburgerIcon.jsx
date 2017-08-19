@@ -34,7 +34,6 @@ export default class HamburgerIcon extends React.Component {
                     htmlFor="nav-trigger">
             		<button
                         onClick={this.props.toggleNav}
-                        onTouchTap={this.props.toggleNav}
                         className={this.props.navIsOpen ? "hamburger is-active" : "hamburger"}>
             			<span> </span>
             		</button>

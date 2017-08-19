@@ -166,7 +166,7 @@ button {
 
 .filter-help {
     font-family: var(--heading-font);
-    color: var(--light-gray);
+    color: #dededd;
     font-size: 1em;
     margin-left: 26px;
 }
@@ -262,6 +262,10 @@ button {
     line-height: 0.7;
 	margin: 0;
 	padding: 0;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
 }
 
 .nav-writing > .crossbar {
@@ -954,26 +958,30 @@ button {
     height: 70px;
 }
 
-.contact-form- {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    height: 80px;
-}
-
 .contact-form {
     margin-top: 130px;
     padding: 50px;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: scroll;
 }
 
 .contact-form .left-form,
 .contact-form .right-form {
-    width: 48%;
-    float: left;
-}
-
-.contact-form .right-form {
-    float: right;
+    flex: 0.48;
 }
 
 .contact-form .left-form p,
@@ -1246,12 +1254,16 @@ button {
     color: var(--light-purple);
     font-family: var(--subheading-font);
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 1.2em;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
     z-index: 101;
+}
+
+.close-button {
+    width: 60px;
 }
 
 .close-button:hover {
@@ -1359,6 +1371,8 @@ button {
     font-weight: 300;
     color: var(--dark-purple);
     font-size: 1.2em;
+    max-width: 80%;
+    text-align: center;
 }
 
 .image-description span {
@@ -1434,6 +1448,10 @@ button {
     line-height: 1.5em;
 }
 
+.article-title.music {
+    text-align: center;
+}
+
 .article-description,
 .design-description {
     position: relative;
@@ -1449,6 +1467,10 @@ button {
     line-height: 1.5em;
 }
 
+.article-description.music {
+    text-align: center;
+}
+
 .article-date-wrapper,
 .design-date-wrapper {
     position: relative;
@@ -1458,15 +1480,32 @@ button {
     width: 100%;
     max-width: 700px;
     margin-top: 20px;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    -webkit-align-items: center;
+	-ms-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+}
+
+.article-date-wrapper.music {
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
 }
 
 .article-date,
 .design-date {
+    display: inline-block;
     font-family: var(--subheading-font);
     font-weight: 300;
     font-size: 1.2em;
     color: var(--cream);
-    margin-left: 60px;
+    margin: 0 20px;
 }
 
 .design-title,
@@ -1732,7 +1771,7 @@ span.code {
 }
 
 .design-block .block-image {
-    width: 45%;
+    flex: 0.45;
 }
 
 .design-block .block-image img {
@@ -1740,7 +1779,7 @@ span.code {
 }
 
 .design-block .block-description {
-    width: 45%;
+    flex: 0.45;
     max-width: 700px;
     font-family: var(--body-font);
     font-weight: 300;
@@ -1797,6 +1836,7 @@ span.code {
 	align-items: center;
     flex-direction: column;
     overflow-x: visible !important;
+    overflow-y: scroll !important;
 }
 
 .music-dialog-actions,
@@ -1830,6 +1870,7 @@ span.code {
     color: var(--dark-purple);
     margin-top: 0;
     line-height: 1.5em;
+    text-align: left;
 }
 
 .music-details {
@@ -1855,15 +1896,25 @@ span.code {
     width: 100%;
     max-width: 700px;
     margin-top: 20px;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    -webkit-align-items: center;
+	-ms-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
 }
 
 .music-date,
 .video-date {
+    display: inline-block;
     font-family: var(--subheading-font);
     font-weight: 300;
     font-size: 1.2em;
     color: var(--cream);
-    margin-left: 60px;
+    margin-left: 20px;
 }
 
 .music-body,
@@ -2400,13 +2451,13 @@ span.code {
 }
 
 .wordcloud-wrapper {
+    display: inline-block;
     position: relative;
     left: 40%;
     width: 60%;
 }
 
 .wordcloud {
-    display: inline-block;
     width: 100%;
     padding: 50px;
     text-align: center;
@@ -2595,6 +2646,249 @@ span.code {
     font-family: var(--heading-font);
     font-size: 2em;
 }
+
+/*========================================== */
+
+/* Media Queries */
+
+@media (max-width: 1145px) {
+    .feed-wrapper {
+        position: absolute;
+        top: 0;
+        right: 113px; /* 121px - 8px where 121 (25 + 71 + 25) */
+        height: 96vh;
+        width: 60vw;
+        margin: 2vh 0;
+        padding: 0;
+        z-index: 2;
+        background: var(--dark-gray);
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+    }
+
+    .navigation {
+        left: 0;
+        width: 30vw;
+        z-index: 3;
+        transition: left 0.3s;
+        -webkit-transition: left 0.3s;
+        -moz-transition: left 0.3s;
+        -ms-transition: left 0.3s;
+    }
+
+    #left-main-block {
+        display: none !important;
+    }
+}
+
+@media (max-width: 995px) {
+    .nav-verb {
+        display: none;
+    }
+
+    .nav-item:hover .nav-verb {
+        display: none;
+    }
+
+    .nav-item:hover .nav-writing {
+        color: #9d7cb8;
+        transition: all 0.3s;
+    	-webkit-transition: all 0.3s;
+    	-moz-transition: all 0.3s;
+    	-ms-transition: all 0.3s;
+    }
+}
+
+@media (max-width: 860px) {
+    .navigation {
+        width: 259px;
+    }
+
+    .navigation.closed,
+    .navigation.contact-open {
+        left: -259px;
+    }
+}
+
+@media (max-width: 810px) {
+    .music-wrapper {
+        position: absolute;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80%;
+    }
+}
+
+@media (max-width: 790px) {
+    .skill-viewport {
+        position: static;
+        top: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .wordcloud-wrapper {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-height: 720px) {
+    .skill-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-height: 700px) {
+    .contact-form-logo {
+        display: none;
+    }
+
+    .contact-form {
+        height: 100% !important;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .playback-buttons {
+        display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+    }
+
+    .music-title,
+    .article-title {
+        text-align: center;
+    }
+
+    .music-details,
+    .article-description {
+        text-align: center;
+    }
+
+    .music-date-wrapper,
+    .article-date-wrapper {
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+    }
+
+    .music-date,
+    .article-date {
+        margin: 0;
+    }
+
+    #music-date-block,
+    #article-date-block {
+        display: none !important;
+    }
+}
+
+@media (max-width: 670px) {
+    .education-logo-wrapper,
+    .education-years-wrapper {
+        display: none;
+    }
+
+    .education-info-wrapper {
+        margin: 0 50px;
+        text-align: center;
+    }
+
+    .accordion-item-subtitle {
+        width: 100%;
+    }
+
+    .sub-accordion-subtitle {
+        display: none;
+    }
+
+    .sub-accordion-item .sub-accordion-title {
+        flex: 1;
+    }
+}
+
+@media (max-width: 650px) {
+    .generate-thumb.standalone .thumb-writing {
+        padding: 30px 50px;
+    }
+
+    .generate-thumb .thumb-writing {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 630px) {
+    .design-body {
+        margin-top: 100px;
+    }
+
+    .design-block {
+        flex-direction: column;
+        margin: 50px 0;
+    }
+
+    .design-block .block-image {
+        flex: 1;
+    }
+
+    .design-block .block-description {
+        flex: 1;
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 570px) {
+    .feed-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 525px) {
+    #afika-logo-no-feed {
+        width: 80%;
+    }
+
+    .feed-wrapper.padded {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form .left-form,
+    .contact-form .right-form {
+        flex: 1;
+    }
+
+    .contact-form .left-form p,
+    .contact-form .right-form p {
+        text-align: center;
+    }
+
+    .classes-wrapper .class-number {
+        display: none;
+    }
+}
+
+
+
 
 
 /*========================================== */

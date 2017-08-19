@@ -68,15 +68,14 @@ export default class MusicDialog extends React.Component {
                         bodyClassName               ="music-dialog-body"
                         contentClassName            ="music-dialog-content" >
                         <CloseButton
-                            position={"absolute"}
+                            position={"fixed"}
                             top={20}
                             bottom={"auto"}
                             left={"auto"}
                             right={30}
                             vertCenter={false}
                             horCenter={false}
-                            onClick={this.closeDialog}
-                            onTouchTap={this.closeDialog} />
+                            onClick={this.closeDialog} />
                         <div className="music-wrapper">
                             <h1 className="music-title">
                                 {this.props.currentItem.title}
@@ -88,11 +87,12 @@ export default class MusicDialog extends React.Component {
                             </p>
                             <div className="music-date-wrapper">
                                 <Block
-                                    position={"absolute"}
-                                    display={"block"}
-                                    top={"50%"}
+                                    id="music-date-block"
+                                    position={"static"}
+                                    display={"inline-block"}
+                                    top={"auto"}
                                     bottom={"auto"}
-                                    left={0}
+                                    left={"auto"}
                                     right={"auto"}
                                     vertCenter={true}
                                     horCenter={false}
@@ -112,8 +112,7 @@ export default class MusicDialog extends React.Component {
                                     <div className="playback-buttons">
                                         <button
                                             className="play-button"
-                                            onClick={this.togglePlayback}
-                                            onTouchTap={this.togglePlayback}>
+                                            onClick={this.togglePlayback}>
                                             {this.state.isPlaying ?
                                                 <svg
                                                     version="1.1"
@@ -142,8 +141,7 @@ export default class MusicDialog extends React.Component {
                                         </button>
                                         <button
                                             className={showLeftArrow ? "prev-button" : "prev-button disable"}
-                                            onClick={showLeftArrow ? this.handleArrowClick.bind({}, "left") : null}
-                                            onTouchTap={showLeftArrow ? this.handleArrowClick.bind({}, "left") : null}>
+                                            onClick={showLeftArrow ? this.handleArrowClick.bind({}, "left") : null}>
                                             <svg
                                                 version="1.1"
                                                 id="prev-button-icon"
@@ -158,8 +156,7 @@ export default class MusicDialog extends React.Component {
                                         </button>
                                         <button
                                             className={showRightArrow ? "next-button" : "next-button disable"}
-                                            onClick={showRightArrow ? this.handleArrowClick.bind({}, "right") : null}
-                                            onTouchTap={showRightArrow ? this.handleArrowClick.bind({}, "right") : null}>
+                                            onClick={showRightArrow ? this.handleArrowClick.bind({}, "right") : null}>
                                             <svg
                                                 version="1.1"
                                                 id="next-button-icon"
@@ -176,8 +173,7 @@ export default class MusicDialog extends React.Component {
                                     <div className="media-progress-bar">
                                         <div
                                             className="media-progress"
-                                            onClick={this.moveScrubber}
-                                            onTouchTap={this.moveScrubber}>
+                                            onClick={this.moveScrubber}>
                                             <div
                                                 className="scrubber"
                                                 style={{
@@ -217,8 +213,7 @@ export default class MusicDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.handleArrowClick.bind({}, "left")}
-                                onTouchTap={this.handleArrowClick.bind({}, "left")} />
+                                onClick={this.handleArrowClick.bind({}, "left")} />
                         :
                             null
                         }
@@ -232,8 +227,7 @@ export default class MusicDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
-                                onClick={this.handleArrowClick.bind({}, "right")}
-                                onTouchTap={this.handleArrowClick.bind({}, "right")} />
+                                onClick={this.handleArrowClick.bind({}, "right")} />
                             :
                                 null
                         }

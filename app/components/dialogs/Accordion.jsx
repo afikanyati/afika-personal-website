@@ -38,6 +38,7 @@ export default class Accordion extends React.Component {
                                 id={section.title}
                                 className="accordion-item"
                                 onClick={this.toggleOpen.bind({}, section.title)}
+                                onTouchTap={this.toggleOpen.bind({}, section.title)}
                                 style={{
                                     zIndex: sections.length + 1
                                 }}>
@@ -67,6 +68,7 @@ export default class Accordion extends React.Component {
                                                     id={semester.title}
                                                     className="sub-accordion-item"
                                                     onClick={this.toggleOpen.bind({}, semester.title)}
+                                                    onTouchTap={this.toggleOpen.bind({}, semester.title)}
                                                     style={{
                                                         zIndex: semesters.length + 1
                                                     }}>
@@ -128,6 +130,10 @@ export default class Accordion extends React.Component {
         console.log("+++++Accordion");
     }
 
+    /**
+     * Toggles CSS open tag to clicked elements
+     * @param  {string} id HTML id of clicked element
+     */
     toggleOpen = (id) => {
         let element = document.getElementById(id);
         if (element.classList.contains('open')) {

@@ -50,8 +50,8 @@ export default class ResumeDialog extends React.Component {
                             Resume
                         </h1>
                         <div className="resume-wrapper">
-                            <button className="resume-download" target="_blank">
-                                <a href={this.props.currentItem.data}>
+                            <button className="resume-download">
+                                <a href={this.props.currentItem.data} target="_blank">
                                     Download
                                 </a>
                             </button>

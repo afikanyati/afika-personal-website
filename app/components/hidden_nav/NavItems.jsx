@@ -32,6 +32,7 @@ export default class NavItems extends React.Component {
                     width: this.state.navigationWidth - 40 // 40px = Left Margin
                 }}
                 >
+                <p className="filter-help">Filter by</p>
                 {this.props.navItems.map((item,index) => {
                     return (
                         <NavItem

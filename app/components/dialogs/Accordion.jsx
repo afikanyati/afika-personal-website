@@ -126,12 +126,10 @@ export default class Accordion extends React.Component {
 
     componentDidMount() {
         console.log("+++++Accordion");
-
     }
 
     toggleOpen = (id) => {
         let element = document.getElementById(id);
-        console.log("element: ", element);
         if (element.classList.contains('open')) {
             element.classList.remove('open');
         } else {

@@ -2258,6 +2258,10 @@ span.code {
 	padding: 0 !important;
 }
 
+.education-wrapper {
+    width: 100%;
+}
+
 .education-title,
 .skills-title {
     position: relative;

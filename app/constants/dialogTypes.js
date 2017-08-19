@@ -10,5 +10,6 @@ export default {
     DESIGN: 'design',
     VIDEO: 'video',
     SKILLS: 'skills',
-    EDUCATION: 'education'
+    EDUCATION: 'education',
+    RESUME: 'resume'
 };

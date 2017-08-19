@@ -84,16 +84,31 @@ export default class FeedItem extends React.Component {
 
         return (
             <article
-                className="feed-item no-thumbnail animated fadeInUp"
-                onClick={this.props.openItem.bind({}, this.props.item)}
-                onTouchTap={this.props.openItem.bind({}, this.props.item)}>
-                <div className={`generate-thumb ${this.state.randomColor}`}>
+                className={
+                    this.props.item.category == "standalone" ?
+                        "feed-item no-thumbnail animated fadeInUp standalone"
+                    :
+                        "feed-item no-thumbnail animated fadeInUp"}
+                onClick={this.handleClick}
+                onTouchTap={this.handleClick}>
+                <div
+                    className={
+                    this.props.item.category == "standalone" ?
+                        `generate-thumb ${this.state.randomColor} standalone`
+                    :
+                        `generate-thumb ${this.state.randomColor}`}>
                     <div className="thumb-writing-wrapper">
-                        <h3 className={`thumb-writing ${this.state.randomFontColor}`}>
+                        <h3
+                            className={`thumb-writing ${this.state.randomFontColor}`}>
                             {this.props.item.title}
                         </h3>
                     </div>
-                    <div className="feed-overlay-info">
+                    <div
+                        className={
+                            this.props.item.category != "standalone" && this.props.item.category != "standalone resume" ?
+                                "feed-overlay-info"
+                            :
+                                "remove"}>
                         <div className="feed-overlay-icon">
                             {this.state.randomColor == "dark-purple" ?
                                 <img src ={`assets/images/icons/${category}_purple.svg`} />
@@ -127,15 +142,23 @@ export default class FeedItem extends React.Component {
 
         return (
             <article
-                className="feed-item animated fadeInUp"
-                onClick={this.props.openItem.bind({}, this.props.item)}
-                onTouchTap={this.props.openItem.bind({}, this.props.item)}>
+                className={
+                    this.props.item.category == "standalone resume" ?
+                        "feed-item animated fadeInUp standalone resume"
+                    :
+                        this.props.item.category == "standalone" ?
+                            "feed-item animated fadeInUp standalone"
+                        :
+                            "feed-item animated fadeInUp"}
+                onClick={this.handleClick}
+                onTouchTap={this.handleClick}>
                 <div className="feed-image">
                     <Img
                         src={this.props.item.thumbnail}
                         loader={<ImagePlaceholder category={category} height={"30vw"}/>} />
                 </div>
-                <div className="feed-overlay">
+                <div
+                    className={this.props.item.category != "standalone" ? "feed-overlay" : "remove"}>
                     <div className="feed-overlay-info">
                         <div className="feed-overlay-icon">
                             <img src ={`assets/images/icons/${category}_cream.svg`} />
@@ -149,6 +172,17 @@ export default class FeedItem extends React.Component {
                 </div>
             </article>
         );
+    }
+
+    /**
+     * Filters out standalone content that should not have any click events
+     */
+    handleClick = () => {
+        if (this.props.item.category === "standalone" && this.props.item.title != "Resume Download") {
+            return;
+        }
+
+        this.props.openItem(this.props.item);
     }
 }
 

@@ -555,16 +555,13 @@ button {
     width: 100%;
 }
 
-.feed-item.dark {
-    background: var(--dark-purple);
+.feed-item.standalone {
+    cursor: default;
+    width: auto;
 }
 
-.feed-item.mid {
-    background: var(--light-purple);
-}
-
-.feed-item.light {
-    background: var(--white);
+.feed-item.standalone.resume {
+    cursor: pointer;
 }
 
 .feed-image {
@@ -712,11 +709,21 @@ button {
     background: var(--dark-purple);
 }
 
-.thumb-writing-wrapper {
+.generate-thumb.standalone {
+    height: auto;
+    width: auto;
+}
+
+.generate-thumb .thumb-writing-wrapper {
     width: 100%;
     height: 100%;
 }
-.thumb-writing {
+
+.generate-thumb.standalone .thumb-writing-wrapper {
+    width: auto;
+}
+
+.generate-thumb .thumb-writing {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -727,6 +734,16 @@ button {
     transform: translate(-50%,-50%);
     margin: 0;
     line-height: 1.5em;
+}
+
+.generate-thumb.standalone .thumb-writing {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 80px;
+    line-height: 1.8em;
+    display: inline-block;
 }
 
 .thumb-writing.white {
@@ -2454,6 +2471,125 @@ span.code {
     margin-top: 15px;
     color: var(--mid-gray);
 }
+
+/*========================================== */
+
+/* Resume Dialog */
+
+.resume-dialog-content {
+	width: 90vw !important;
+    max-width: none !important;
+}
+
+.resume-dialog-title {
+	padding-bottom: 0px !important;
+	text-align: center;
+	font-size: 1.6em !important;
+	color: #000000 !important;
+	background: var(--white);
+	font-weight: 600 !important;
+	font-family: var(--heading-font);
+}
+
+.resume-dialog-body {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+	width: 90vw  !important;
+    height: 90vh !important;
+	padding: 50px !important;
+    -webkit-align-items: center;
+	-ms-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+    flex-direction: column;
+}
+
+.resume-dialog-actions {
+	padding: 0 !important;
+}
+
+.resume-title {
+    position: relative;
+    width: 100%;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 2.3em;
+    color: var(--dark-purple);
+    margin: 0;
+    text-align: center;
+    background: var(--white);
+}
+
+.resume-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+}
+
+.resume-download {
+    width: 250px;
+    height: 80px;
+    padding: 0;
+    background: var(--dark-purple);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.resume-download:hover {
+    background: var(--light-purple);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.resume-download a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+    color: var(--white);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+
+
 /*========================================== */
 
 /* Animations */

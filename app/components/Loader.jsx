@@ -20,7 +20,9 @@ export default class Loader extends React.Component {
     render() {
 
         return (
-            <div className="square-split">
+            <div
+                id={this.props.id}
+                className="square-split">
                 <div className={`loader ${this.props.size}`}>
                     <div className="square-1"></div>
                     <div className="square-2"></div>
@@ -39,5 +41,6 @@ export default class Loader extends React.Component {
 // ============= PropTypes ==============
 
 Loader.propTypes = {
-    size: PropTypes.string.isRequired
+    size: PropTypes.string.isRequired,
+    id: PropTypes.string
 };

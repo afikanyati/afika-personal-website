@@ -74,7 +74,7 @@ export default class ImageDialog extends React.Component {
                         </h3>
                         {showLeftArrow ?
                             <ArrowButton
-                                position={"absolute"}
+                                position={"fixed"}
                                 top={"50%"}
                                 bottom={"auto"}
                                 left={20}
@@ -88,7 +88,7 @@ export default class ImageDialog extends React.Component {
                         }
                         {showRightArrow ?
                             <ArrowButton
-                                position={"absolute"}
+                                position={"fixed"}
                                 top={"50%"}
                                 bottom={"auto"}
                                 left={"auto"}

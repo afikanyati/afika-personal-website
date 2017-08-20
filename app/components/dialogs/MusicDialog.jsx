@@ -205,7 +205,7 @@ export default class MusicDialog extends React.Component {
                         </div>
                         {showLeftArrow ?
                             <ArrowButton
-                                position={"absolute"}
+                                position={"fixed"}
                                 top={"50%"}
                                 bottom={"auto"}
                                 left={20}
@@ -219,7 +219,7 @@ export default class MusicDialog extends React.Component {
                         }
                         {showRightArrow ?
                             <ArrowButton
-                                position={"absolute"}
+                                position={"fixed"}
                                 top={"50%"}
                                 bottom={"auto"}
                                 left={"auto"}
@@ -351,11 +351,16 @@ export default class MusicDialog extends React.Component {
             let timeElapsed = this.convertTime(timeElapsedTimestamp);
             let timeLeft = this.convertTime(timeLeftTimestamp);
             let percent = currentTime/duration;
+            let isPlaying = true;
+            if (percent == 1) {
+                isPlaying = false;
+            }
 
             this.updateScrubber(percent);
             this.setState({
                 timeElapsed: timeElapsed,
-                timeLeft: timeLeft
+                timeLeft: timeLeft,
+                isPlaying: isPlaying
             });
         }
     }

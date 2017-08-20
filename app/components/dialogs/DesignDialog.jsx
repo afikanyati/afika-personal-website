@@ -6,12 +6,14 @@ import Dialog               from 'material-ui/Dialog';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import Img                  from 'react-image';
+import uuid                 from 'uuid';
 
 // Components
 import DialogTypes          from '../../constants/dialogTypes';
 import CloseButton          from '../buttons/CloseButton';
 import Block                from '../Block';
 import ImagePlaceholder     from '../feed/ImagePlaceholder';
+import DesignAsset          from './DesignAsset';
 
 /**
  * The DesignDialog is one of various Dialog components used to render
@@ -19,7 +21,7 @@ import ImagePlaceholder     from '../feed/ImagePlaceholder';
  */
 export default class DesignDialog extends React.Component {
     state = {
-        blocks: []          // A list of block assets: an image/video and text pairing
+        assets: []             // A list of various design assets used in the article
     }
 
     constructor(props) {
@@ -89,48 +91,11 @@ export default class DesignDialog extends React.Component {
                                     color={"#5a4570"}/>
                             </div>
                             <div className="design-body">
-                                {this.state.blocks.map((item, index) => {
-                                    let isEven = index == 0 || !!(index && !(index%2));
-
+                                {this.state.assets.map(asset => {
                                     return (
-                                        <div>
-                                            {item.type == "image" ?
-                                                isEven ?
-                                                    <div className="design-block">
-                                                        <div className="block-image">
-                                                            <Img
-                                                                src={item.data}
-                                                                loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
-                                                        </div>
-                                                        <div className="block-description">
-                                                            {item.description}
-                                                        </div>
-                                                    </div>
-
-                                                :
-
-                                                    <div className="design-block right">
-                                                        <div className="block-description">
-                                                            {item.description}
-                                                        </div>
-                                                        <div className="block-image">
-                                                            <Img
-                                                                src={item.data}
-                                                                loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
-                                                        </div>
-                                                    </div>
-
-                                            :
-                                                null
-                                            }
-                                            {item.type == "text" ?
-                                                <div className="design-block-text">
-                                                    {item.data}
-                                                </div>
-                                            :
-                                                null
-                                            }
-                                        </div>
+                                        <DesignAsset
+                                            key={uuid.v4()}
+                                            asset={asset} />
                                     );
                                 })}
                             </div>
@@ -144,17 +109,17 @@ export default class DesignDialog extends React.Component {
     componentDidMount() {
         console.log("+++++DesignDialog");
 
-        if (this.props.currentItem.blocks) {
+        if (this.props.currentItem.assets) {
             this.setState({
-                blocks: this.props.currentItem.blocks
+                assets: this.props.currentItem.assets
             });
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.currentItem.blocks) {
+        if (nextProps.currentItem.assets) {
             this.setState({
-                blocks: nextProps.currentItem.blocks
+                assets: nextProps.currentItem.assets
             });
         }
     }

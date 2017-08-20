@@ -8,13 +8,13 @@ import Img              from 'react-image';
 import uuid             from 'uuid';
 
 // Components
-import AssetTypes       from '../../constants/assetTypes.js';
-import Italic           from './Italic';
-import Bold             from './Bold';
-import Link             from './Link';
-import Code             from './Code';
-import ImagePlaceholder from '../feed/ImagePlaceholder';
-import Block            from '../Block';
+import ArticleAssetTypes        from '../../constants/articleAssetTypes.js';
+import Italic                   from './Italic';
+import Bold                     from './Bold';
+import Link                     from './Link';
+import Code                     from './Code';
+import ImagePlaceholder         from '../feed/ImagePlaceholder';
+import Block                    from '../Block';
 
 /**
  * The ArticleAsset is a multi-purpose asset used by ArticleDialog component to display
@@ -40,23 +40,23 @@ export default class ArticleAsset extends React.Component {
     }
 
     render() {
-        if(this.props.asset.type == AssetTypes.PARAGRAPH) {
+        if(this.props.asset.type == ArticleAssetTypes.PARAGRAPH) {
             return this.paragraphAsset();
-        } else if (this.props.asset.type == AssetTypes.HEADING) {
+        } else if (this.props.asset.type == ArticleAssetTypes.HEADING) {
             return this.headingAsset();
-        } else if (this.props.asset.type == AssetTypes.YOUTUBE) {
+        } else if (this.props.asset.type == ArticleAssetTypes.YOUTUBE) {
             return this.youtubeAsset();
-        } else if (this.props.asset.type == AssetTypes.IMAGE) {
+        } else if (this.props.asset.type == ArticleAssetTypes.IMAGE) {
             return this.imageAsset();
-        } else if (this.props.asset.type == AssetTypes.QUOTE) {
+        } else if (this.props.asset.type == ArticleAssetTypes.QUOTE) {
             return this.quoteAsset();
-        } else if (this.props.asset.type == AssetTypes.DICTIONARY) {
+        } else if (this.props.asset.type == ArticleAssetTypes.DICTIONARY) {
             return this.dictionaryAsset();
-        } else if (this.props.asset.type == AssetTypes.LIST) {
+        } else if (this.props.asset.type == ArticleAssetTypes.LIST) {
             return this.listAsset();
-        } else if (this.props.asset.type == AssetTypes.SLIDER) {
+        } else if (this.props.asset.type == ArticleAssetTypes.SLIDER) {
             return this.sliderAsset();
-        } else if (this.props.asset.type == AssetTypes.SECTION_DIVIDER) {
+        } else if (this.props.asset.type == ArticleAssetTypes.SECTION_DIVIDER) {
             return this.sectionDividerAsset();
         } else {
             // should not reach this point

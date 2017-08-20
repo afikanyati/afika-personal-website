@@ -7,15 +7,20 @@ import uuid                 from 'uuid';
 import Dialog               from 'material-ui/Dialog';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
+import JsxParser            from 'react-jsx-parser';
 
 
 // Components
-import DialogTypes          from '../../constants/dialogTypes';
-import CloseButton          from '../buttons/CloseButton';
-import Block                from '../Block';
-import ArticleAsset         from './ArticleAsset';
-import ArrowButton          from '../buttons/ArrowButton';
-import AssetTypes           from '../../constants/assetTypes.js';
+import DialogTypes                  from '../../constants/dialogTypes';
+import CloseButton                  from '../buttons/CloseButton';
+import Block                        from '../Block';
+import Italic                       from './Italic';
+import Bold                         from './Bold';
+import Link                         from './Link';
+import Code                         from './Code';
+import ArticleAsset                 from './ArticleAsset';
+import ArrowButton                  from '../buttons/ArrowButton';
+import ArticleAssetTypes            from '../../constants/articleAssetTypes.js';
 
 /**
  * The ArticleDialog is one of various Dialog components used to render
@@ -74,7 +79,10 @@ export default class ArticleDialog extends React.Component {
                                 {this.props.currentItem.title}
                             </h1>
                             <p className={`article-description ${type}`}>
-                                {this.props.currentItem.subtitle}
+                                <JsxParser
+                                    bindings={{}}
+                                    components={{Italic, Link, Bold, Code}}
+                                    jsx={this.props.currentItem.subtitle} />
                             </p>
                             <div className={`article-date-wrapper ${type}`}>
                                 <Block
@@ -116,7 +124,7 @@ export default class ArticleDialog extends React.Component {
                                     );
                                 })}
                             </div>
-                            {this.state.currentSlide > 0 && this.state.assets[0]["type"] == AssetTypes.SLIDER ?
+                            {this.state.currentSlide > 0 && this.state.assets[0]["type"] == ArticleAssetTypes.SLIDER ?
                                 <ArrowButton
                                     position={"fixed"}
                                     top={"50%"}
@@ -130,7 +138,7 @@ export default class ArticleDialog extends React.Component {
                             :
                                 null
                             }
-                            {this.state.currentSlide < lenSlides && this.state.assets[0]["type"] == AssetTypes.SLIDER ?
+                            {this.state.currentSlide < lenSlides && this.state.assets[0]["type"] == ArticleAssetTypes.SLIDER ?
                                 <ArrowButton
                                     position={"fixed"}
                                     top={"50%"}

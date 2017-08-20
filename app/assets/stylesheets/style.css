@@ -1909,9 +1909,9 @@ span.code {
 
 .music-wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: auto;
+    left: auto;
+    transform: none;
     width: 80%;
 }
 
@@ -2127,6 +2127,7 @@ span.code {
     font-weight: 300;
     font-size: 1.2em;
     margin-top: 10px;
+    margin-bottom: 100px;
 }
 
 .video-player video {
@@ -2772,16 +2773,6 @@ span.code {
     .navigation.closed,
     .navigation.contact-open {
         left: -259px;
-    }
-}
-
-@media (max-width: 810px) {
-    .music-wrapper {
-        position: absolute;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 80%;
     }
 }
 

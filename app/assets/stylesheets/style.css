@@ -1817,6 +1817,7 @@ span.code {
     font-family: var(--body-font);
     font-weight: 300;
     font-size: 1.2em;
+    margin-bottom: 50px;
 }
 
 .design-video-asset,

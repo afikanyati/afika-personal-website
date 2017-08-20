@@ -15,7 +15,7 @@ export default class HamburgerIcon extends React.Component {
     }
 
     componentWillMount() {
-        console.log("+++++HamburgerIcon");
+        // console.log("+++++HamburgerIcon");
     }
 
     render() {
@@ -43,7 +43,7 @@ export default class HamburgerIcon extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++HamburgerIcon");
+        // console.log("+++++HamburgerIcon");
     }
 }
 

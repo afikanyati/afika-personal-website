@@ -21,7 +21,7 @@ export default class Feed extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----Feed");
+        // console.log("-----Feed");
     }
 
     render() {
@@ -41,7 +41,7 @@ export default class Feed extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Feed");
+        // console.log("+++++Feed");
         const feed = ReactDOM.findDOMNode(this.refs.feed);
         feed.addEventListener('scroll', this.scrolled);
     }

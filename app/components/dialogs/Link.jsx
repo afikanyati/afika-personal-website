@@ -15,7 +15,7 @@ export default class Link extends React.Component {
     }
 
     componentWillMount() {
-        console.log("+++++Link");
+        // console.log("+++++Link");
     }
 
     render() {
@@ -30,7 +30,7 @@ export default class Link extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Link");
+        // console.log("+++++Link");
     }
 }
 

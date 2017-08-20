@@ -25,7 +25,7 @@ export default class Accordion extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----Accordion");
+        // console.log("-----Accordion");
     }
 
     render() {
@@ -125,7 +125,7 @@ export default class Accordion extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Accordion");
+        // console.log("+++++Accordion");
     }
 
     /**

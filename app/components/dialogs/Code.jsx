@@ -16,7 +16,7 @@ export default class Code extends React.Component {
     }
 
     componentWillMount() {
-        console.log("+++++Code");
+        // console.log("+++++Code");
     }
 
     render() {
@@ -28,7 +28,7 @@ export default class Code extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Code");
+        // console.log("+++++Code");
     }
 }
 

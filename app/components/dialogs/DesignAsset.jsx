@@ -21,7 +21,11 @@ import Block                    from '../Block';
  *  - Paragraph asset: A paragraph of text
  *  - Heading asset: A heading within the entry
  *  - Image asset: An embeded full-width image
+ *  - Double Image asset: A couplet consisting of two images
  *  - Video asset: An embedded full-width video
+ *  - Double Video asset: A couplet consisting of two videos
+ *  - Image Video asset: A couplet consisting of an image to the left and a video to the right
+ *  - Video Image asset: A couplet consisting of an video to the left and a image to the right
  *  - Right Block Asset: A text and image/video couple with the image on the right
  *  - Left Block Asset: A text and image/video couple with the image on the left
  */
@@ -32,7 +36,7 @@ export default class DesignAsset extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----DesignAsset");
+        // console.log("-----DesignAsset");
     }
 
     render() {
@@ -65,7 +69,7 @@ export default class DesignAsset extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++DesignAsset");
+        // console.log("+++++DesignAsset");
     }
 
     // ========== Methods ===========
@@ -132,6 +136,10 @@ export default class DesignAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for double image asset
+     * @return React component double image asset div
+     */
     doubleImageAsset = () => {
         return (
             <div className="design-block-double">
@@ -149,6 +157,10 @@ export default class DesignAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for double video asset
+     * @return React component double video asset div
+     */
     doubleVideoAsset = () => {
         return (
             <div className="design-block-double">
@@ -168,6 +180,10 @@ export default class DesignAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for video image asset
+     * @return React component video image asset div
+     */
     videoImageAsset = () => {
         return (
             <div className="design-block-double">
@@ -186,6 +202,10 @@ export default class DesignAsset extends React.Component {
         );
     }
 
+    /**
+     * Renderer for image video asset
+     * @return React component image video asset div
+     */
     imageVideoAsset = () => {
         return (
             <div className="design-block-double">

@@ -17,7 +17,7 @@ export default class ScrollButton extends React.Component {
     }
 
     componentWillMount() {
-        console.log("+++++ScrollButton");
+        // console.log("+++++ScrollButton");
     }
 
     render() {
@@ -54,7 +54,7 @@ export default class ScrollButton extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++ScrollButton");
+        // console.log("+++++ScrollButton");
     }
 
     // ========== Methods ===========

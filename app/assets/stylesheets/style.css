@@ -2751,6 +2751,12 @@ span.code {
     #left-main-block {
         display: none !important;
     }
+
+    .skill-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
 }
 
 @media (max-width: 995px) {
@@ -2784,8 +2790,8 @@ span.code {
 
 @media (max-width: 790px) {
     .skill-viewport {
-        position: static;
-        top: auto;
+        position: relative;
+        top: 90px;
         transform: none;
         width: 100%;
         margin-top: 50px;
@@ -2794,6 +2800,10 @@ span.code {
     .wordcloud-wrapper {
         width: 100%;
         left: 0;
+    }
+
+    .wordcloud-wrapper {
+        top: 90px;
     }
 }
 

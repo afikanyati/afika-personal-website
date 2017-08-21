@@ -107,7 +107,11 @@ export default class DesignAsset extends React.Component {
      */
     videoAsset = () => {
         return (
-            <div className="design-video-asset">
+            <div
+                className="design-video-asset"
+                style={{
+                    height: window.innerWidth * 0.9 * 0.9 * 0.9 // 0.9 = Dialog Body, 0.9 = Design Wrapper, 0.9 = Image
+                }}>
                 <video className="design-video" autoPlay loop>
                      <source src={this.props.asset.asset.data} type="video/mp4" />
                     Your browser does not support HTML5 video.
@@ -236,7 +240,13 @@ export default class DesignAsset extends React.Component {
                         src={this.props.asset.asset.image}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                 </div>
-                <div className="block-description">
+                <div
+                    className="block-description"
+                    style={
+                        window.innerWidth > 630 ?
+                            {paddingLeft: 40}
+                        :
+                            null}>
                     <JsxParser
                         bindings={{}}
                         components={{Italic, Link, Bold, Code}}
@@ -253,7 +263,13 @@ export default class DesignAsset extends React.Component {
     rightBlockAsset = () => {
         return (
             <div className="design-block right">
-                <div className="block-description">
+                <div
+                    className="block-description"
+                    style={
+                        window.innerWidth > 630 ?
+                            {paddingRight: 40}
+                        :
+                            null}>
                     <JsxParser
                         bindings={{}}
                         components={{Italic, Link, Bold, Code}}

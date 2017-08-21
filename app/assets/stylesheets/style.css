@@ -981,7 +981,13 @@ button {
 
 .contact-form .left-form,
 .contact-form .right-form {
-    flex: 0.48;
+    flex: 0.50;
+    padding-right: 20px;
+}
+
+.contact-form .right-form {
+    padding-right: 0;
+    padding-left: 20px;
 }
 
 .contact-form .left-form p,
@@ -1428,7 +1434,6 @@ button {
 .article-wrapper,
 .design-wrapper {
     width: 80%;
-    margin-top: 20px;
 }
 
 .design-wrapper {
@@ -1790,7 +1795,8 @@ span.code {
 .design-block .block-image,
 .design-block-double .block-image,
 .design-block-double .block-video {
-    flex: 0.47;
+    flex: 0.50;
+    padding: 20px;
 }
 
 .design-block .block-image img,
@@ -1800,7 +1806,7 @@ span.code {
 }
 
 .design-block .block-description {
-    flex: 0.45;
+    flex: 0.50;
     max-width: 700px;
     font-family: var(--body-font);
     font-weight: 300;
@@ -1845,10 +1851,6 @@ span.code {
 .design-video,
 .design-image-asset img {
     width: 60%;
-}
-
-.design-image-asset img {
-    height: 60%;
 }
 
 .design-video-caption,
@@ -2932,10 +2934,6 @@ span.code {
     .design-image-asset img {
         width: 100%;
     }
-
-    .design-image-asset img {
-        height: 100%;
-    }
 }
 
 @media (max-width: 570px) {
@@ -2962,6 +2960,7 @@ span.code {
     .contact-form .left-form,
     .contact-form .right-form {
         flex: 1;
+        padding: 0;
     }
 
     .contact-form .left-form p,

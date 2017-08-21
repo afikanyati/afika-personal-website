@@ -2515,9 +2515,14 @@ span.code {
     z-index: 100;
 }
 
+.skills-title {
+    position: fixed;
+}
+
 .wordcloud-wrapper {
     display: inline-block;
     position: relative;
+    top: 90px;
     left: 40%;
     width: 60%;
 }

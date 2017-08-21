@@ -13,5 +13,6 @@ export default {
     IMAGE_VIDEO: "image_video",
     VIDEO_IMAGE: "video_image",
     VIDEO: "video",
-    DOUBLE_VIDEO: "double_video"
+    DOUBLE_VIDEO: "double_video",
+    QUOTE: "quote"
 };

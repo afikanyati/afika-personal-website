@@ -26,8 +26,8 @@ import Block                    from '../Block';
  *  - Double Video asset: A couplet consisting of two videos
  *  - Image Video asset: A couplet consisting of an image to the left and a video to the right
  *  - Video Image asset: A couplet consisting of an video to the left and a image to the right
- *  - Right Block Asset: A text and image/video couple with the image on the right
- *  - Left Block Asset: A text and image/video couple with the image on the left
+ *  - Right Image Block Asset: A text and image/video couple with the image/video on the right
+ *  - Left Image Block Asset: A text and image/video couple with the image/video on the left
  */
 export default class DesignAsset extends React.Component {
 
@@ -60,6 +60,8 @@ export default class DesignAsset extends React.Component {
             return this.imageVideoAsset();
         } else if (this.props.asset.type == DesignAssetTypes.VIDEO_IMAGE) {
             return this.VideoImageAsset();
+        } else if (this.props.asset.type == DesignAssetTypes.QUOTE) {
+            return this.quoteAsset();
         } else {
             // should not reach this point
             return (
@@ -108,10 +110,7 @@ export default class DesignAsset extends React.Component {
     videoAsset = () => {
         return (
             <div
-                className="design-video-asset"
-                style={{
-                    height: window.innerWidth * 0.9 * 0.9 * 0.9 // 0.9 = Dialog Body, 0.9 = Design Wrapper, 0.9 = Image
-                }}>
+                className="design-video-asset">
                 <video className="design-video" autoPlay loop>
                      <source src={this.props.asset.asset.data} type="video/mp4" />
                     Your browser does not support HTML5 video.
@@ -151,11 +150,17 @@ export default class DesignAsset extends React.Component {
                     <Img
                         src={this.props.asset.asset.image_1}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                    <h3 className="design-image-caption">
+                        {this.props.asset.asset.caption_1}
+                    </h3>
                 </div>
                 <div className="block-image">
                     <Img
                         src={this.props.asset.asset.image_2}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                    <h3 className="design-image-caption">
+                        {this.props.asset.asset.caption_2}
+                    </h3>
                 </div>
             </div>
         );
@@ -173,12 +178,18 @@ export default class DesignAsset extends React.Component {
                          <source src={this.props.asset.asset.video_1} type="video/mp4" />
                         Your browser does not support HTML5 video.
                     </video>
+                    <h3 className="design-video-caption">
+                        {this.props.asset.asset.caption_1}
+                    </h3>
                 </div>
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video_2} type="video/mp4" />
                         Your browser does not support HTML5 video.
                     </video>
+                    <h3 className="design-video-caption">
+                        {this.props.asset.asset.caption_2}
+                    </h3>
                 </div>
             </div>
         );
@@ -196,11 +207,17 @@ export default class DesignAsset extends React.Component {
                          <source src={this.props.asset.asset.video} type="video/mp4" />
                         Your browser does not support HTML5 video.
                     </video>
+                    <h3 className="design-video-caption">
+                        {this.props.asset.asset.video_caption}
+                    </h3>
                 </div>
                 <div className="block-image">
                     <Img
                         src={this.props.asset.asset.image}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                        <h3 className="design-image-caption">
+                            {this.props.asset.asset.image_caption}
+                        </h3>
                 </div>
             </div>
         );
@@ -217,12 +234,18 @@ export default class DesignAsset extends React.Component {
                     <Img
                         src={this.props.asset.asset.image}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                    <h3 className="design-image-caption">
+                        {this.props.asset.asset.image_caption}
+                    </h3>
                 </div>
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video} type="video/mp4" />
                         Your browser does not support HTML5 video.
                     </video>
+                    <h3 className="design-video-caption">
+                        {this.props.asset.asset.video_caption}
+                    </h3>
                 </div>
             </div>
         );
@@ -233,13 +256,30 @@ export default class DesignAsset extends React.Component {
      * @return React component left block asset div
      */
     leftBlockAsset = () => {
+         let isImage = this.props.asset.asset.hasOwnProperty("image");
         return (
             <div className="design-block">
-                <div className="block-image">
-                    <Img
-                        src={this.props.asset.asset.image}
-                        loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
-                </div>
+                {isImage ?
+                    <div className="block-image">
+                        <Img
+                            src={this.props.asset.asset.image}
+                            loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                        <h3 className="design-image-caption">
+                            {this.props.asset.asset.image_caption}
+                        </h3>
+                    </div>
+                :
+                    <div className="block-video">
+                        <video autoPlay loop>
+                             <source src={this.props.asset.asset.video} type="video/mp4" />
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <h3 className="design-video-caption">
+                            {this.props.asset.asset.video_caption}
+                        </h3>
+                    </div>
+                }
+
                 <div
                     className="block-description"
                     style={
@@ -261,6 +301,7 @@ export default class DesignAsset extends React.Component {
      * @return React component right block asset div
      */
     rightBlockAsset = () => {
+        let isImage = this.props.asset.asset.hasOwnProperty("image");
         return (
             <div className="design-block right">
                 <div
@@ -275,11 +316,58 @@ export default class DesignAsset extends React.Component {
                         components={{Italic, Link, Bold, Code}}
                         jsx={this.props.asset.asset.text}/>
                 </div>
-                <div className="block-image">
-                    <Img
-                        src={this.props.asset.asset.image}
-                        loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                {isImage ?
+                    <div className="block-image">
+                        <Img
+                            src={this.props.asset.asset.image}
+                            loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
+                        <h3 className="design-image-caption">
+                            {this.props.asset.asset.image_caption}
+                        </h3>
+                    </div>
+                :
+                    <div className="block-video">
+                        <video autoPlay loop>
+                             <source src={this.props.asset.asset.video} type="video/mp4" />
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <h3 className="design-video-caption">
+                            {this.props.asset.asset.video_caption}
+                        </h3>
+                    </div>
+                }
+            </div>
+        );
+    }
+
+    /**
+     * Renderer for quote asset
+     * @return React component quote asset div
+     */
+    quoteAsset = () => {
+        return (
+            <div className="quote-asset">
+                <Block
+                    position={"absolute"}
+                    display={"block"}
+                    top={"50%"}
+                    bottom={"auto"}
+                    left={0}
+                    right={"auto"}
+                    vertCenter={true}
+                    horCenter={false}
+                    width={3}
+                    height={"100%"}
+                    color={"#989898"}/>
+                <div className="quote">
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.data}/>
                 </div>
+                <h3 className="reference">
+                    {this.props.asset.asset.reference}
+                </h3>
             </div>
         );
     }

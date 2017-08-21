@@ -1793,6 +1793,7 @@ span.code {
 }
 
 .design-block .block-image,
+.design-block .block-video,
 .design-block-double .block-image,
 .design-block-double .block-video {
     flex: 0.50;
@@ -1800,6 +1801,7 @@ span.code {
 }
 
 .design-block .block-image img,
+.design-block .block-video video,
 .design-block-double .block-image img,
 .design-block-double .block-video video {
     width: 100%;

@@ -15,5 +15,6 @@ export default {
     VIDEO: "video",
     DOUBLE_VIDEO: "double_video",
     QUOTE: "quote",
-    DICTIONARY: "dictionary"
+    DICTIONARY: "dictionary",
+    YOUTUBE: "youtube"
 };

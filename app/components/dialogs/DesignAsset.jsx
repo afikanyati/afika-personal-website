@@ -31,6 +31,7 @@ import Loader                   from '../Loader';
  *  - Left Image Block Asset: A text and image/video couple with the image/video on the left
  *  - Quote asset: Text in a stylized quote layout
  *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
+ *  - YouTube asset: An embeded YouTube video
  */
 export default class DesignAsset extends React.Component {
 
@@ -67,6 +68,8 @@ export default class DesignAsset extends React.Component {
             return this.quoteAsset();
         } else if (this.props.asset.type == DesignAssetTypes.DICTIONARY) {
             return this.dictionaryAsset();
+        } else if (this.props.asset.type == ArticleAssetTypes.YOUTUBE) {
+            return this.youtubeAsset();
         } else {
             // should not reach this point
             return (
@@ -475,6 +478,28 @@ export default class DesignAsset extends React.Component {
                         jsx={entireDef}/>
                 </p>
             </div>
+        );
+    }
+
+    /**
+     * Renderer for YouTube asset
+     * @return React component YouTube asset div
+     */
+    youtubeAsset = () => {
+        return (
+            <div className={`youtube-asset ${this.props.asset.asset.layout}`}>
+                <YouTube
+                    videoId={this.props.asset.asset.data}
+                    className="youtube-video"
+                />
+                <h3 className="youtube-caption">
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
+                </h3>
+            </div>
+
         );
     }
 }

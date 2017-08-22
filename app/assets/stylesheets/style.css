@@ -1805,6 +1805,8 @@ span.code {
 .design-block-double .block-image img,
 .design-block-double .block-video video {
     width: 100%;
+    border: 1px solid var(--mid-gray);
+    border-radius: 1px;
 }
 
 .design-block .block-description {
@@ -1853,6 +1855,8 @@ span.code {
 .design-video,
 .design-image-asset img {
     width: 60%;
+    border: 1px solid var(--mid-gray);
+    border-radius: 1px;
 }
 
 .design-video-caption,

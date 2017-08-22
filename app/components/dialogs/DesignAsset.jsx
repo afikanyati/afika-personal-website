@@ -28,6 +28,8 @@ import Block                    from '../Block';
  *  - Video Image asset: A couplet consisting of an video to the left and a image to the right
  *  - Right Image Block Asset: A text and image/video couple with the image/video on the right
  *  - Left Image Block Asset: A text and image/video couple with the image/video on the left
+ *  - Quote asset: Text in a stylized quote layout
+ *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
  */
 export default class DesignAsset extends React.Component {
 
@@ -62,6 +64,8 @@ export default class DesignAsset extends React.Component {
             return this.VideoImageAsset();
         } else if (this.props.asset.type == DesignAssetTypes.QUOTE) {
             return this.quoteAsset();
+        } else if (this.props.asset.type == DesignAssetTypes.DICTIONARY) {
+            return this.dictionaryAsset();
         } else {
             // should not reach this point
             return (
@@ -368,6 +372,64 @@ export default class DesignAsset extends React.Component {
                 <h3 className="reference">
                     {this.props.asset.asset.reference}
                 </h3>
+            </div>
+        );
+    }
+
+    /**
+     * Renderer for dictionary asset
+     * @return React component dictionary asset div
+     */
+    dictionaryAsset = () => {
+        // Create string for dictionary definition
+        // composed of numbered sub-definitions
+
+        let definitionString = "";
+
+        // Run loop for distinct definitions
+        for (let i in this.props.asset.asset.definitions) {
+            // Distinct definition is an array when it has sub-definitions
+            if (Array.isArray(this.props.asset.asset.definitions[i])) {
+                // Run loop for sub-definitions
+                for (let j in this.props.asset.asset.definitions[i]) {
+                    let definitionNum = `${parseInt(i)+1}.${parseInt(j)+1}.`;
+                    definitionString += `<Bold text={"${definitionNum}"} /> `;
+                    definitionString += this.props.asset.asset.definitions[i][j];
+                    definitionString += " ";
+                }
+            } else {
+                // Definition has no sub-definitions
+                let definitionNum = `${parseInt(i)+1}.`;
+                definitionString += `<Bold text={"${definitionNum}"} /> `;
+                definitionString += this.props.asset.asset.definitions[i];
+                definitionString += " ";
+            }
+        }
+
+        // Remove trailing space
+        definitionString = definitionString.substring(0, definitionString.length - 1);
+        let entireDef = `<Bold text={"${this.props.asset.asset.term}"} /> <Italic text={"${this.props.asset.asset.phonetic}"} /> ${definitionString}`;
+
+        return (
+            <div className="dictionary-asset">
+                <Block
+                    position={"absolute"}
+                    display={"block"}
+                    top={"50%"}
+                    bottom={"auto"}
+                    left={0}
+                    right={"auto"}
+                    vertCenter={true}
+                    horCenter={false}
+                    width={3}
+                    height={"100%"}
+                    color={"#989898"}/>
+                <p className="dic-definition">
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={entireDef}/>
+                </p>
             </div>
         );
     }

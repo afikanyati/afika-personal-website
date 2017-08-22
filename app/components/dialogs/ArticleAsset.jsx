@@ -298,7 +298,6 @@ export default class ArticleAsset extends React.Component {
 // ============= PropTypes ==============
 
 ArticleAsset.propTypes = {
-    key: PropTypes.string.isRequired,
     asset: PropTypes.object.isRequired,
     currentSlide: PropTypes.number
 };

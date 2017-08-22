@@ -482,6 +482,5 @@ export default class DesignAsset extends React.Component {
 // ============= PropTypes ==============
 
 DesignAsset.propTypes = {
-    key: PropTypes.string.isRequired,
     asset: PropTypes.object.isRequired
 };

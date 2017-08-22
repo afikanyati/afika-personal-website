@@ -52,7 +52,6 @@ export default class NavItem extends React.Component {
 // ============= PropTypes ==============
 
 NavItem.propTypes = {
-    key: PropTypes.string.isRequired,
     navIsOpen: PropTypes.bool.isRequired,
     navItem: PropTypes.object.isRequired,
     toggleContent: PropTypes.func.isRequired,

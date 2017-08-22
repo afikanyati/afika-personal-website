@@ -187,7 +187,6 @@ export default class FeedItem extends React.Component {
 // ============= PropTypes ==============
 
 FeedItem.propTypes = {
-    key: PropTypes.number.isRequired,
     item: PropTypes.object.isRequired,
     openItem: PropTypes.func.isRequired
 };

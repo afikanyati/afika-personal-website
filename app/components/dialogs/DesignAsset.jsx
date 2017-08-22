@@ -14,6 +14,7 @@ import Link                     from './Link';
 import Code                     from './Code';
 import ImagePlaceholder         from '../feed/ImagePlaceholder';
 import Block                    from '../Block';
+import Loader                   from '../Loader';
 
 /**
  * The DesignAsset is a multi-purpose asset used by DesignDialog component to display
@@ -117,6 +118,7 @@ export default class DesignAsset extends React.Component {
                 className="design-video-asset">
                 <video className="design-video" autoPlay loop>
                      <source src={this.props.asset.asset.data} type="video/mp4" />
+                     <Loader size="small" id="video-loader" />
                     Your browser does not support HTML5 video.
                 </video>
                 <h3 className="design-video-caption">
@@ -192,6 +194,7 @@ export default class DesignAsset extends React.Component {
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video_1} type="video/mp4" />
+                         <Loader size="small" id="video-loader" />
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
@@ -204,6 +207,7 @@ export default class DesignAsset extends React.Component {
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video_2} type="video/mp4" />
+                         <Loader size="small" id="video-loader" />
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
@@ -227,6 +231,7 @@ export default class DesignAsset extends React.Component {
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video} type="video/mp4" />
+                         <Loader size="small" id="video-loader" />
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
@@ -272,6 +277,7 @@ export default class DesignAsset extends React.Component {
                 <div className="block-video">
                     <video autoPlay loop>
                          <source src={this.props.asset.asset.video} type="video/mp4" />
+                         <Loader size="small" id="video-loader" />
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
@@ -309,6 +315,7 @@ export default class DesignAsset extends React.Component {
                     <div className="block-video">
                         <video autoPlay loop>
                              <source src={this.props.asset.asset.video} type="video/mp4" />
+                             <Loader size="small" id="video-loader" />
                             Your browser does not support HTML5 video.
                         </video>
                         <h3 className="design-video-caption">
@@ -369,6 +376,7 @@ export default class DesignAsset extends React.Component {
                     <div className="block-video">
                         <video autoPlay loop>
                              <source src={this.props.asset.asset.video} type="video/mp4" />
+                             <Loader size="small" id="video-loader" />
                             Your browser does not support HTML5 video.
                         </video>
                         <h3 className="design-video-caption">

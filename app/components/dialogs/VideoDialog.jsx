@@ -73,7 +73,6 @@ export default class VideoDialog extends React.Component {
                             horCenter={false}
                             onClick={this.closeDialog} />
                         <div className="video-wrapper">
-                            <Loader size="small" id="video-loader" />
                             <h1 className="video-title">
                                 {this.props.currentItem.title}
                             </h1>
@@ -101,6 +100,7 @@ export default class VideoDialog extends React.Component {
                                         ref="video"
                                         poster={this.props.currentItem.thumbnail}>
                                          <source src={this.props.currentItem.data} type="video/mp4" />
+                                         <Loader size="small" id="video-loader" />
                                         Your browser does not support HTML5 video.
                                     </video>
                                     <div className="video-playback-group">

@@ -120,7 +120,10 @@ export default class DesignAsset extends React.Component {
                     Your browser does not support HTML5 video.
                 </video>
                 <h3 className="design-video-caption">
-                    {this.props.asset.asset.caption}
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
                 </h3>
             </div>
         );
@@ -137,7 +140,10 @@ export default class DesignAsset extends React.Component {
                     src={this.props.asset.asset.data}
                     loader={<ImagePlaceholder category={this.props.asset.type} height={"30vw"}/>} />
                 <h3 className="design-image-caption">
-                    {this.props.asset.asset.caption}
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
                 </h3>
             </div>
         );
@@ -155,7 +161,10 @@ export default class DesignAsset extends React.Component {
                         src={this.props.asset.asset.image_1}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                     <h3 className="design-image-caption">
-                        {this.props.asset.asset.caption_1}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.caption_1}/>
                     </h3>
                 </div>
                 <div className="block-image">
@@ -163,7 +172,10 @@ export default class DesignAsset extends React.Component {
                         src={this.props.asset.asset.image_2}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                     <h3 className="design-image-caption">
-                        {this.props.asset.asset.caption_2}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.caption_2}/>
                     </h3>
                 </div>
             </div>
@@ -183,7 +195,10 @@ export default class DesignAsset extends React.Component {
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
-                        {this.props.asset.asset.caption_1}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.caption_1}/>
                     </h3>
                 </div>
                 <div className="block-video">
@@ -192,7 +207,10 @@ export default class DesignAsset extends React.Component {
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
-                        {this.props.asset.asset.caption_2}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.caption_2}/>
                     </h3>
                 </div>
             </div>
@@ -212,7 +230,10 @@ export default class DesignAsset extends React.Component {
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
-                        {this.props.asset.asset.video_caption}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.video_caption}/>
                     </h3>
                 </div>
                 <div className="block-image">
@@ -220,7 +241,10 @@ export default class DesignAsset extends React.Component {
                         src={this.props.asset.asset.image}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                         <h3 className="design-image-caption">
-                            {this.props.asset.asset.image_caption}
+                            <JsxParser
+                                bindings={{}}
+                                components={{Italic, Link, Bold, Code}}
+                                jsx={this.props.asset.asset.image_caption}/>
                         </h3>
                 </div>
             </div>
@@ -239,7 +263,10 @@ export default class DesignAsset extends React.Component {
                         src={this.props.asset.asset.image}
                         loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                     <h3 className="design-image-caption">
-                        {this.props.asset.asset.image_caption}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.image_caption}/>
                     </h3>
                 </div>
                 <div className="block-video">
@@ -248,7 +275,10 @@ export default class DesignAsset extends React.Component {
                         Your browser does not support HTML5 video.
                     </video>
                     <h3 className="design-video-caption">
-                        {this.props.asset.asset.video_caption}
+                        <JsxParser
+                            bindings={{}}
+                            components={{Italic, Link, Bold, Code}}
+                            jsx={this.props.asset.asset.video_caption}/>
                     </h3>
                 </div>
             </div>
@@ -269,7 +299,10 @@ export default class DesignAsset extends React.Component {
                             src={this.props.asset.asset.image}
                             loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                         <h3 className="design-image-caption">
-                            {this.props.asset.asset.image_caption}
+                            <JsxParser
+                                bindings={{}}
+                                components={{Italic, Link, Bold, Code}}
+                                jsx={this.props.asset.asset.image_caption}/>
                         </h3>
                     </div>
                 :
@@ -279,7 +312,10 @@ export default class DesignAsset extends React.Component {
                             Your browser does not support HTML5 video.
                         </video>
                         <h3 className="design-video-caption">
-                            {this.props.asset.asset.video_caption}
+                            <JsxParser
+                                bindings={{}}
+                                components={{Italic, Link, Bold, Code}}
+                                jsx={this.props.asset.asset.video_caption}/>
                         </h3>
                     </div>
                 }

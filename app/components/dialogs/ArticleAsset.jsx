@@ -111,7 +111,10 @@ export default class ArticleAsset extends React.Component {
                     className="youtube-video"
                 />
                 <h3 className="youtube-caption">
-                    {this.props.asset.asset.caption}
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
                 </h3>
             </div>
 
@@ -129,7 +132,10 @@ export default class ArticleAsset extends React.Component {
                     src={this.props.asset.asset.data}
                     loader={<ImagePlaceholder category={this.props.asset.type} height={"30vw"}/>} />
                 <h3 className="image-caption">
-                    {this.props.asset.asset.caption}
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
                 </h3>
             </div>
         );

@@ -240,6 +240,7 @@ button {
 .nav-item:nth-child(4) { animation-delay: 0.2s }
 .nav-item:nth-child(5) { animation-delay: 0.25s }
 .nav-item:nth-child(6) { animation-delay: 0.3s }
+.nav-item:nth-child(7) { animation-delay: 0.35s }
 
 .nav-item > div {
     border-left: 3px solid var(--dark-purple);

@@ -354,10 +354,10 @@ export default class VideoDialog extends React.Component {
         let totalLengthTarget = targetRect.right - targetRect.left;
         let percent = lengthLeftSideTarget/totalLengthTarget;
 
-        let audio = this.refs.audio;
-        let duration = audio.duration;
+        let video = this.refs.video;
+        let duration = video.duration;
         let newTime = Math.floor(duration * percent);
-        audio.currentTime = newTime;
+        video.currentTime = newTime;
         this.updateTime();
     }
 }

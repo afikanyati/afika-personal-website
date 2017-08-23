@@ -207,6 +207,9 @@ export default class ContactView extends React.Component {
                     contact.message = message;
                 }
 
+                let timestamp = new Date().toISOString();
+                console.log("Timestamp");
+                contact.sent = timestamp;
                 this.props.saveContact(contact);
                 this.clearForm();
                 this.state.errors.push("Thanks for reaching out. I look forward to connecting with you!");

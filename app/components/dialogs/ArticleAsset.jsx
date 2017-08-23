@@ -4,6 +4,7 @@ import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 import JsxParser        from 'react-jsx-parser';
 import YouTube          from 'react-youtube';
+import Vimeo            from 'react-vimeo';
 import Img              from 'react-image';
 import uuid             from 'uuid';
 
@@ -22,6 +23,7 @@ import Block                    from '../Block';
  *  - Paragraph asset: A paragraph of text
  *  - Heading asset: A heading within the article
  *  - YouTube asset: An embeded YouTube video
+ *  - Vimeo asset: An embeded Vimeo video
  *  - Image asset: An embeded image
  *  - Quote asset: Text in a stylized quote layout
  *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
@@ -46,6 +48,8 @@ export default class ArticleAsset extends React.Component {
             return this.headingAsset();
         } else if (this.props.asset.type == ArticleAssetTypes.YOUTUBE) {
             return this.youtubeAsset();
+        } else if (this.props.asset.type == ArticleAssetTypes.VIMEO) {
+            return this.vimeoAsset();
         } else if (this.props.asset.type == ArticleAssetTypes.IMAGE) {
             return this.imageAsset();
         } else if (this.props.asset.type == ArticleAssetTypes.QUOTE) {
@@ -111,6 +115,25 @@ export default class ArticleAsset extends React.Component {
                     className="youtube-video"
                 />
                 <h3 className="youtube-caption">
+                    <JsxParser
+                        bindings={{}}
+                        components={{Italic, Link, Bold, Code}}
+                        jsx={this.props.asset.asset.caption}/>
+                </h3>
+            </div>
+
+        );
+    }
+
+    /**
+     * Renderer for Vimeo asset
+     * @return React component Vimeo asset div
+     */
+    vimeoAsset = () => {
+        return (
+            <div className={`vimeo-asset ${this.props.asset.asset.layout}`}>
+                <Vimeo videoId={this.props.asset.asset.data} />
+                <h3 className="vimeo-caption">
                     <JsxParser
                         bindings={{}}
                         components={{Italic, Link, Bold, Code}}

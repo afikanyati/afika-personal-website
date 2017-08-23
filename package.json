@@ -56,7 +56,6 @@
     "react-list": "^0.8.6",
     "react-masonry-component": "^4.2.1",
     "react-scrollaware": "^1.2.4",
-    "react-vimeo": "^1.0.0",
     "react-youtube": "^7.4.0",
     "webpack": "^1.14.0"
   },

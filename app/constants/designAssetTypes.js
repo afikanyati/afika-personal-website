@@ -16,6 +16,5 @@ export default {
     DOUBLE_VIDEO: "double_video",
     QUOTE: "quote",
     DICTIONARY: "dictionary",
-    YOUTUBE: "youtube",
-    VIMEO: "vimeo"
+    YOUTUBE: "youtube"
 };

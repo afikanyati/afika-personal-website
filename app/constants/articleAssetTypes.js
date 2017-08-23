@@ -12,6 +12,5 @@ export default {
     DICTIONARY: "dictionary",
     LIST: "list",
     SLIDER: "slider",
-    SECTION_DIVIDER: "section_divider",
-    VIMEO: "vimeo"
+    SECTION_DIVIDER: "section_divider"
 };

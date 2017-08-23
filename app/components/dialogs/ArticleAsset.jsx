@@ -22,7 +22,6 @@ import Block                    from '../Block';
  *  - Paragraph asset: A paragraph of text
  *  - Heading asset: A heading within the article
  *  - YouTube asset: An embeded YouTube video
- *  - Vimeo asset: An embeded Vimeo video
  *  - Image asset: An embeded image
  *  - Quote asset: Text in a stylized quote layout
  *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout

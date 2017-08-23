@@ -1633,7 +1633,6 @@ button {
 .youtube-video,
 .image-asset > img {
     width: 100%;
-    height: auto;
 }
 
 .youtube-caption,
@@ -1656,6 +1655,7 @@ button {
     font-family: var(--body-font);
     font-weight: 300;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .quote-asset .quote {

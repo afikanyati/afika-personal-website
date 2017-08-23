@@ -32,7 +32,6 @@ import Loader                   from '../Loader';
  *  - Quote asset: Text in a stylized quote layout
  *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
  *  - YouTube asset: An embeded YouTube video
- *  - Vimeo asset: An embeded Vimeo video
  */
 export default class DesignAsset extends React.Component {
 
@@ -71,8 +70,6 @@ export default class DesignAsset extends React.Component {
             return this.dictionaryAsset();
         } else if (this.props.asset.type == DesignAssetTypes.YOUTUBE) {
             return this.youtubeAsset();
-        } else if (this.props.asset.type == DesignAssetTypes.VIMEO) {
-            return this.vimeoAsset();
         } else {
             // should not reach this point
             return (

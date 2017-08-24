@@ -46,7 +46,7 @@ export default class ResumeDialog extends React.Component {
                             horCenter={false}
                             onClick={this.props.toggleDialog.bind({}, DialogTypes.RESUME)} />
                         <h1 className="resume-title">
-                            Resume
+                            Resumé
                         </h1>
                         <div className="resume-wrapper">
                             <button className="resume-download">

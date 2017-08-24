@@ -32,6 +32,7 @@ import Loader                   from '../Loader';
  *  - Quote asset: Text in a stylized quote layout
  *  - Dictionary asset: A dictionary definition (with sub-definitions) in a stylized layout
  *  - YouTube asset: An embeded YouTube video
+ *  - List asset: A numbered or bulleted list of text
  */
 export default class DesignAsset extends React.Component {
 
@@ -70,6 +71,8 @@ export default class DesignAsset extends React.Component {
             return this.dictionaryAsset();
         } else if (this.props.asset.type == DesignAssetTypes.YOUTUBE) {
             return this.youtubeAsset();
+        } else if (this.props.asset.type == DesignAssetTypes.LIST) {
+            return this.listAsset();
         } else {
             // should not reach this point
             return (
@@ -500,6 +503,40 @@ export default class DesignAsset extends React.Component {
                 </h3>
             </div>
 
+        );
+    }
+
+    /**
+     * Renderer for list asset
+     * @return React component list asset div
+     */
+    listAsset = () => {
+        return (
+            <div>
+                {this.props.asset.asset.kind == "bullets" ?
+                    <ul className="list-asset">
+                        {this.props.asset.asset.data.map(item => {
+                            return (
+                                <JsxParser
+                                    bindings={{}}
+                                    components={{Italic, Link, Bold, Code}}
+                                    jsx={`<li>${item}</li>`}/>
+                            );
+                        })}
+                    </ul>
+                :
+                    <ol className="list-asset">
+                        {this.props.asset.asset.data.map(item => {
+                            return (
+                                <JsxParser
+                                    bindings={{}}
+                                    components={{Italic, Link, Bold, Code}}
+                                    jsx={`<li>${item}</li>`}/>
+                            );
+                        })}
+                    </ol>
+                }
+            </div>
         );
     }
 }

@@ -146,7 +146,7 @@ export default class DesignAsset extends React.Component {
             <div className="design-image-asset">
                 <Img
                     src={this.props.asset.asset.data}
-                    loader={<ImagePlaceholder category={this.props.asset.type} height={"30vw"}/>} />
+                    loader={<ImagePlaceholder category={"image"} height={"30vw"}/>} />
                 <h3 className="design-image-caption">
                     <JsxParser
                         bindings={{}}

@@ -86,7 +86,7 @@ export default class ArticleDialog extends React.Component {
                             </p>
                             <div className={`article-date-wrapper ${type}`}>
                                 <Block
-                                    id="article-date-block"
+                                    id={type === "music" ? "music-date-block" : "article-date-block"}
                                     position={"static"}
                                     display={"inline-block"}
                                     top={"auto"}
@@ -98,7 +98,7 @@ export default class ArticleDialog extends React.Component {
                                     width={40}
                                     height={3}
                                     color={"#5a4570"}/>
-                                <h4 className="article-date">
+                                <h4 className={type === "music" ? "music-date" : "article-date"}>
                                     {this.props.currentItem.date}
                                 </h4>
                                 <Block

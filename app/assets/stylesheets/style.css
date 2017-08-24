@@ -1838,6 +1838,7 @@ span.code {
     font-family: var(--body-font);
     font-weight: 300;
     font-size: 1.2em;
+    color: var(--dark-gray);
 }
 
 .design-block-text {
@@ -1850,6 +1851,7 @@ span.code {
     font-family: var(--body-font);
     font-weight: 300;
     font-size: 1.2em;
+    color: var(--dark-gray);
     margin-bottom: 50px;
 }
 
@@ -2018,6 +2020,12 @@ span.code {
     margin-left: 20px;
 }
 
+.music-date {
+    margin-left: 0;
+    margin: 0 20px;
+}
+
+
 .music-body,
 .video-body {
     position: relative;
@@ -2172,6 +2180,7 @@ span.code {
     font-family: var(--body-font);
     font-weight: 300;
     font-size: 1.2em;
+    color: var(--dark-gray);
     margin-top: 10px;
     margin-bottom: 100px;
 }
@@ -2951,13 +2960,11 @@ span.code {
         justify-content: center;
     }
 
-    .music-date,
     .article-date,
     .video-date {
         margin: 0;
     }
 
-    #music-date-block,
     #article-date-block,
     #video-date-block {
         display: none !important;

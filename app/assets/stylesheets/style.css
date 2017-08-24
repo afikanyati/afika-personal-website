@@ -1880,11 +1880,29 @@ span.code {
     margin-bottom: 100px;
 }
 
+.design-image-asset.full {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    margin: 0;
+}
+
 .design-video,
 .design-image-asset img {
     width: 60%;
     border: 1px solid var(--mid-gray);
     border-radius: 1px;
+}
+
+.design-image-asset.elongated img,
+.design-video.elongated {
+    width: 100%;
+}
+
+.design-image-asset.full img,
+.design-video.full {
+    width: 100%;
 }
 
 .design-video-caption,

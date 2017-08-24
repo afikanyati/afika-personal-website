@@ -1,0 +1,61 @@
+[debug] [2017-08-24T18:10:32.611Z] ----------------------------------------------------------------------
+[debug] [2017-08-24T18:10:32.614Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-08-24T18:10:32.615Z] CLI Version:   3.9.2
+[debug] [2017-08-24T18:10:32.615Z] Platform:      darwin
+[debug] [2017-08-24T18:10:32.615Z] Node Version:  v6.9.1
+[debug] [2017-08-24T18:10:32.615Z] Time:          Thu Aug 24 2017 20:10:32 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:32.615Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-24T18:10:32.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-24T18:10:32.633Z] > authorizing via signed-in user
+[debug] [2017-08-24T18:10:32.635Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-24T18:10:32.635Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/qQGNDVIz_VZX1m2OfIFKnetDS-yiq9QbL4bVjpM5FNc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Aug 24 2017 20:10:32 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:33.070Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-24T18:10:33.072Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/afika-nyati-website  
+ Thu Aug 24 2017 20:10:33 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:34.749Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-24T18:10:34.750Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/afika-nyati-website/tokens  
+ Thu Aug 24 2017 20:10:34 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:35.883Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'afika-nyati-website'...
+[info] 
+[info] i  deploying database, functions, hosting
+[info] ✔  database: rules ready to deploy.
+[debug] [2017-08-24T18:10:38.545Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.1.2",
+    "firebase-functions": "^0.5"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-08-24T18:10:38.547Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/afika-nyati-website?view=CONSUMER_VIEW  
+ Thu Aug 24 2017 20:10:38 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:38.547Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/afika-nyati-website?view=CONSUMER_VIEW  
+ Thu Aug 24 2017 20:10:38 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:40.951Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-08-24T18:10:41.032Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-08-24T18:10:41.033Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/afika-nyati-website  
+ Thu Aug 24 2017 20:10:41 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:41.034Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/afika-nyati-website/apiKeys  
+ Thu Aug 24 2017 20:10:41 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:43.164Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-24T18:10:43.166Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-08-24T18:10:45.716Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/afika-nyati-website/configs  
+ Thu Aug 24 2017 20:10:45 GMT+0200 (SAST)
+[debug] [2017-08-24T18:10:46.386Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing build directory for upload...
+[debug] [2017-08-24T18:10:48.031Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/afika-nyati-website/uploads/-KsKR5nW47-qd9ZBCJNK?fileCount=125&message=  
+ Thu Aug 24 2017 20:10:48 GMT+0200 (SAST)

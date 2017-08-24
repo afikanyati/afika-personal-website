@@ -2907,6 +2907,18 @@ span.code {
 }
 
 @media (max-width: 700px) {
+    body,
+    .education-dialog-body,
+    .skills-dialog-body,
+    .resume-dialog-body,
+    .image-dialog-body,
+    .article-dialog-body,
+    .design-dialog-body,
+    .music-dialog-body,
+    .video-dialog-body {
+        font-size: 13px !important;
+    }
+
     .playback-buttons {
         display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
         display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */

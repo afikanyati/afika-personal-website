@@ -1791,10 +1791,6 @@ span.code {
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;
-    -webkit-align-items: center;
-	-ms-align-items: center;
-	-moz-align-items: center;
-	align-items: center;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     -moz-flex-direction: row;

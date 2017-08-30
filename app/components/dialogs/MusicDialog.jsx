@@ -40,7 +40,7 @@ export default class MusicDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----MusicDialog");
+        console.log("-----MusicDialog");
     }
 
     render() {
@@ -238,7 +238,7 @@ export default class MusicDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++MusicDialog");
+        console.log("+++++MusicDialog");
 
         // Create path to project
         let path = "";
@@ -246,21 +246,21 @@ export default class MusicDialog extends React.Component {
             let str = this.props.currentItem.path;
             let lastSlash = str.lastIndexOf("/");
             path = str.substring(0, lastSlash + 1);
-        }
 
-        // Get length of artworks list
-        firebase.database().ref(`content/${path}`).once(
-            'value',
-            (snapshot) => {
-                let lenMusic = snapshot.val().length;
-                this.setState({
-                    lengthMusicList: lenMusic
-                });
-            },
-            () => {
-                return;
-            }
-        );
+            // Get length of artworks list
+            firebase.database().ref(`${path}`).once(
+                'value',
+                (snapshot) => {
+                    let lenMusic = snapshot.val().length;
+                    this.setState({
+                        lengthMusicList: lenMusic
+                    });
+                },
+                () => {
+                    return;
+                }
+            );
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -270,21 +270,21 @@ export default class MusicDialog extends React.Component {
             let str = nextProps.currentItem.path;
             let lastSlash = str.lastIndexOf("/");
             path = str.substring(0, lastSlash + 1);
-        }
 
-        // Get length of artworks list
-        firebase.database().ref(`content/${path}`).once(
-            'value',
-            (snapshot) => {
-                let lenMusic = snapshot.val().length;
-                this.setState({
-                    lengthMusicList: lenMusic
-                });
-            },
-            () => {
-                return;
-            }
-        );
+            // Get length of artworks list
+            firebase.database().ref(path).once(
+                'value',
+                (snapshot) => {
+                    let lenMusic = snapshot.val().length;
+                    this.setState({
+                        lengthMusicList: lenMusic
+                    });
+                },
+                () => {
+                    return;
+                }
+            );
+        }
     }
 
     // ========== Methods ===========

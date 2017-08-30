@@ -36,7 +36,7 @@ export default class VideoDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----VideoDialog");
+        console.log("-----VideoDialog");
     }
 
     render() {
@@ -193,7 +193,7 @@ export default class VideoDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++VideoDialog");
+        console.log("+++++VideoDialog");
     }
 
     // ========== Methods ===========

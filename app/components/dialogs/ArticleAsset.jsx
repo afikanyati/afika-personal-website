@@ -36,7 +36,7 @@ export default class ArticleAsset extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----ArticleAsset");
+        console.log("-----ArticleAsset");
     }
 
     render() {
@@ -67,7 +67,7 @@ export default class ArticleAsset extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++ArticleAsset");
+        console.log("+++++ArticleAsset");
     }
 
     // ========== Methods ===========

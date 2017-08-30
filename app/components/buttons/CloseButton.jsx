@@ -15,7 +15,7 @@ export default class CloseButton extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("+++++CloseButton");
+        console.log("+++++CloseButton");
     }
 
     render() {
@@ -46,7 +46,7 @@ export default class CloseButton extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++CloseButton");
+        console.log("+++++CloseButton");
     }
 }
 

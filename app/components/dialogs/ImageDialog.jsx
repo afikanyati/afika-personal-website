@@ -27,7 +27,7 @@ export default class ImageDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----ImageDialog");
+        console.log("-----ImageDialog");
     }
 
     render() {
@@ -107,7 +107,7 @@ export default class ImageDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++ImageDialog");
+        console.log("+++++ImageDialog");
 
         // Get length of artworks list
         firebase.database().ref('content/art').once(

@@ -29,7 +29,7 @@ export default class FeedItem extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----FeedItem");
+        console.log("-----FeedItem");
         this.generateRandomColorAndFont();
     }
 
@@ -44,7 +44,7 @@ export default class FeedItem extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++FeedItem");
+        console.log("+++++FeedItem");
     }
 
     // ========== Methods ===========
@@ -80,7 +80,7 @@ export default class FeedItem extends React.Component {
      * @return React component feed item article
      */
     generateThumbnail = () => {
-        let category = this.props.item.path.split("/")[0];
+        let category = this.props.item.path.split("/")[1];
 
         return (
             <article
@@ -89,7 +89,7 @@ export default class FeedItem extends React.Component {
                         "feed-item no-thumbnail animated fadeInUp standalone"
                     :
                         "feed-item no-thumbnail animated fadeInUp"}
-                onClick={this.handleClick}>
+                onClick={this.handleItemClick}>
                 <div
                     className={
                     this.props.item.category == "standalone" ?
@@ -126,6 +126,23 @@ export default class FeedItem extends React.Component {
                             <h4 className="feed-overlay-title no-thumbnail">{this.props.item.category}</h4>
                         </div>
                         }
+                        <div className="feed-overlay-hearts">
+                            <svg
+                                onClick={this.handleHeartClick}
+                                version="1.1"
+                                id="heart-icon"
+                                x="0px"
+                                y="0px"
+                                width="50px"
+                                height="50px"
+                                viewBox="-1 0 50 50"
+                                enableBackground="new -1 0 50 50">
+                                <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
+	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
+	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
+                            </svg>
+                            <h3 className="heart-count">{this.props.item.hearts}</h3>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -137,7 +154,7 @@ export default class FeedItem extends React.Component {
      * @return React component feed item article
      */
     thumbnail = () => {
-        let category = this.props.item.path.split("/")[0];
+        let category = this.props.item.path.split("/")[1];
 
         return (
             <article
@@ -149,7 +166,7 @@ export default class FeedItem extends React.Component {
                             "feed-item animated fadeInUp standalone"
                         :
                             "feed-item animated fadeInUp"}
-                onClick={this.handleClick}>
+                onClick={this.handleItemClick}>
                 <div className="feed-image">
                     <Img
                         src={this.props.item.thumbnail}
@@ -166,6 +183,23 @@ export default class FeedItem extends React.Component {
                             <h3 className="feed-overlay-title">{this.props.item.title}</h3>
                             <h4 className="feed-overlay-description">{this.props.item.category}</h4>
                         </div>
+                        <div className="feed-overlay-hearts">
+                            <svg
+                                onClick={this.handleHeartClick}
+                                version="1.1"
+                                id="heart-icon"
+                                x="0px"
+                                y="0px"
+                                width="50px"
+                                height="50px"
+                                viewBox="-1 0 50 50"
+                                enableBackground="new -1 0 50 50">
+                                <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
+	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
+	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
+                            </svg>
+                            <h3 className="heart-count">{this.props.item.hearts}</h3>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -175,12 +209,27 @@ export default class FeedItem extends React.Component {
     /**
      * Filters out standalone content that should not have any click events
      */
-    handleClick = () => {
-        if (this.props.item.category === "standalone" && this.props.item.title != "Resume Download") {
+    handleItemClick = (e) => {
+        let targetId = e.target.id;
+
+        if (this.props.item.category === "standalone" && this.props.item.title != "Resume Download" || targetId == "heart-fill") {
             return;
         }
 
         this.props.openItem(this.props.item);
+    }
+
+    handleHeartClick = (e) => {
+        let item = this.props.item;
+        item['feedIndex'] = this.props.index;
+        this.props.incrementHeart(item);
+
+        let element = e.target;
+        element.classList.add('run-heart-animation');
+
+        setTimeout(() => {
+            element.classList.remove('run-heart-animation');
+        }, 1000);
     }
 }
 
@@ -188,5 +237,6 @@ export default class FeedItem extends React.Component {
 
 FeedItem.propTypes = {
     item: PropTypes.object.isRequired,
-    openItem: PropTypes.func.isRequired
+    openItem: PropTypes.func.isRequired,
+    incrementHeart: PropTypes.func.isRequired
 };

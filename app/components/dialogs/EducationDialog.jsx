@@ -26,7 +26,7 @@ export default class EducationDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----EducationDialog");
+        console.log("-----EducationDialog");
     }
 
     render() {
@@ -65,7 +65,7 @@ export default class EducationDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++EducationDialog");
+        console.log("+++++EducationDialog");
     }
 }
 

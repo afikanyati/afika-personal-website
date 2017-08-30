@@ -16,7 +16,7 @@ export default class ContactIcon extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----ContactIcon");
+        console.log("-----ContactIcon");
     }
 
     render() {
@@ -59,7 +59,7 @@ export default class ContactIcon extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++ContactIcon");
+        console.log("+++++ContactIcon");
     }
 }
 

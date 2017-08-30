@@ -15,7 +15,7 @@ export default class Bold extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("+++++Bold");
+        console.log("+++++Bold");
     }
 
     render() {
@@ -27,7 +27,7 @@ export default class Bold extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++Bold");
+        console.log("+++++Bold");
     }
 }
 

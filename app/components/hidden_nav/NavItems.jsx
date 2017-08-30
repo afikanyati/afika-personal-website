@@ -21,7 +21,7 @@ export default class NavItems extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----NavItems");
+        console.log("-----NavItems");
     }
 
     render() {
@@ -50,7 +50,7 @@ export default class NavItems extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++NavItems");
+        console.log("+++++NavItems");
         window.addEventListener("resize", this.adjustNavWidth);
 
         let navigationWidth = document.getElementById('hiddenNav').clientWidth;

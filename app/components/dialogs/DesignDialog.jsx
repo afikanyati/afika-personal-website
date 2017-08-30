@@ -29,7 +29,7 @@ export default class DesignDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----DesignDialog");
+        console.log("-----DesignDialog");
     }
 
     render() {
@@ -107,7 +107,7 @@ export default class DesignDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++DesignDialog");
+        console.log("+++++DesignDialog");
 
         if (this.props.currentItem.assets) {
             this.setState({

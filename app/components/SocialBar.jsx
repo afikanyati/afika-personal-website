@@ -15,7 +15,7 @@ export default class SocialBar extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----SocialBar");
+        console.log("-----SocialBar");
     }
 
     render() {
@@ -179,7 +179,7 @@ export default class SocialBar extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++SocialBar");
+        console.log("+++++SocialBar");
     }
 }
 

@@ -21,7 +21,7 @@ export default class Feed extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----Feed");
+        console.log("-----Feed");
     }
 
     render() {
@@ -41,7 +41,7 @@ export default class Feed extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++Feed");
+        console.log("+++++Feed");
         const feed = ReactDOM.findDOMNode(this.refs.feed);
         feed.addEventListener('scroll', this.scrolled);
     }
@@ -161,8 +161,10 @@ export default class Feed extends React.Component {
         return (
             <FeedItem
                 key={key}
+                index={index}
                 item={this.props.feed[index]}
-                openItem={this.props.openItem} />
+                openItem={this.props.openItem}
+                incrementHeart={this.props.incrementHeart} />
         );
     }
 
@@ -190,5 +192,6 @@ Feed.propTypes = {
     contactIsOpen: PropTypes.bool.isRequired,
     feedScroll: PropTypes.number.isRequired,
     updateFeedScroll: PropTypes.func.isRequired,
-    openItem: PropTypes.func.isRequired
+    openItem: PropTypes.func.isRequired,
+    incrementHeart: PropTypes.func.isRequired
 };

@@ -14,7 +14,7 @@ export default class Loader extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("+++++Loader");
+        console.log("+++++Loader");
     }
 
     render() {
@@ -34,7 +34,7 @@ export default class Loader extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++Loader");
+        console.log("+++++Loader");
     }
 }
 

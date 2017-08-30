@@ -39,7 +39,7 @@ export default class ArticleDialog extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("-----ArticleDialog");
+        console.log("-----ArticleDialog");
     }
 
     render() {
@@ -160,7 +160,7 @@ export default class ArticleDialog extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++ArticleDialog");
+        console.log("+++++ArticleDialog");
 
         if (this.props.currentItem.assets) {
             this.setState({

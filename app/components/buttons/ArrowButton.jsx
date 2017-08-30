@@ -15,7 +15,7 @@ export default class ArrowButton extends React.Component {
     }
 
     componentWillMount() {
-        // console.log("+++++ArrowButton");
+        console.log("+++++ArrowButton");
     }
 
     render() {
@@ -70,7 +70,7 @@ export default class ArrowButton extends React.Component {
     }
 
     componentDidMount() {
-        // console.log("+++++ArrowButton");
+        console.log("+++++ArrowButton");
     }
 }
 

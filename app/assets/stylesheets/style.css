@@ -3071,6 +3071,10 @@ span.code {
     #video-date-block {
         display: none !important;
     }
+
+    .feed-overlay-hearts {
+        display: none;
+    }
 }
 
 @media (max-width: 670px) {

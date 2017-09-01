@@ -2052,11 +2052,9 @@ span.code {
 }
 
 .music-wrapper {
-    position: absolute;
-    top: auto;
-    left: auto;
-    transform: none;
     width: 80%;
+    height: 100%;
+    min-height: 639px;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -2315,7 +2313,6 @@ span.code {
     font-size: 1.2em;
     color: var(--dark-gray);
     margin-top: 10px;
-    margin-bottom: 100px;
 }
 
 .video-player video {
@@ -2717,12 +2714,6 @@ span.code {
     width: 100%;
 }
 
-.skills-wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(50%);
-}
-
 .education-title,
 .skills-title {
     position: relative;
@@ -2745,7 +2736,8 @@ span.code {
 .wordcloud-wrapper {
     display: inline-block;
     position: relative;
-    top: 90px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 40%;
     width: 60%;
 }

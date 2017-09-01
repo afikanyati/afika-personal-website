@@ -68,11 +68,27 @@ export default class Feed extends React.Component {
                         this.props.navIsOpen ?
                             "feed-wrapper"
                             :
-                            "feed-wrapper padded"}>
+                            "feed-wrapper padded"}
+                style={
+                    window.innerWidth > 1600 && this.props.navIsOpen ?
+                        {
+                            width: window.innerWidth - 500
+                        }
+                    :
+                        null
+                }>
                 <div
                     id="feed"
                     ref="feed"
-                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
+                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}
+                    style={
+                        window.innerWidth > 1600 && this.props.navIsOpen ?
+                            {
+                                width: window.innerWidth - 500
+                            }
+                        :
+                            null
+                    }>
                     <svg
                         version="1.1"
                         id="afika-logo-no-feed"
@@ -113,11 +129,27 @@ export default class Feed extends React.Component {
                         this.props.navIsOpen ?
                             "feed-wrapper"
                             :
-                            "feed-wrapper padded"}>
+                            "feed-wrapper padded"}
+                style={
+                    window.innerWidth > 1600 && this.props.navIsOpen ?
+                        {
+                            width: window.innerWidth - 500
+                        }
+                    :
+                        null
+                }>
                 <div
                     id="feed"
                     ref="feed"
-                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
+                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}
+                    style={
+                        window.innerWidth > 1600 && this.props.navIsOpen ?
+                            {
+                                width: window.innerWidth - 500
+                            }
+                        :
+                            null
+                    }>
                     <Loader size="large" />
                 </div>
             </div>
@@ -137,11 +169,27 @@ export default class Feed extends React.Component {
                         this.props.navIsOpen ?
                             "feed-wrapper"
                             :
-                            "feed-wrapper padded"}>
+                            "feed-wrapper padded"}
+                style={
+                    window.innerWidth > 1600 && this.props.navIsOpen ?
+                        {
+                            width: window.innerWidth - 500
+                        }
+                    :
+                        null
+                }>
                 <div
                     id="feed"
                     ref="feed"
-                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}>
+                    className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}
+                    style={
+                        window.innerWidth > 1600 ?
+                            {
+                                width: window.innerWidth - 400
+                            }
+                        :
+                            null
+                    }>
                     <ReactList
                         itemRenderer={this.renderItem}
                         length={this.props.feed.length}

@@ -16,7 +16,7 @@ export default class ImagePlaceholder extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----ImagePlaceholder");
+        // console.log("-----ImagePlaceholder");
     }
 
     render() {
@@ -33,7 +33,7 @@ export default class ImagePlaceholder extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++ImagePlaceholder");
+        // console.log("+++++ImagePlaceholder");
     }
 }
 

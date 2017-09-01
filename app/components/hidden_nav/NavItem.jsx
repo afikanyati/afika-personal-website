@@ -15,7 +15,7 @@ export default class NavItem extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----NavItem");
+        // console.log("-----NavItem");
     }
 
     render() {
@@ -44,7 +44,7 @@ export default class NavItem extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++NavItem");
+        // console.log("+++++NavItem");
 
     }
 }

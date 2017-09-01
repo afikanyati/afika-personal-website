@@ -20,7 +20,7 @@ export default class HiddenNav extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----HiddenNav");
+        // console.log("-----HiddenNav");
     }
 
     render() {
@@ -45,7 +45,7 @@ export default class HiddenNav extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++HiddenNav");
+        // console.log("+++++HiddenNav");
     }
 }
 

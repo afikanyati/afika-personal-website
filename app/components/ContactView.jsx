@@ -25,7 +25,7 @@ export default class ContactView extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----ContactView");
+        // console.log("-----ContactView");
     }
 
     render() {
@@ -137,7 +137,7 @@ export default class ContactView extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++ContactView");
+        // console.log("+++++ContactView");
     }
 
     componentWillReceiveProps(nextProps) {

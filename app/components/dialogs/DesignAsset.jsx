@@ -41,7 +41,7 @@ export default class DesignAsset extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----DesignAsset");
+        // console.log("-----DesignAsset");
     }
 
     render() {
@@ -82,7 +82,7 @@ export default class DesignAsset extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++DesignAsset");
+        // console.log("+++++DesignAsset");
     }
 
     // ========== Methods ===========

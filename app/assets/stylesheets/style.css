@@ -759,6 +759,7 @@ button {
     width: 20px;
     height: 20px;
     overflow: visible;
+    cursor: pointer;
 }
 
 .feed-overlay-hearts svg path {

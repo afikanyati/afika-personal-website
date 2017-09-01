@@ -15,7 +15,7 @@ export default class Italic extends React.Component {
     }
 
     componentWillMount() {
-        console.log("+++++Italic");
+        // console.log("+++++Italic");
     }
 
     render() {
@@ -27,7 +27,7 @@ export default class Italic extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Italic");
+        // console.log("+++++Italic");
     }
 }
 

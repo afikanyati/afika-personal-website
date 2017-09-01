@@ -31,7 +31,7 @@ export default class SkillsDialog extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----SkillsDialog");
+        // console.log("-----SkillsDialog");
     }
 
     render() {
@@ -109,7 +109,7 @@ export default class SkillsDialog extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++SkillsDialog");
+        // console.log("+++++SkillsDialog");
         if (this.props.currentItem.skills) {
             let shuffledSkills = this.props.currentItem.skills.sort(function() { return 0.5 - Math.random() });
 

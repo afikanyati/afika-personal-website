@@ -29,7 +29,7 @@ export default class FeedItem extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----FeedItem");
+        // console.log("-----FeedItem");
         this.generateRandomColorAndFont();
     }
 
@@ -44,7 +44,7 @@ export default class FeedItem extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++FeedItem");
+        // console.log("+++++FeedItem");
     }
 
     // ========== Methods ===========

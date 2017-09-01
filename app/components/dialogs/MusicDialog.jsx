@@ -40,7 +40,7 @@ export default class MusicDialog extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----MusicDialog");
+        // console.log("-----MusicDialog");
     }
 
     render() {
@@ -238,7 +238,7 @@ export default class MusicDialog extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++MusicDialog");
+        // console.log("+++++MusicDialog");
 
         // Create path to project
         let path = "";

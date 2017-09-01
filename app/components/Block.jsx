@@ -16,7 +16,7 @@ export default class Block extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----Block");
+        // console.log("-----Block");
     }
 
     render() {
@@ -46,7 +46,7 @@ export default class Block extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++Block");
+        // console.log("+++++Block");
     }
 }
 

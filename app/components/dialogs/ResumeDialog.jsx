@@ -21,7 +21,7 @@ export default class ResumeDialog extends React.Component {
     }
 
     componentWillMount() {
-        console.log("-----ResumeDialog");
+        // console.log("-----ResumeDialog");
     }
 
     render() {
@@ -62,7 +62,7 @@ export default class ResumeDialog extends React.Component {
     }
 
     componentDidMount() {
-        console.log("+++++ResumeDialog");
+        // console.log("+++++ResumeDialog");
     }
 }
 

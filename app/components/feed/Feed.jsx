@@ -72,7 +72,7 @@ export default class Feed extends React.Component {
                 style={
                     window.innerWidth > 1600 && this.props.navIsOpen ?
                         {
-                            width: window.innerWidth - 500
+                            width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                         }
                     :
                         null
@@ -84,7 +84,7 @@ export default class Feed extends React.Component {
                     style={
                         window.innerWidth > 1600 && this.props.navIsOpen ?
                             {
-                                width: window.innerWidth - 500
+                                width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                             }
                         :
                             null
@@ -133,7 +133,7 @@ export default class Feed extends React.Component {
                 style={
                     window.innerWidth > 1600 && this.props.navIsOpen ?
                         {
-                            width: window.innerWidth - 500
+                            width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                         }
                     :
                         null
@@ -145,7 +145,7 @@ export default class Feed extends React.Component {
                     style={
                         window.innerWidth > 1600 && this.props.navIsOpen ?
                             {
-                                width: window.innerWidth - 500
+                                width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                             }
                         :
                             null
@@ -173,7 +173,7 @@ export default class Feed extends React.Component {
                 style={
                     window.innerWidth > 1600 && this.props.navIsOpen ?
                         {
-                            width: window.innerWidth - 500
+                            width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                         }
                     :
                         null
@@ -185,7 +185,7 @@ export default class Feed extends React.Component {
                     style={
                         window.innerWidth > 1600 ?
                             {
-                                width: window.innerWidth - 400
+                                width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                             }
                         :
                             null

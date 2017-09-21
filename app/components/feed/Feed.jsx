@@ -183,7 +183,7 @@ export default class Feed extends React.Component {
                     ref="feed"
                     className       ={this.props.navIsOpen ? "feed-box" : "feed-box enlarge"}
                     style={
-                        window.innerWidth > 1600 ?
+                        window.innerWidth > 1600 && this.props.navIsOpen ?
                             {
                                 width: window.innerWidth - 500 - 113 // 500px = Nav, 113px = Social Bar
                             }

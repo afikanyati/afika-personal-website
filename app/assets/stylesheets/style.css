@@ -2740,6 +2740,7 @@ span.code {
     transform: translateY(-50%);
     left: 40%;
     width: 60%;
+    margin: 100px 0;
 }
 
 .wordcloud {

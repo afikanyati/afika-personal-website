@@ -5,6 +5,7 @@ import PropTypes      from 'prop-types';
 
 // Components
 import NavItems       from './NavItems';
+import SortWidget     from './SortWidget';
 
 /**
  * HiddenNav is a component used to display the various types of content on the web
@@ -40,6 +41,9 @@ export default class HiddenNav extends React.Component {
                     navIsOpen={this.props.navIsOpen}
                     navItems={this.props.navItems}
                     toggleContent={this.props.toggleContent} />
+                <SortWidget
+                    toggleSort={this.props.toggleSort}
+                    sortByPopularity={this.props.sortByPopularity} />
             </nav>
         );
     }
@@ -55,6 +59,7 @@ HiddenNav.propTypes = {
     navIsOpen: PropTypes.bool.isRequired,
     contactIsOpen: PropTypes.bool.isRequired,
     navItems: PropTypes.array.isRequired,
-    toggleContent: PropTypes.func.isRequired
-
+    toggleContent: PropTypes.func.isRequired,
+    toggleSort: PropTypes.func.isRequired,
+    sortByPopularity: PropTypes.bool.isRequired
 };

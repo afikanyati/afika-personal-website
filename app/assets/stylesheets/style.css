@@ -482,6 +482,93 @@ button {
 
 /*========================================== */
 
+/* Sort Widget */
+
+.button {
+	position: absolute;
+	display: none; /* visibility: hidden takes up space - affects layout */;
+}
+
+.button + label {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+}
+
+input.slide-square + label {
+	width: 70px;
+	height: 31px;
+	background: var(--dark-gray);
+	transition: background 0.3s;
+}
+
+input.slide-square.small + label {
+	width: 50px;
+	height: 23px;
+}
+
+input.slide-square + label:after {
+	display: inline-block;
+	position: absolute;
+	content: "";
+	top: 3px;
+	left: 3px;
+	width: 25px;
+	height: 25px;
+	background: var(--white);
+	transition: margin 0.3s;
+}
+
+input.slide-square.small + label:after {
+	top: 2px;
+	left: 2px;
+	width: 19px;
+	height: 19px;
+}
+
+input.slide-square:checked + label:after {
+	margin-left: 39px;
+}
+
+input.slide-square.small:checked + label:after {
+	margin-left: 27px;
+}
+
+.sort-widget-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 35px;
+}
+
+.sort-heading {
+    font-family: var(--heading-font);
+    color: #dededd;
+    font-size: 1em;
+    text-align: center;
+}
+
+#sort-heart,
+#sort-clock,
+#sort-heart-purple,
+#sort-clock-purple {
+    height: 20px;
+    width: 40px;
+    position: relative;
+    top: 6px;
+    transition: fill 0.8s;
+}
+
+#sort-heart-purple path,
+#sort-clock-purple path {
+    fill: var(--light-purple);
+    transition: fill 0.8s;
+}
+/*========================================== */
+
 /* Feed */
 
 .feed-wrapper {

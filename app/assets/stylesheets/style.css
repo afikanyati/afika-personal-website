@@ -3145,6 +3145,7 @@ span.code {
     .music-dialog-body,
     .video-dialog-body {
         font-size: 13px !important;
+        padding: 24px !important;
     }
 
     .playback-buttons {

@@ -50,7 +50,7 @@ export default class ArticleDialog extends React.Component {
         }
 
         if (this.props.currentItem.path) {
-            type = this.props.currentItem.path.substring(0, this.props.currentItem.path.indexOf("/"));
+            type = this.props.currentItem.path.substring(8, this.props.currentItem.path.indexOf("/", 8));
         }
 
         return (

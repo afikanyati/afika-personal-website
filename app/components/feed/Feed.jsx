@@ -212,7 +212,7 @@ export default class Feed extends React.Component {
                 index={index}
                 item={this.props.feed[index]}
                 openItem={this.props.openItem}
-                incrementHeart={this.props.incrementHeart} />
+                incrementor={this.props.incrementor} />
         );
     }
 
@@ -241,5 +241,5 @@ Feed.propTypes = {
     feedScroll: PropTypes.number.isRequired,
     updateFeedScroll: PropTypes.func.isRequired,
     openItem: PropTypes.func.isRequired,
-    incrementHeart: PropTypes.func.isRequired
+    incrementor: PropTypes.func.isRequired
 };

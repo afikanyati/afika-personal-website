@@ -28,7 +28,8 @@ export default class VideoDialog extends React.Component {
         timeElapsed: "0:00",    // Used to store the amount of seconds that have played
         timeLeft: "",           // Used to store how much time is left in the video (duration - limeElapsed)
         scrubberWidth: "0%",    // Specifies the width of playback scrubber which is proportional to timeElapsed
-        reload: false           // Informs us when a new video must be reloaded (when navigated to new video)
+        reload: false,          // Informs us when a new video must be reloaded (when navigated to new video)
+        playCounted: false      // Ensures asong play is incremented once per open dialog
     }
 
     constructor(props) {
@@ -207,6 +208,14 @@ export default class VideoDialog extends React.Component {
         let video = this.refs.video;
         let reload = this.state.reload; // Necessary when we navigate to new video
 
+        // Makes sure play only added once
+        if (!this.state.playCounted || (this.state.playCounted && video.ended)) {
+            this.props.incrementor("plays", this.props.currentItem);
+            this.setState({
+                playCounted: true
+            });
+        }
+
         if (reload) {
             video.load();
             reload = false;
@@ -304,7 +313,8 @@ export default class VideoDialog extends React.Component {
             timeElapsed: "0:00",
             timeLeft: "",
             scrubberWidth: "0%",
-            reload: true
+            reload: true,
+            playCounted: false
         }, () => {this.props.toggleDialog(DialogTypes.VIDEO)});
     }
 
@@ -329,7 +339,8 @@ export default class VideoDialog extends React.Component {
             timeElapsed: "0:00",
             timeLeft: "",
             scrubberWidth: "0%",
-            reload: true
+            reload: true,
+            playCounted: false
         }, () => {this.props.browseTo(direction)});
     }
 
@@ -368,5 +379,6 @@ VideoDialog.propTypes = {
     videoDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
     currentItem: PropTypes.object.isRequired,
-    browseTo: PropTypes.func.isRequired
+    browseTo: PropTypes.func.isRequired,
+    incrementor: PropTypes.func.isRequired
 };

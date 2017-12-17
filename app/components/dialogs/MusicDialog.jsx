@@ -32,7 +32,8 @@ export default class MusicDialog extends React.Component {
         timeElapsed: "0:00",    // Used to store the amount of seconds that have played
         timeLeft: "",           // Used to store how much time is left in the song (duration - limeElapsed)
         scrubberWidth: "0%",    // Specifies the width of playback scrubber which is proportional to timeElapsed
-        reload: false           // Informs us when new audio must be reloaded (when navigated to new track)
+        reload: false,          // Informs us when new audio must be reloaded (when navigated to new track)
+        playCounted: false      // Ensures asong play is incremented once per open dialog
     }
 
     constructor(props) {
@@ -298,6 +299,14 @@ export default class MusicDialog extends React.Component {
         let audio = this.refs.audio;
         let reload = this.state.reload; // Necessary when we navigate to new track
 
+        // Makes sure play only added once
+        if (!this.state.playCounted || (this.state.playCounted && audio.ended)) {
+            this.props.incrementor("plays", this.props.currentItem);
+            this.setState({
+                playCounted: true
+            });
+        }
+
         if (reload) {
             audio.load();
             reload = false;
@@ -307,7 +316,7 @@ export default class MusicDialog extends React.Component {
             audio.pause();
         } else {
             audio.play();
-            // Updates timestamps ona regular interval
+            // Updates timestamps on a regular interval
             // Only issue is that setInterval will continue in background
             setInterval(() => {
                 this.updateTime();
@@ -402,7 +411,8 @@ export default class MusicDialog extends React.Component {
             timeElapsed: "0:00",
             timeLeft: "",
             scrubberWidth: "0%",
-            reload: true
+            reload: true,
+            playCounted: false
         }, () => {this.props.toggleDialog(DialogTypes.MUSIC)});
     }
 
@@ -427,7 +437,8 @@ export default class MusicDialog extends React.Component {
             timeElapsed: "0:00",
             timeLeft: "",
             scrubberWidth: "0%",
-            reload: true
+            reload: true,
+            playCounted: false
         }, () => {this.props.browseTo(direction)});
     }
 
@@ -466,5 +477,6 @@ MusicDialog.propTypes = {
     musicDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
     currentItem: PropTypes.object.isRequired,
-    browseTo: PropTypes.func.isRequired
+    browseTo: PropTypes.func.isRequired,
+    incrementor: PropTypes.func.isRequired
 };

@@ -23,7 +23,10 @@ export default class ContactIcon extends React.Component {
         const contactTooltip = (
             <Tooltip
                 className="tooltip">
-                Send me a message!
+        		{this.props.contactIsOpen ?
+        			"Back to Content Feed"
+        		:	
+                    "Send me a message!"}
             </Tooltip>
         );
 

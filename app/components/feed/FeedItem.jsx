@@ -141,7 +141,12 @@ export default class FeedItem extends React.Component {
 	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
 	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
                             </svg>
-                            <h3 className="heart-count">{this.props.item.hearts}</h3>
+                            <h3 className="heart-count">{
+                                    this.props.item.hearts ?
+                                        this.props.item.hearts.length
+                                    :
+                                        "0"
+                                }</h3>
                         </div>
                     </div>
                 </div>
@@ -198,7 +203,12 @@ export default class FeedItem extends React.Component {
 	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
 	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
                             </svg>
-                            <h3 className="heart-count">{this.props.item.hearts}</h3>
+                            <h3 className="heart-count">{
+                                    this.props.item.hearts ?
+                                        this.props.item.hearts.length
+                                    :
+                                        "0"
+                                }</h3>
                         </div>
                     </div>
                 </div>
@@ -217,12 +227,13 @@ export default class FeedItem extends React.Component {
         }
 
         this.props.openItem(this.props.item);
+        this.props.incrementor("clicks", this.props.item);
     }
 
     handleHeartClick = (e) => {
         let item = this.props.item;
         item['feedIndex'] = this.props.index;
-        this.props.incrementHeart(item);
+        this.props.incrementor("hearts", item);
 
         let element = e.target;
         element.classList.add('run-heart-animation');
@@ -238,5 +249,5 @@ export default class FeedItem extends React.Component {
 FeedItem.propTypes = {
     item: PropTypes.object.isRequired,
     openItem: PropTypes.func.isRequired,
-    incrementHeart: PropTypes.func.isRequired
+    incrementor: PropTypes.func.isRequired
 };

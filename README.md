@@ -1,35 +1,44 @@
 # Afika Nyati Personal Website
 --------------------------
-Afika Nyati's personal website, written as a Node.js application with use of ReactJS for front-end services. The application uses ES6 syntax.
+Afika Nyati's personal website, a Node.js web application written using ReactJS and JavaScript ES6 syntax. Web Application employs Babel for compiling ES6 syntax and Webpack for module bundling. Application data is stored and served using Google Firebase.
 
-## Workflow and versioning
+## I. Dependencies
 
-Instructions for deploying are given near the end of this document. Deployment
-corresponds to the tip of `master` branch. As such, development should occur on
-branches other than `master`. The version number is kept in package.json.
-Currently, there is no practice of tagging commits because merges into `master`
-branch represent releases.
+To install all dependencies/libraries (located in the package.json), run the following command in the terminal:
 
-## Testing
+    `$ npm install`
 
+## II. Usage
 
-### Tests particular client-side
+To run the web application, run the following command in the terminal:
 
-To get the Selenium standalone server that the curator-portal configuration of
-Nightwatch (http://nightwatchjs.org/) is expecting,
+    `$ npm run start`
 
-    ./get-testing-deps.sh
+A development server will be launched on the localhost: http://localhost:8080
 
-For end-to-end testing, install ChromeDriver
-(https://sites.google.com/a/chromium.org/chromedriver/).
-On an Ubuntu host, try
+## III. Deployment
 
-    sudo apt-get install chromium-chromedriver
+Before this application can be deployed, the ES6+ codebase must be transpiled and web-packed into a build bundle.
 
-On Debian GNU/Linux, use instead `apt-get install chromedriver`.
+To do this, run the following command in the terminal:
 
-Note that nightwatch.json lists the path of the ChromeDriver executable as
-/usr/lib/chromium-browser/chromedriver, which is consistent with the location
-from the `chromium-chromedriver` deb package. You might need to change the path
-on other systems.  In particular, on Debian, it is
-/usr/lib/chromium/chromedriver.
+    `$ npm run build`
+
+Then, the /build directory should be ready for deployment.
+
+## IV. Firebase Data Structure
+
+To view a sample file depicting the structure of the web application's data stored on Google Firebase, see: `firebase_data_sample.json`
+
+## V. Helpful Links
+
+To learn more about ReactJS, visit: https://facebook.github.io/react/
+
+To learn more about the Webpack module bundler, visit:
+https://webpack.js.org/
+
+To learn more about the Babel compiler, visit:
+https://babeljs.io/
+
+To learn more about Google Firebase, visit:
+https://firebase.google.com/

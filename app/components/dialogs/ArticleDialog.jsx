@@ -100,6 +100,7 @@ export default class ArticleDialog extends React.Component {
                                     color={"#5a4570"}/>
                                 <h4 className={type === "music" ? "music-date" : "article-date"}>
                                     {this.props.currentItem.date}
+                                    <span className="article-time">{`(${this.props.determineReadTime(this.props.currentItem).toString()} min)`}</span>
                                 </h4>
                                 <Block
                                     position={"static"}
@@ -228,5 +229,6 @@ export default class ArticleDialog extends React.Component {
 ArticleDialog.propTypes = {
     articleDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
-    currentItem: PropTypes.object.isRequired
+    currentItem: PropTypes.object.isRequired,
+    determineReadTime: PropTypes.func.isRequired
 };

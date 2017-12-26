@@ -1705,6 +1705,20 @@ input.slide-square.small:checked + label:after {
     margin: 0 20px;
 }
 
+.article-time,
+.design-time {
+    font-weight: 300;
+    font-size: 0.8em;
+    color: var(--light-purple);
+    margin: 0 20px;
+    margin-bottom: 5px;
+}
+
+.design-time {
+    margin-top: 15px;
+    text-align: center;
+}
+
 .design-title,
 .design-description,
 .design-date-wrapper {

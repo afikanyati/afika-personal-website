@@ -90,6 +90,7 @@ export default class DesignDialog extends React.Component {
                                     height={3}
                                     color={"#5a4570"}/>
                             </div>
+                            <p className="design-time">{`${this.props.determineReadTime(this.props.currentItem).toString()} min`}</p>
                             <div className="design-body">
                                 {this.state.assets.map(asset => {
                                     return (
@@ -130,5 +131,6 @@ export default class DesignDialog extends React.Component {
 DesignDialog.propTypes = {
     designDialogIsOpen: PropTypes.bool.isRequired,
     toggleDialog: PropTypes.func.isRequired,
-    currentItem: PropTypes.object.isRequired
+    currentItem: PropTypes.object.isRequired,
+    determineReadTime: PropTypes.func.isRequired
 };

@@ -477,11 +477,13 @@ export default class App extends React.Component {
                 if (newItem) {
                     this.setState({
                         currentItem: newItem
+                    }, () => {
+                        this.incrementor("clicks", this.state.currentItem);
                     });
                 }
             },
             () => {
-                this.incrementor("clicks", this.state.currentItem);
+                return;
             }
         );
     }

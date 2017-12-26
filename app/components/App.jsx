@@ -481,7 +481,7 @@ export default class App extends React.Component {
                 }
             },
             () => {
-                return;
+                this.incrementor("clicks", this.state.currentItem);
             }
         );
     }

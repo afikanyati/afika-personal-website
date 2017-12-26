@@ -6,13 +6,13 @@ Afika Nyati's personal website, a Node.js web application written using ReactJS 
 
 To install all dependencies/libraries (located in the package.json), run the following command in the terminal:
 
-    `$ npm install`
+    $ npm install
 
 ## II. Usage
 
 To run the web application, run the following command in the terminal:
 
-    `$ npm run start`
+    $ npm run start
 
 A development server will be launched on the localhost: http://localhost:8080
 
@@ -22,7 +22,7 @@ Before this application can be deployed, the ES6+ codebase must be transpiled an
 
 To do this, run the following command in the terminal:
 
-    `$ npm run build`
+    $ npm run build
 
 Then, the /build directory should be ready for deployment.
 

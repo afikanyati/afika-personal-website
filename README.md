@@ -26,6 +26,12 @@ To do this, run the following command in the terminal:
 
 Then, the /build directory should be ready for deployment.
 
+To deploy the web application to firebase host, run the following command in the terminal:
+
+    $ firebase deploy -m "commit message"
+
+To learn more about Firebase hosting and deployment, read: https://firebase.google.com/docs/hosting/deploying
+
 ## IV. Firebase Data Structure
 
 To view a sample file depicting the structure of the web application's data stored on Google Firebase, see: `firebase_data_sample.json`

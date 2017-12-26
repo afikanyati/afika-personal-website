@@ -1028,18 +1028,18 @@ input.slide-square.small:checked + label:after {
     height: 25px;
 }
 
-.social-button svg > path,
-.social-button svg > rect,
-.social-button svg > polygon {
+.social-button svg path,
+.social-button svg rect,
+.social-button svg polygon {
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 }
 
-.social-button:hover svg > path,
-.social-button:hover svg > rect,
-.social-button:hover svg > polygon {
+.social-button:hover svg path,
+.social-button:hover svg rect,
+.social-button:hover svg polygon {
     fill: var(--light-purple);
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;

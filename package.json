@@ -5,6 +5,7 @@
   "main": "app/index.jsx",
   "scripts": {
     "build": "webpack",
+    "deploy": "firebase deploy",
     "start": "webpack-dev-server"
   },
   "repository": {

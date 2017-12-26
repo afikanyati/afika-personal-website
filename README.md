@@ -1,4 +1,4 @@
-# Afika Nyati Personal Website
+# Afika Nyati's Personal Website
 --------------------------
 Afika Nyati's personal website, a Node.js web application written using ReactJS and JavaScript ES6 syntax. Web Application employs Babel for compiling ES6 syntax and Webpack for module bundling. Application data is stored and served using Google Firebase.
 

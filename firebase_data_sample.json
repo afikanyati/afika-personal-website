@@ -13,37 +13,791 @@
   "content" : {
     "art" : [ {
       "category" : "Animation",
+      "clicks" : [ "2017-12-20T07:22:05.716Z" ],
       "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fanime%2Fthe_life_of_a_geek_can_be_bleak.mp4?alt=media&token=dfd92433-cad9-4298-86ad-fbd8fe927493",
       "date" : "March 2010",
       "dialog" : "video",
-      "path" : "art/0",
+      "path" : "content/art/0",
+      "plays" : [ "2017-12-20T07:22:11.075Z" ],
       "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fanimation%2Fgeek_tn.jpg?alt=media&token=65353db3-4ff5-47bb-a303-ca5520fcb582",
       "title" : "Freak Geek: The Life of a Geek can be Bleak"
     }, {
+      "category" : "Animation",
+      "clicks" : [ "2017-12-20T07:24:12.965Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fanime%2Fthe_sickest_freestyle_ever.mp4?alt=media&token=aee2a653-dce9-493f-b8fb-1953a0d462fd",
+      "date" : "June 2010",
+      "dialog" : "video",
+      "path" : "content/art/1",
+      "plays" : [ "2017-12-20T07:24:16.138Z" ],
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fanimation%2Ffreestyle_tn.jpg?alt=media&token=bef293d6-ffce-4f1e-97a2-974e3c5a66a5",
+      "title" : "The Sickest Freestyle Ever!"
+    }, {
+      "category" : "Animation",
+      "clicks" : [ "2017-12-20T07:26:23.879Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fanime%2Fzimbabwean_alien.mp4?alt=media&token=1f27d4ee-845b-4801-b3e2-18497374210b",
+      "date" : "March 2010",
+      "dialog" : "video",
+      "path" : "content/art/2",
+      "plays" : [ "2017-12-20T07:26:28.328Z" ],
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fanimation%2Falien_tn.jpg?alt=media&token=dc186b8f-e1eb-4f1f-bb75-1364ee864373",
+      "title" : "Freak Geek: Zimbabwean Alien"
+    }, {
       "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:27:13.146Z" ],
       "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Facid_city.jpg?alt=media&token=00e7a23a-38e4-407e-bc5d-ffc651a3c5d7",
       "date" : "2012",
       "dialog" : "image",
-      "path" : "art/3",
+      "path" : "content/art/3",
       "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Facid_city_tn.jpg?alt=media&token=f24d5162-68c9-4ce8-b5ba-2883e1933c0c",
       "title" : "Acid City"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:27:08.026Z", "2017-12-20T16:21:57.777Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_braque.jpg?alt=media&token=3920da45-2866-4e00-a39f-abb27c537694",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/4",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_braque_tn.jpg?alt=media&token=19d2c3bd-9e37-4fee-b59c-48167dfa0e3a",
+      "title" : "After Braque"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:27:29.044Z", "2017-12-20T07:48:22.316Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_carravaggio.jpg?alt=media&token=a9cfdaa4-0158-4db5-9d61-73cd6c0ec264",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/5",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_carravaggio_tn.jpg?alt=media&token=f7423119-1169-4bd9-85c7-a2a25e9af885",
+      "title" : "After Caravaggio"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:27:22.922Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_gauguin.jpg?alt=media&token=5470f5b5-927d-463c-a10c-a411f3a9f84b",
+      "date" : "2010",
+      "dialog" : "image",
+      "path" : "content/art/6",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_gauguin_tn.jpg?alt=media&token=5b79c619-0df1-4c0a-853c-2ae251c4edda",
+      "title" : "After Gauguin"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_jacques_luis_david.jpg?alt=media&token=3223b0fe-2d08-4232-93c6-1abf927dccb5",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/7",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_jacques_luis_david_tn.jpg?alt=media&token=94b71b39-e8f5-4ff8-ac75-2f2a74236413",
+      "title" : "After Jacques Luis David"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_maree_clarkson.jpg?alt=media&token=a5e91f69-68c6-4190-993f-de51645d1f25",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/8",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_maree_clarkson_tn.jpg?alt=media&token=fa4a8be1-a66c-43e8-9d09-5aaee0c46e3c",
+      "title" : "After Maree Clarkson"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_matisse.jpg?alt=media&token=32642eea-50ce-4fdc-97e3-55a67195390c",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/9",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_matisse_tn.jpg?alt=media&token=e90fd2ad-9c50-4913-ab2c-f0ffe2615556",
+      "title" : "After Matisse"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:27:46.763Z", "2017-12-20T16:22:19.894Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_michelangelo.jpg?alt=media&token=22000db7-5461-41de-98e4-634d5c8f263c",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/10",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_michelangelo_tn.jpg?alt=media&token=3b97ff82-67be-4998-8be7-d210eba38c38",
+      "title" : "After Michelangelo"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:28:19.815Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_morandi.jpg?alt=media&token=95299415-232f-47dd-a0c5-a75ab13c4903",
+      "date" : "2009",
+      "dialog" : "image",
+      "path" : "content/art/11",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_morandi_tn.jpg?alt=media&token=58af46e1-9b58-4425-ab39-6235323e7ca2",
+      "title" : "After Morandi"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:28:11.936Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_rembrandt.jpg?alt=media&token=235ca8b3-7844-4325-ab65-1c8e7ad06645",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/12",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_rembrandt_tn.jpg?alt=media&token=d4122f49-1d34-4be7-b3c8-4acae34b99ef",
+      "title" : "After Rembrandt"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_uglow.jpg?alt=media&token=1531f9c3-2858-45d8-86de-af2bc7f7fa58",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/13",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_uglow_tn.jpg?alt=media&token=12027a09-c0c6-4b4a-aa2e-a32f37603bcd",
+      "title" : "After Uglow"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:28:26.384Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_umberto_boccioni.jpg?alt=media&token=d3665b3d-e4f7-4d23-a1a3-e3913acd3b48",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/14",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_umberto_boccioni_tn.jpg?alt=media&token=2c620a00-f83c-41c7-9a6e-8d54676ca059",
+      "title" : "After Umberto Boccioni"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_van_gogh_1.jpg?alt=media&token=a5471c6a-d697-48a0-b967-f7e0a65953b1",
+      "date" : "2009",
+      "dialog" : "image",
+      "path" : "content/art/15",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_van_gogh_1_tn.jpg?alt=media&token=432eaa09-0344-46bb-8594-95218c30f0c3",
+      "title" : "After Van Gogh I"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-18T21:52:19.730Z", "2017-12-20T16:22:04.340Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_van_gogh_2.jpg?alt=media&token=caadb356-0ca2-4ba7-a4c1-2db5c6c10f26",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/16",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_van_gogh_2_tn.jpg?alt=media&token=b6c086e8-655d-4c47-a4d7-0b6058ab8189",
+      "title" : "After Van Gogh II"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fafter_van_gogh_3.jpg?alt=media&token=37f6f746-c41f-461c-b50f-db25825743c5",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/17",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fafter_van_gogh_3_tn.jpg?alt=media&token=cefadad0-8f0c-42db-bee8-235fc3009327",
+      "title" : "After Van Gogh III"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-18T21:52:24.047Z", "2017-12-20T07:21:57.825Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fandrew.jpg?alt=media&token=f58d9dd0-774b-4af0-9992-4ecef1960be7",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/18",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fandrew_tn.jpg?alt=media&token=4da34898-38e0-4fdd-ad5a-d7bbb93846c4",
+      "title" : "Andrew"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fangel.jpg?alt=media&token=c7d6a67d-c363-4a9f-a039-d1d15e07442a",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/19",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fangel_tn.jpg?alt=media&token=972c0ce7-1627-45d1-aa04-a10233ea7ff3",
+      "title" : "Angel"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fapple_and_chestnuts.jpg?alt=media&token=0899dbcf-fe60-4fc8-bd06-ceb57522709b",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/20",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fapple_and_chestnuts_tn.jpg?alt=media&token=cfbd5d0d-76a8-48d3-9fd5-4eb4f4e2bfb6",
+      "title" : "Apples and Chestnuts"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fapples_and_alcohol.jpg?alt=media&token=7fa9dac9-161a-4e1d-96d1-a9ddb1582fb7",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/21",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fapples_and_alcohol_tn.jpg?alt=media&token=e0161bbc-32fe-4b11-b749-61795e01d403",
+      "title" : "Apples and Alcohol"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fapples_and_cutlery.jpg?alt=media&token=0a696582-518b-4e0c-8955-53a0dcb44dfa",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/22",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fapples_and_cutlery_tn.jpg?alt=media&token=d889680c-0144-4975-95b7-dc242a9eb82e",
+      "title" : "Apples and Cutlery"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fbedroom.jpg?alt=media&token=2294e5ba-6f83-45e0-837d-f23df78fa745",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/23",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fbedroom_tn.jpg?alt=media&token=fdf029c6-ce00-42b2-b2dc-92469d07c8ec",
+      "title" : "Bedroom"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fbishops_unsung_heroes.jpg?alt=media&token=d480b444-0f8d-41cd-bed3-7b31c9f4a344",
+      "date" : "2010",
+      "dialog" : "image",
+      "path" : "content/art/24",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fbishops_unsung_heroes_tn.jpg?alt=media&token=8b1b4eba-52a8-4180-824f-3713ecebca18",
+      "title" : "Bishops' Unsung Heroes"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fcape_town_primordial.jpg?alt=media&token=05b5c073-c0e4-4bd5-8a56-f8fbc2795850",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/25",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fcape_town_primordial_tn.jpg?alt=media&token=9f82c286-d40e-41ef-b388-9fec85fcd5f9",
+      "title" : "Cape Town: Primordial"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fcutlery_and_brownies.jpg?alt=media&token=a6f3ab38-2a9f-48db-a4fa-fdb630661cf4",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/26",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fcutlery_and_brownies_tn.jpg?alt=media&token=8c9bdf2c-5f70-409e-b012-c1415cd09d5d",
+      "title" : "Cutlery and Brownies"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fdolphins.jpg?alt=media&token=66ca4419-b157-4777-bf93-0d10e49f2654",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/27",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fdolphins_tn.jpg?alt=media&token=d8eff7e1-bb04-490c-88d6-f268b52a7b41",
+      "title" : "Dolphins"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fdropout_bear.jpg?alt=media&token=a0d3f299-351b-4e24-ba7a-24293e9ed60b",
+      "date" : "2010",
+      "dialog" : "image",
+      "path" : "content/art/28",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fdropout_bear_tn.jpg?alt=media&token=28a2730b-aa51-4da3-9e20-53da95a433ee",
+      "title" : "Dropout Bear"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-18T21:52:32.884Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fdusk_at_the_waterfront.jpg?alt=media&token=34bb6515-cf79-4595-bda7-68bbe57c1207",
+      "date" : "2013",
+      "dialog" : "image",
+      "hearts" : [ "2017-12-18T21:56:20.793Z" ],
+      "path" : "content/art/29",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fdusk_at_the_waterfront_tn.jpg?alt=media&token=26a843d5-96f8-4983-809c-f6ff0c5d13d0",
+      "title" : "Dusk at the Waterfront"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-18T21:52:40.943Z", "2017-12-18T21:56:10.814Z", "2017-12-20T07:39:15.936Z", "2017-12-20T16:21:30.547Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fephemerality.jpg?alt=media&token=f283d4c5-68c0-442e-b5e0-139857bf2ec1",
+      "date" : "2013",
+      "dialog" : "image",
+      "hearts" : [ "2017-12-18T21:56:10.814Z" ],
+      "path" : "content/art/30",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fephemerality_tn.jpg?alt=media&token=b8aa2a0d-29a2-4360-bc08-424794a4ab9d",
+      "title" : "Ephemerality"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fhadeda.jpg?alt=media&token=c6beeb3a-a400-40cf-9bf9-b99d478eaee3",
+      "date" : "2009",
+      "dialog" : "image",
+      "path" : "content/art/31",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fhadeda_tn.jpg?alt=media&token=f05ec68c-f058-4561-8a99-56745f2d0e69",
+      "title" : "Hadeda"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fhusky.jpg?alt=media&token=a9668483-e275-4f0f-9922-30d5d297929d",
+      "date" : "2009",
+      "dialog" : "image",
+      "path" : "content/art/32",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fhusky_tn.jpg?alt=media&token=e88991ba-a67e-4ed2-a11b-f55a63486141",
+      "title" : "Husky"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fhuts.jpg?alt=media&token=f1a2cee0-a055-4a1d-abf0-0268152585df",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/33",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fhuts_tn.jpg?alt=media&token=89c1bd53-9f57-4003-83a7-65e4b18b73e7",
+      "title" : "Huts"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Findio_picaro.jpg?alt=media&token=88b02931-b2bc-4d54-a80b-420bb62272c3",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/34",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Findio_picaro_tn.jpg?alt=media&token=9cf5b80e-fa2f-4dad-a933-6a361f36eba3",
+      "title" : "Indio Picaro"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fiphone.jpg?alt=media&token=024a5b5d-3759-47f1-ac0a-8cf35b4eac3a",
+      "date" : "2010",
+      "dialog" : "image",
+      "path" : "content/art/35",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fiphone_tn.jpg?alt=media&token=f88dbe87-7591-48fd-a616-a539d7b15eb8",
+      "title" : "iPhone 3G"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Flandscape_in_watercolour.jpg?alt=media&token=6df988f1-fb15-44ad-8536-159ac8434ceb",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/36",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Flandscape_in_watercolour_tn.jpg?alt=media&token=0e9753af-04d8-4fae-bfc0-e1396b932055",
+      "title" : "Landscape in Watercolor"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fpeacock.jpg?alt=media&token=7968c6e9-ed21-4d40-857e-304939261d4f",
+      "date" : "2009",
+      "dialog" : "image",
+      "path" : "content/art/37",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fpeacock_tn.jpg?alt=media&token=558ff47b-fa66-410d-b4f8-d80e99342b01",
+      "title" : "Peacock"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fpelican.jpg?alt=media&token=458f507e-bdff-4427-acc0-22df41e21e09",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/38",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fpelican_tn.jpg?alt=media&token=a95c0ec5-73d2-4311-9f2b-aacb5e775f2a",
+      "title" : "Pelican"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fpiano_man.jpg?alt=media&token=83f4d4f3-018f-42bb-9485-526f172c49c5",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/39",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fpiano_man_tn.jpg?alt=media&token=7c205f80-855c-4f55-9e9b-4d69c5868d8c",
+      "title" : "Piano Man"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:29:45.929Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fportrait_of_father_1.jpg?alt=media&token=8b03560e-fb35-4bec-9360-00817398ddf8",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/40",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fportrait_of_father_1_tn.jpg?alt=media&token=c719f15c-81d2-4523-b0b6-ea3e690132d4",
+      "title" : "Portrait of Father I"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:30:04.166Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fportrait_of_father_2.jpg?alt=media&token=bc7f7946-9fc8-4ef0-85cc-0e91a9ce4ba9",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/41",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fportrait_of_father_2_tn.jpg?alt=media&token=a6e145bf-675b-418d-9d3b-1f1a5a23191c",
+      "title" : "Portrait of Father II"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fportrait_of_father_3.jpg?alt=media&token=1877c37c-ec1f-49ba-add9-d99fd5dd9c4d",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/42",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fportrait_of_father_3_tn.jpg?alt=media&token=3e10b77e-af4b-41de-9d10-121829d81a93",
+      "title" : "Portrait of Father III"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fportrait_of_father_4.jpg?alt=media&token=0f1a2cee-7f7e-4d6e-b19d-47a4ad184e29",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/43",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fportrait_of_father_4_tn.jpg?alt=media&token=35bee0d5-82a0-4dac-9c0b-a65d0530f28e",
+      "title" : "Portrait of Father IV"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fpuzzle.jpg?alt=media&token=cbadfd9e-7684-4ec1-a18f-5d79106bc0b9",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/44",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fpuzzle_tn.jpg?alt=media&token=97e9be91-c7f7-40d0-b8e3-891a0f96ee3a",
+      "title" : "Puzzle"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fself_portrait_1.jpg?alt=media&token=f192a974-9cc8-4588-8397-567e49ef1121",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/45",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fself_portrait_1_tn.jpg?alt=media&token=ab390fe1-0596-46d8-b6cb-813b08384963",
+      "title" : "Self Portrait I"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fself_portrait_2.jpg?alt=media&token=8b8a2816-d4f8-4495-9da0-8928d8ac7c83",
+      "date" : "2013",
+      "dialog" : "image",
+      "hearts" : [ "2017-12-18T21:56:52.591Z" ],
+      "path" : "content/art/46",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fself_portrait_2_tn.jpg?alt=media&token=99f6c17d-1599-4c14-b2b7-9f54aa112776",
+      "title" : "Self Portrait II"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fself_portrait_3.jpg?alt=media&token=98878ca9-a119-43ce-8555-f26ee8d0e993",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/47",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fself_portrait_3_tn.jpg?alt=media&token=ea838091-f2a5-4924-8c89-5984674ffc6e",
+      "title" : "Self Portrait III"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fself_portrait_4.jpg?alt=media&token=73bd0715-1d72-40ac-9078-b287fb75009f",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/48",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fself_portrait_4_tn.jpg?alt=media&token=a6f902a5-5a70-466e-8fa4-bdee7fe30656",
+      "title" : "Self Portrait IV"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fsitting_man.jpg?alt=media&token=d8c3f7a4-23e0-475c-b335-30d023abb336",
+      "date" : "2010",
+      "dialog" : "image",
+      "path" : "content/art/49",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fsitting_man_tn.jpg?alt=media&token=dd89868a-366d-4bad-85b0-32172ed165aa",
+      "title" : "Sitting Man"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fstill_life_apples_oranges_pears_1.jpg?alt=media&token=c7732180-434b-4b19-9fce-7a3dec32e6a1",
+      "date" : "2012",
+      "dialog" : "image",
+      "path" : "content/art/50",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fstill_life_apples_oranges_pears_1_tn.jpg?alt=media&token=9b462975-5e4f-4841-9a52-d55224334283",
+      "title" : "Still Life: Apples, Oranges and Pears I"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fstill_life_apples_oranges_pears_2.jpg?alt=media&token=f6169a40-dba8-4c3a-bfc9-342bf499af03",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/51",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fstill_life_apples_oranges_pears_2_tn.jpg?alt=media&token=6ba2dfd3-5421-4aa1-b8ac-5518b578c16a",
+      "title" : "Still Life: Apples, Oranges and Pears II"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-20T07:21:26.228Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fsunset_at_myrtle_beach.jpg?alt=media&token=17a29f55-e105-4505-8a5c-66d46d04d864",
+      "date" : "2011",
+      "dialog" : "image",
+      "hearts" : [ "2017-12-18T21:57:03.757Z" ],
+      "path" : "content/art/52",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fsunset_at_myrtle_beach_tn.jpg?alt=media&token=20d91528-4142-4497-a267-efac0aec58e5",
+      "title" : "Sunset at Myrtle Beach"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fthumbnails_1.jpg?alt=media&token=ddbddf24-299f-4267-8ef2-eb565085da18",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/53",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fthumbnails_1_tn.jpg?alt=media&token=63bd2e3c-2873-4ff7-912b-e48181f5c024",
+      "title" : "Thumbnail Studies: Self Portrait"
+    }, {
+      "category" : "Fine Art",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Fthumbnails_2.jpg?alt=media&token=2c2ee41b-b0db-4720-a22f-f325956f78b6",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/54",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Fthumbnails_2_tn.jpg?alt=media&token=23fae2fd-1757-403e-8bf1-cda6cdfce538",
+      "title" : "Thumbnail Studies: Matisse"
+    }, {
+      "category" : "Fine Art",
+      "clicks" : [ "2017-12-18T21:57:36.688Z", "2017-12-18T22:22:26.514Z", "2017-12-20T07:37:58.195Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Ffine_art%2Ftime.jpg?alt=media&token=de09418f-7b9e-4a53-8e6d-46cf5a6b929f",
+      "date" : "2013",
+      "dialog" : "image",
+      "hearts" : [ "2017-12-18T21:56:58.742Z", "2017-12-18T21:57:30.441Z" ],
+      "path" : "content/art/55",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Ffine_art%2Ftime_tn.jpg?alt=media&token=6f42f1d3-bef2-466d-ae53-7777f341ff9f",
+      "title" : "TIME"
     }, {
       "category" : "Graphic Design",
       "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Farrival_graphic.jpg?alt=media&token=aa663584-59a1-4db7-bcf7-7d6d161411a0",
       "date" : "2011",
       "dialog" : "image",
-      "path" : "art/56",
+      "path" : "content/art/56",
       "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Farrival_graphic_tn.jpg?alt=media&token=e48c6991-11d5-426f-bc04-68c81395117d",
       "title" : "The Arrival - Music Graphic"
     }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Farrival_icon.png?alt=media&token=3687841b-e254-4318-bc0c-99066a6ec8cc",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/57",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Farrival_icon_tn.jpg?alt=media&token=ac17abaf-3955-4370-bf1b-0c851196ca66",
+      "title" : "The Arrival - Website Icon"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:31:18.414Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fbatlogs.jpg?alt=media&token=d9d76141-8a0c-4979-9ee3-24604764793f",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/58",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fbatlogs_tn.jpg?alt=media&token=c767cccd-1093-4dd8-9108-f973957df9ba",
+      "title" : "Batlogs"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fbrass_rat_logo_2018.png?alt=media&token=2fa1b198-1464-405e-95ac-701f36992640",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/59",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fbrass_rat_logo_2018_tn.jpg?alt=media&token=2d4d8d87-8572-4344-a523-0386f39e45b8",
+      "title" : "Brass Rat 2018 Logo"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:41:43.454Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fdiscover_product_design.png?alt=media&token=9d42f35c-1ad5-4c97-86f2-5bda83f78690",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/60",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fdiscover_product_design_tn.jpg?alt=media&token=77c760d8-e7b3-4ac1-b217-daca0e5e55ca",
+      "title" : "Discover Product Design Logo"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:33:37.711Z", "2017-12-20T16:21:43.677Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fkhoi.png?alt=media&token=7dbc09fd-7112-4a05-8144-2deb22e12940",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/61",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fkhoi_tn.jpg?alt=media&token=961c02eb-91c5-4723-856c-96fb9edab7e8",
+      "title" : "KHOI"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Flow_poly_self_portrait.jpg?alt=media&token=cbdde5c4-78bc-43ae-9b71-b4d40c3d75f4",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/62",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Flow_poly_self_portrait_tn.jpg?alt=media&token=00b3718a-d80b-482f-bee4-9058f7362721",
+      "title" : "Low Poly Self Portrait"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:34:17.147Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_facebook_banner_purple.png?alt=media&token=16cbff9b-a887-449a-a4cc-01148aa799d9",
+      "date" : "2016",
+      "dialog" : "image",
+      "path" : "content/art/63",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_facebook_banner_purple_tn.jpg?alt=media&token=904935cf-b67e-47df-aad1-67dc2b5b027e",
+      "title" : "SAE Facebook Banner - Purple"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:34:31.541Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_facebook_banner_yellow.png?alt=media&token=f95d754f-93bc-4d10-ba78-2b22b6a55ae9",
+      "date" : "2016",
+      "dialog" : "image",
+      "path" : "content/art/64",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_facebook_banner_yellow_tn.jpg?alt=media&token=3d7bb29d-6969-4df5-b251-fda0d33bc8a0",
+      "title" : "SAE Facebook Banner - Yellow"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_logo_redesign.png?alt=media&token=0a5f4c4b-1123-4437-b94c-e1e144b2dfae",
+      "date" : "2016",
+      "dialog" : "image",
+      "path" : "content/art/65",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_logo_redesign_tn.jpg?alt=media&token=35300f2c-fb5f-4f7b-b6bc-4594822f5b7c",
+      "title" : "SAE Logo Redesign"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_phoenix.png?alt=media&token=acada0d5-02b5-4407-aecc-4de72016a2c9",
+      "date" : "2017",
+      "dialog" : "image",
+      "path" : "content/art/66",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_phoenix_tn.jpg?alt=media&token=117e096c-9285-4489-b930-78e76ac48e2a",
+      "title" : "SAE - Pheonix"
+    }, {
+      "category" : "Graphic Design",
+      "clicks" : [ "2017-12-20T07:34:47.048Z" ],
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_rush_shirt_2016_1.jpg?alt=media&token=793b79d7-0728-478e-8f69-8ab63ba434a9",
+      "date" : "2016",
+      "dialog" : "image",
+      "path" : "content/art/67",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_rush_shirt_2016_1_tn.jpg?alt=media&token=15d01819-b758-4f57-9e9b-5d1e0c92dbb0",
+      "title" : "SAE - Rush 2016 I"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fsae_rush_shirt_2016_2.jpg?alt=media&token=8ae8fe8e-47dd-4433-83c0-b788d87b83a6",
+      "date" : "2016",
+      "dialog" : "image",
+      "path" : "content/art/68",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fsae_rush_shirt_2016_2_tn.jpg?alt=media&token=33179415-3657-4c70-9332-e8612b0b27f0",
+      "title" : "SAE - Rush 2016 II"
+    }, {
+      "category" : "Graphic Design",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fgraphic_design%2Fwebsite_logo.png?alt=media&token=ac647bae-5d05-47f9-9a46-e5b1fd9ad864",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/69",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fdesign%2Fwebsite_logo_tn.jpg?alt=media&token=945b3594-1f72-4948-8a32-77c2482cfe1d",
+      "title" : "Afika Nyati Logotype"
+    }, {
       "category" : "Photography",
+      "clicks" : [ "2017-12-20T07:36:04.273Z" ],
       "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_1.jpg?alt=media&token=c5dec978-a455-4ecd-880a-4a2a7c262357",
       "date" : "2013",
       "dialog" : "image",
-      "path" : "art/70",
+      "path" : "content/art/70",
       "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_1_tn.jpg?alt=media&token=bc15ef32-b713-4bc7-a40b-18238e19198c",
       "title" : "Cape Town I"
-    }],
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_2.jpg?alt=media&token=53c5891f-d37b-4a5f-bde3-1c4ee3d6c3e9",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/71",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_2_tn.jpg?alt=media&token=47751c95-1700-42d6-9b40-b2d0915e4985",
+      "title" : "Cape Town II"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_3.jpg?alt=media&token=29f37cde-c795-4d76-a1fa-d52ccadb7f9d",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/72",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_3_tn.jpg?alt=media&token=a45682b1-633b-45aa-bd4d-22c0d07ac15b",
+      "title" : "Cape Town III"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_4.jpg?alt=media&token=ea3b1de2-9317-4926-8d68-17122672dfd7",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/73",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_4_tn.jpg?alt=media&token=0b4313bf-b3f4-450e-8b78-ec1f74b469d5",
+      "title" : "Cape Town IV"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_5.jpg?alt=media&token=5c2bc843-6e2a-48c3-abf8-f7276d39a3ce",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/74",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_5_tn.jpg?alt=media&token=b434bfe0-b8f9-41c0-9c1e-259dc925acb2",
+      "title" : "Cape Town V"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_6.jpg?alt=media&token=327e81b4-7d96-4596-bc19-d52b7a10bfb5",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/75",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_6_tn.jpg?alt=media&token=df5a68ad-a9a6-446f-9db7-a420b056db81",
+      "title" : "Cape Town VI"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_7.jpg?alt=media&token=648af5d1-4634-4d9e-a5b2-bcd01fd3d237",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/76",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_7_tn.jpg?alt=media&token=a96c6bdd-ee55-47c0-ae27-6c8d736d7347",
+      "title" : "Cape Town VII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_8.jpg?alt=media&token=7e5d3318-6055-4922-b5a4-c7b87f6bcfb9",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/77",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_8_tn.jpg?alt=media&token=5b75127b-9e04-438f-a4a2-8028000dd34f",
+      "title" : "Cape Town VIII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_9.jpg?alt=media&token=42c56049-f1ac-4bba-916a-de6170046a12",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/78",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_9_tn.jpg?alt=media&token=1752bc34-758e-4150-857a-310ba50b42b9",
+      "title" : "Cape Town IX"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_10.jpg?alt=media&token=54779e9a-772c-4819-a2d2-bec205e419db",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/79",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_10_tn.jpg?alt=media&token=24934d19-f07a-416e-8e31-3f2f7e3ededd",
+      "title" : "Cape Town X"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_11.jpg?alt=media&token=427fa740-c2da-44df-8e22-92134c0ea461",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/80",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_11_tn.jpg?alt=media&token=ecdd93f0-dfed-4326-9512-f843fc4c6921",
+      "title" : "Cape Town XI"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_12.jpg?alt=media&token=2d36e965-0919-43ce-9658-3a9c1d2e56c9",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/81",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_12_tn.jpg?alt=media&token=dcfd5ede-d811-4028-aa28-f85204ec7fb6",
+      "title" : "Cape Town XII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_13.jpg?alt=media&token=ef891b3f-b149-46d0-aab2-271ad3d7e16e",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/82",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_13_tn.jpg?alt=media&token=7a18597b-35d7-4110-8422-11ab08ee8467",
+      "title" : "Cape Town XIII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_14.jpg?alt=media&token=9e2900a9-256c-40f5-885e-afe75b0cf674",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/83",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_14_tn.jpg?alt=media&token=6704139d-167a-42c1-93a1-63fc5304a09f",
+      "title" : "Cape Town XIV"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_15.jpg?alt=media&token=b5c332c0-aebd-47d7-8e71-18d3cd5f8b74",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/84",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_15_tn.jpg?alt=media&token=a66eb4e3-1b5b-4ec5-8091-46978f0ca14d",
+      "title" : "Cape Town XV"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_16.jpg?alt=media&token=9d1c425e-f469-4676-b842-1afc8709012e",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/85",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_16_tn.jpg?alt=media&token=2aa813b0-6740-493a-a531-28f629e23d8f",
+      "title" : "Cape Town XVI"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_17.jpg?alt=media&token=98a79606-6377-4aed-bab6-f34e72b83a36",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/86",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_17_tn.jpg?alt=media&token=e364c023-d4da-4601-bdb2-1abfd4527eac",
+      "title" : "Cape Town XVII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fcape_town_18.jpg?alt=media&token=6428119f-e22a-4a6e-94be-8de80b8ff1b1",
+      "date" : "2013",
+      "dialog" : "image",
+      "path" : "content/art/87",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fcape_town_18_tn.jpg?alt=media&token=3f66b469-d89d-43c8-91a0-7ef50b1d54cf",
+      "title" : "Cape Town XVIII"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fselfie.jpg?alt=media&token=5eb1e8d8-877d-4173-aaa3-8439aae74259",
+      "date" : "2011",
+      "dialog" : "image",
+      "path" : "content/art/88",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fselfie_tn.jpg?alt=media&token=419a874a-169a-4220-88bb-7792be72ba7b",
+      "title" : "Selfie"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fjozi.jpg?alt=media&token=ba3ee260-a023-42a3-98c8-c610d72a877e",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/89",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fjozi_tn.jpg?alt=media&token=8364b1f1-f019-45b0-9447-20e36f8433b5",
+      "title" : "Jozi"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Flounge.jpg?alt=media&token=d754b0a0-40e8-4ac1-8971-b9de1a591530",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/90",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Flounge_tn.jpg?alt=media&token=16518437-00d9-41f0-a8ca-2a1a0a53650c",
+      "title" : "Lounge"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fmit_1.jpg?alt=media&token=a35901d7-7c5d-46db-8dba-5618c0fe502b",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/91",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fmit_1_tn.jpg?alt=media&token=a2a1501c-8097-45e4-ad4c-bb3c8b49a76a",
+      "title" : "Simmons"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Fmit_2.jpg?alt=media&token=48f69519-8a6e-424d-96e6-fb9a7d100da0",
+      "date" : "2014",
+      "dialog" : "image",
+      "path" : "content/art/92",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Fmit_2_tn.jpg?alt=media&token=3a0fdb82-08fb-4720-803a-e131d4441832",
+      "title" : "What? Project"
+    }, {
+      "category" : "Photography",
+      "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/art%2Fphotography%2Ftech_and_terrain.jpg?alt=media&token=c8f257d4-fe04-4582-b19d-a0373ed9a1ee",
+      "date" : "2015",
+      "dialog" : "image",
+      "path" : "content/art/93",
+      "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fart%2Fphotography%2Ftech_and_terrain_tn.jpg?alt=media&token=5cf8e451-8e6a-4a35-a90f-e8842a1b424a",
+      "title" : "Tech and Terrain"
+    } ],
     "design" : {
       "6141" : {
         "assets" : [ {
@@ -211,12 +965,169 @@
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-17T22:40:48.028Z", "2017-12-17T22:41:15.373Z", "2017-12-17T22:45:03.921Z", "2017-12-17T22:47:24.804Z", "2017-12-25T01:37:18.236Z" ],
         "date" : "May 2017",
         "dialog" : "design",
-        "path" : "design/6161",
+        "path" : "content/design/6141",
         "subtitle" : "Building an autonomous vehicle using the Robot Operating System.",
         "thumbnail" : "-1",
         "title" : "Robotics: Science and Systems"
+      },
+      "cadencv" : {
+        "assets" : [ {
+          "asset" : {
+            "data" : "Introduction"
+          },
+          "type" : "heading"
+        }, {
+          "asset" : {
+            "data" : "Music has long been an integral part of human culture, and today this still remains true. As a form of artistic ex- pression and emotional communication in contemporary society, it's almost impossible to go a day without hearing a song played or a tune being whistled in your vicinity."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Over the last century, we've seen a significant global increase in the use of digital devices, and the production and consumption of digital information - a trend that has left no industry unaffected. The music industry in specific has experienced significant disruption due to digitization - losing control over content distribution, consumption and the sales associated with the two. Digital tools have also ushered new potential for musicians to express themselves in unique ways using synthesizers and voice-distortion technology."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "While much has been explored in context of music production, and listener consumption, limited development has been made towards the digitization of pre-information age and printed music documents. To be more specific, today there exists no robust tools for computer perception of music notation, inhibiting the improvement of music storage, playback and manipulation in a digital form. For example, a musician learning a new song would greatly benefit from hearing its auditory representation prior to parsing its notated sheet music. This is the focus of Optical Music Recognition."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage1.jpg?alt=media&token=ce10b8f3-9448-4c7f-8dff-310735a13935",
+            "layout" : "elongated"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "Approach"
+          },
+          "type" : "heading"
+        }, {
+          "asset" : {
+            "data" : "Music notation comprises a large finite alphabet used to express ways of interpreting and communicating musical ideas. Each character serves to create a visual manifestation of the interrelated properties of musical sound such as pitch, dynamics, time, and timbre. For background, music notes are presented on a staff, a set of five lines each possessing its own pitch. A clef serves to communicate the pitch associated with each of these five lines. In this way, the pitch of a given note is determined by its vertical placement on the staff i.e. it's pitch is consistent with the pitch of the staff line or space on which it rests. The temporal nature of music is represented by the horizontal traversal of the staff. Thus music notation presents information in two dimensions. Certain subsets of the alphabet serve to communicate note duration, relative durations of silence, temporary changes in pitch, dynamics (loudness), and note articulations (changes in musical sound). In practice, certain symbols have almost unlimited variations in representation. As a result, building a computer vision system that understands musical notation is a difficult, but achievable goal."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "Typical music primitives used in sheet music.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage2.jpg?alt=media&token=15490077-fee2-4b88-8362-062b13244e39",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "caption" : "Bi-dimensional structure of the music staff.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage3.jpg?alt=media&token=d195cd0c-dca1-420b-bb48-b5f38554b27c",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "For the purpose of this project, I decided to restrict the scope of the alphabet space considered. Consequently, my research sought to develop a OMR system capable of recognizing and representing high resolution sheet music written for a single monophonic musical instrument using note or rest values equal to or greater than eighth notes, expressed on a staff consisting of either the treble or the bass clef and one of the common time signatures, i.e. common time, 2/4, 4/4, 3/4 or 6/8. Consequently, my recognition system cannot perform <Italic text={'key'} /> or <Italic text={'time signature alterations'} />, or <Italic text={'detect tempo demarcations'} />, <Italic text={'harmony'} />, <Italic text={'multi-instrumentation'} />, <Italic text={'braced-joined staffs'} />, <Italic text={'tuplets'} />, <Italic text={'repeats'} />, <Italic text={'slurs'} /> and <Italic text={'ties'} />, <Italic text={'articulation'} /> and <Italic text={'dynamic marks'} />, or <Italic text={'dotted rhythms'} />."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "Standard input to OMR system.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage4.jpg?alt=media&token=9eb98449-56ff-4f64-b225-f20bdb09010f",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "Over time, a general framework for OMR systems has been developed. The framework breaks down the overarching recognition problem into four simpler operations that aid in the recognition, representation and storage of musical documents in a machine-readable format. The framework can be summarized as follows:"
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : [ "Image Processing", "Music Primitive Detection", "Music Primitive Classification", "Semantic Reconstruction" ],
+            "kind" : "numbers"
+          },
+          "type" : "list"
+        }, {
+          "asset" : {
+            "data" : "The main goal of the preprocessing stage is to modify the original music document to improve the robustness and efficiency of the recognition process. This typically includes <Italic text={'enhancement'} />, <Italic text={'blurring'} />, <Italic text={'noise removal'} />, <Italic text={'morphological operations'} />, <Italic text={'deskewing'} /> and <Italic text={'binarization'} />. The music primitive detection stage is where elementary music primitives are recognized, which is followed by the music primitive classification stage where these primitives are classified. Finally, the semantic reconstruction stage reestablishes the semantic relation between the recognized musical primitives and stores the information in a suitable data structure."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Because my OMR system was designed for input of a specified nature, namely original printed sheet music recorded in high resolution image file formats, only a few preprocessing operations were necessary. My system employs noise removal, and binarization. The first operation attempts to remove any image artifacts, while the second operation converts the input image into a matrix of binary-valued pixels. Because no information is conveyed through the use of color on common music scores, the process does not constrain subsequent phases. On the contrary, it facilitates them by reducing the volume of information that is need to be processed. My system employs <Italic text={'Otsu's global thresholding method'} /> for this purpose. A global thresholding method was chosen over an adaptive one due to the fact that the input image would have a uniform background, thus it would not need to threshold each pixel using local neighborhood information."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Owing to the importance of staff as a two dimensional coordinate system for musical notation, the first step of primitive detection requires determining <Italic text={'staff line thickness'} /> and <Italic text={'staff spacing height'} />, which are further used to deduce the size of other music symbols, and to detect the location of each staff in the input image. <Italic text={'Staff line thickness'} /> and <Italic text={'staff spacing height'} /> are calculated using run-length encoding (RLE), by encoding the score column by column with RLE. The most common black run approximates the <Italic text={'staff line thickness'} /> and the most common white run estimates the <Italic text={'staff space height'} />. Each staff is located using horizontal projection, which maps a binary image into a histogram by accumulating the number of black pixels in each row. The staff is detected as five consequent distinct peaks in the histogram."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "The horizontal projection of a music score excerpt.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage5.jpg?alt=media&token=9c80bc18-3209-40ad-b40d-997e14dbb600",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "Music primitives are both segmented and classified using a template matching approach to image classification.The classification method detects primitives by comparing an image segment to a library of labelled primitive templates, staff-by-staff, primitive by primitive, and classifies as a specific music primitive if its similarity exceeds a specified threshold. Because staff positions have been determined beforehand, along with their <Italic text={'staff line thickness'} /> and <Italic text={'staff space height'} />, note pitch values can be determined by observing which row index the center of a note's bounding box lies; it's pitch is consistent with the pitch of the staff line or space sharing that particular row index."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Eighth notes, which are originally classified as quarter notes owing to the possession of an equivalent note head, are retroactively corrected by determining if an eighth flag is in the vicinity of the note head or whether it is beamed with adjacent notes. Beaming is determined by determining if the column central to adjacent notes contains more black pixels than expected, i.e. more then five times the <Italic text={'staff line thickness'} />. I had to devise a way to detect key signatures; because every staff is initiated by its key signature, it could easily be identified by counting the number of accidentals located at the beginning of the ordered list of detected music primitives on a given staff. Subsequent to this operation, accidentals resulting from the key are applied to the note primitives."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Once all primitives are located and classified, they are sorted by their horizontal position on their staff and sequenced in order into an object-oriented data structure comprising of <Italic text={'notes'} />, <Italic text={'rests'} />, and <Italic text={'accidentals'} /> encapsulated by <Italic text={'bars'} />, which are further encapsulated by <Italic text={'staffs'} />. Finally, once each staff has been semantically reconstructed, they are expanded and each note is converted from its note name into a number corresponding to its associated MIDI note value and added to a MIDI track representing the image's auditory representation."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "For more information on the project, read the project <Link src={'https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fanyati.pdf?alt=media&token=180b5379-59c8-4221-84bb-54aaa7708728'} text={'paper'} />."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "Hierarchy of OMR system's tree data structure.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage6.jpg?alt=media&token=779b86bc-6009-45a3-8438-d6d0e69f4917",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "caption" : "Staff Detection on 'Mary Had a Little Lamb' input example.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage7.jpg?alt=media&token=1662b3c9-543a-4304-a1b7-1c29b1262791",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "caption" : "Music Primitive Detection and Classification on 'Mary Had a Little Lamb' input example.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/design%2Fcadencv%2Fimage8.jpg?alt=media&token=d331d630-e81c-4c48-84f4-08a432e8c732",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "caption" : "OMR Interpretation of 'Mary had a Little Lamb' sheet music.",
+            "data" : "amL6wHfAShw",
+            "layout" : "standard"
+          },
+          "type" : "youtube"
+        } ],
+        "category" : "Design",
+        "clicks" : [ "2017-12-18T04:03:23.389Z", "2017-12-20T07:43:53.176Z", "2017-12-25T01:37:42.798Z" ],
+        "date" : "November 2017",
+        "dialog" : "design",
+        "hearts" : [ "2017-12-18T04:03:18.796Z", "2017-12-18T04:03:28.737Z" ],
+        "path" : "content/design/cadencv",
+        "subtitle" : "An Optical Music Recognition System.",
+        "thumbnail" : "-1",
+        "title" : "cadenCV"
       },
       "granularity" : {
         "assets" : [ {
@@ -233,12 +1144,12 @@
           "type" : "image"
         }, {
           "asset" : {
-            "data" : "This is troubling given present society's growing reliance on information consumption as a means of informing decision-making and learning. Data production is going up, but the rate of data consumption – resulting from our means of consuming the information – and time devoted to it's consumption remain constant. The interaction between the reliance on information consumption as a means of staying informed and knowledgeable about society and the natural world and fixed consumption rates result in the need to devote more energy and time to the process of information acquisition. And in a world where our time and attention are increasingly sought after, it becomes difficult to manage this time allocation process."
+            "data" : "This is troubling given present society's growing reliance on information consumption as a means of learning and informing decision-making. Data production is going up, but the rate of data consumption – resulting from our means of consuming the information – and time devoted to it's consumption remain constant. The interaction between the reliance on information consumption as a means of staying informed and knowledgeable about society and the natural world and fixed consumption rates result in the need to devote more energy and time to the process of information acquisition. And in a world where our time and attention are increasingly sought after, it becomes difficult to manage this time allocation process."
           },
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "By and large, most information is consumed in textual form, a representation that remains fixed once encoded. However, graphical and auditory mediums are just as widespread as channels through which information can be communicated."
+            "data" : "By and large, most information is consumed in textual form, a representation that remains fixed once encoded. However, graphical and auditory mediums are just as widespread as channels through which information is communicated."
           },
           "type" : "paragraph"
         }, {
@@ -286,7 +1197,7 @@
           "type" : "image"
         }, {
           "asset" : {
-            "data" : "As an fun extension to the project, I added an <Italic text={'Oculus Rift'} /> headset to the middle granularity state and created an animation that transitions between me adorned with the headgear and me without it."
+            "data" : "As an fun extension to the project, I added an <Italic text={'Oculus Rift'} /> headset to Granularity State II and created an animation that transitions between me adorned with the headgear and me without it."
           },
           "type" : "paragraph"
         }, {
@@ -298,9 +1209,10 @@
           "type" : "video"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-20T07:48:35.417Z" ],
         "date" : "June 2017",
         "dialog" : "design",
-        "path" : "design/granularity",
+        "path" : "content/design/granularity",
         "subtitle" : "An exploration of visual information.",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fdesign%2Fafika_mid_tn.png?alt=media&token=e17e7a58-cc4e-438f-9871-679b288a1d81",
         "title" : "Granularity"
@@ -330,9 +1242,10 @@
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-20T07:51:20.880Z", "2017-12-25T01:37:38.148Z" ],
         "date" : "August 2014",
         "dialog" : "design",
-        "path" : "design/lapdesk",
+        "path" : "content/design/lapdesk",
         "subtitle" : "It's a cup holder! It's a laptop desk!",
         "thumbnail" : "-1",
         "title" : "Lapdesk"
@@ -470,9 +1383,11 @@
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-18T21:58:32.796Z", "2017-12-20T07:46:30.537Z" ],
         "date" : "May 2015",
         "dialog" : "design",
-        "path" : "design/reality_editor",
+        "hearts" : [ "2017-12-18T21:58:27.087Z", "2017-12-18T21:58:31.169Z" ],
+        "path" : "content/design/reality_editor",
         "subtitle" : "A web-based tool for controlling the physical world.",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fdesign%2Ffluid_interfaces.png?alt=media&token=db4094d3-2828-4969-8ce1-bce5a34333ea",
         "title" : "Reality Editor"
@@ -480,7 +1395,7 @@
       "slide" : {
         "assets" : [ {
           "asset" : {
-            "data" : "My first contracted logo design was for a start-up out of Harvard called <Italic text={'Slide'} />. <Italic text={'Slide'} /> sought to disrupt the financial industry by delivering an innovative process through which to make safe transactions on the web in an efficient and timely manner. To put it in metaphorical terms, their ambition was to make the process of transactions as frictional as possible, hence the iconography of their brand name."
+            "data" : "My first contracted logo design was for a start-up out of Harvard called <Italic text={'Slide'} />. <Italic text={'Slide'} /> sought to disrupt the financial industry by delivering an innovative process through which to make safe transactions on the web in an efficient and timely manner. To put it in metaphorical terms, their ambition was to make the process of transactions as frictionless as possible, hence the iconography of their brand name."
           },
           "type" : "paragraph"
         }, {
@@ -508,7 +1423,7 @@
           "type" : "image"
         }, {
           "asset" : {
-            "data" : "The design we converged onto was geometrically harmonious and simultaneously pleasing to the eye. It was a logotype, but could also be distilled to a logo emblem by presenting the <Italic text={\"'S'\"} /> on its own. Primarily composed of curvilinear shapes, the notion of <Italic text={'simplicity'} />, <Italic text={'speed'} />, and <Italic text={'harmony'} /> were inherently baked into it's <Italic text={'DNA'} />. Drawing focus to the <Italic text={\"'S'\"} />, <Italic text={\"'d'\"} /> and <Italic text={\"'e'\"} /> of Slide, once is overwhelmed by the sense of 'sliding' motion summoned by their curvature. In addition to the the logo's geometry, it also consisted of an example of <Italic text={'security'} /> iconography. The <Italic text={\"'S'\"} /> emblem can be understood to be a linking of chains, supporting the company's principle of safe transactions."
+            "data" : "The design we converged onto was geometrically harmonious and simultaneously pleasing to the eye. It was a logotype, but could also be distilled to a logomark by presenting the <Italic text={\"'S'\"} /> on its own. Primarily composed of curvilinear shapes, the notion of <Italic text={'simplicity'} />, <Italic text={'speed'} />, and <Italic text={'harmony'} /> were inherently baked into it's <Italic text={'DNA'} />. Drawing focus to the <Italic text={\"'S'\"} />, <Italic text={\"'d'\"} /> and <Italic text={\"'e'\"} /> of Slide, once is overwhelmed by the sense of 'sliding' motion summoned by their curvature. In addition to the the logo's geometry, it also consisted of an example of <Italic text={'security'} /> iconography. The <Italic text={\"'S'\"} /> emblem can be understood to be a linking of chains, supporting the company's principle of safe transactions."
           },
           "type" : "paragraph"
         }, {
@@ -537,9 +1452,10 @@
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-20T07:51:30.678Z" ],
         "date" : "January 2015",
         "dialog" : "design",
-        "path" : "design/slide",
+        "path" : "content/design/slide",
         "subtitle" : "A logo design commissioned by a Harvard start-up.",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fdesign%2Fslide_tn.png?alt=media&token=6cdfe745-7a9e-43d0-8d31-9fc6b82b7b37",
         "title" : "Slide Logotype"
@@ -677,9 +1593,11 @@
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-18T01:32:05.075Z", "2017-12-18T04:02:41.582Z", "2017-12-18T04:02:43.905Z", "2017-12-20T07:42:07.132Z", "2017-12-23T11:21:08.380Z" ],
         "date" : "August 2016",
         "dialog" : "design",
-        "path" : "design/tekuma_artist_interface",
+        "hearts" : [ "2017-12-18T04:02:43.903Z", "2017-12-18T21:58:10.343Z" ],
+        "path" : "content/design/tekuma_artist_interface",
         "subtitle" : "A Tekuma web application for artwork management and submission.",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fdesign%2Ftekuma_logo.png?alt=media&token=12a8d0cd-27c7-4fda-a675-3a7eff7a8b74",
         "title" : "Tekuma: Artist Interface"
@@ -734,15 +1652,17 @@
           "type" : "youtube"
         }, {
           "asset" : {
-            "data" : "To learn more about WordSense, visit the <Link text={'WordSense homepage'} src={'https://www.media.mit.edu/projects/wordsense-learning-language-in-the-wild/overview/'} />."
+            "data" : "To learn more about WordSense, visit the <Link text={'WordSense homepage'} src={'https://www.media.mit.edu/projects/wordsense-learning-language-in-the-wild/overview/'} />, <Link text={'this'} src={'https://www.media.mit.edu/posts/mixing-realities-language-learning-in-the-wild/'} /> article or read the publication <Link text={'here'} src={'https://www.media.mit.edu/publications/serendipitous-language-learning-in-mixed-reality'} />."
           },
           "type" : "paragraph"
         } ],
         "category" : "Design",
+        "clicks" : [ "2017-12-18T21:57:59.331Z", "2017-12-20T07:46:45.437Z" ],
         "date" : "December 2016",
         "dialog" : "design",
-        "path" : "design/wordsense",
-        "subtitle" : "A Hololens application aiding in language skill development through serendipitous learning.",
+        "hearts" : [ "2017-12-18T04:04:27.477Z", "2017-12-18T21:58:14.475Z" ],
+        "path" : "content/design/wordsense",
+        "subtitle" : "A Hololens mixed reality application aiding in language acquisition through serendipitous learning.",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fdesign%2Ffluid_interfaces.png?alt=media&token=db4094d3-2828-4969-8ce1-bce5a34333ea",
         "title" : "WordSense"
       }
@@ -754,7 +1674,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fep%2Fjoy_and_sorrow.mp3?alt=media&token=db7dc946-3cd3-4fd6-935a-ee9289e64e41",
           "dialog" : "music",
-          "path" : "music/projects/ep/0",
+          "path" : "content/music/projects/ep/0",
           "producer" : "Afika Nyati",
           "project" : "EP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -767,7 +1687,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fep%2Ffly_away.mp3?alt=media&token=3b047030-b05f-4e15-b66c-ddc228449af9",
           "dialog" : "music",
-          "path" : "music/projects/ep/1",
+          "path" : "content/music/projects/ep/1",
           "producer" : "Afika Nyati, Norah Jones",
           "project" : "EP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -780,7 +1700,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fep%2Fglory.mp3?alt=media&token=0b971621-7281-436b-bf6f-e8f9d8f6df28",
           "dialog" : "music",
-          "path" : "music/projects/ep/2",
+          "path" : "content/music/projects/ep/2",
           "producer" : "Afika Nyati",
           "project" : "EP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -793,7 +1713,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fep%2Fit_never_lasts.mp3?alt=media&token=4145dae2-2e6b-47dc-ae46-1444e774a3f9",
           "dialog" : "music",
-          "path" : "music/projects/ep/3",
+          "path" : "content/music/projects/ep/3",
           "producer" : "Afika Nyati",
           "project" : "EP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -806,7 +1726,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fep%2Fbliss.mp3?alt=media&token=067a2d33-1bca-4f6b-8e15-0a347fc810b0",
           "dialog" : "music",
-          "path" : "music/projects/ep/4",
+          "path" : "content/music/projects/ep/4",
           "producer" : "Afika Nyati",
           "project" : "EP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -818,9 +1738,11 @@
         "formal_education" : [ {
           "artist" : "Afika Nyati",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-20T07:39:44.739Z", "2017-12-25T01:39:05.492Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fformal_education%2Fa_game_of_chase.mp3?alt=media&token=e99e378c-7e67-44e1-8d0f-c5e857fd0c85",
           "dialog" : "music",
-          "path" : "music/projects/formal_education/0",
+          "path" : "content/music/projects/formal_education/0",
+          "plays" : [ "2017-12-20T07:40:06.034Z" ],
           "producer" : "Afika Nyati",
           "project" : "Formal Music Education",
           "text" : "Unlike most music enthusiasts, my formal music education began late in my teens - at the age of sixteen to be precise. Until then, the intricacies of the medium, such as the interplay between harmony and melody, went unnoticed. However, it was only when I felt the need to improve my music production skills with music theory did I begin to appreciate the importance of understanding this language. Subsequently, I've augmented my knowledge in my own time and through classes at MIT, where I've had the privilege of being taught by masters in the discipline.",
@@ -831,9 +1753,11 @@
         }, {
           "artist" : "Afika Nyati",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T02:50:04.747Z", "2017-12-17T02:53:46.880Z", "2017-12-17T02:54:05.441Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fformal_education%2Fmisty.mp3?alt=media&token=802fcf78-3828-4a12-8d50-28092f10a683",
           "dialog" : "music",
-          "path" : "music/projects/formal_education/1",
+          "path" : "content/music/projects/formal_education/1",
+          "plays" : [ "2017-12-17T02:54:09.560Z", "2017-12-17T02:54:23.817Z" ],
           "producer" : "Errol Garner, Afika Nyati",
           "project" : "Formal Music Education",
           "text" : "Unlike most music enthusiasts, my formal music education began late in my teens - at the age of sixteen to be precise. Until then, the intricacies of the medium, such as the interplay between harmony and melody, went unnoticed. However, it was only when I felt the need to improve my music production skills with music theory did I begin to appreciate the importance of understanding this language. Subsequently, I've augmented my knowledge in my own time and through classes at MIT, where I've had the privilege of being taught by masters in the discipline.",
@@ -846,7 +1770,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fformal_education%2Fcobalt_blues.mp3?alt=media&token=6bd7d1ef-2c7b-4999-92bb-fb3bc3dcdebf",
           "dialog" : "music",
-          "path" : "music/projects/formal_education/2",
+          "path" : "content/music/projects/formal_education/2",
           "producer" : "Afika Nyati",
           "project" : "Formal Music Education",
           "text" : "Unlike most music enthusiasts, my formal music education began late in my teens - at the age of sixteen to be precise. Until then, the intricacies of the medium, such as the interplay between harmony and melody, went unnoticed. However, it was only when I felt the need to improve my music production skills with music theory did I begin to appreciate the importance of understanding this language. Subsequently, I've augmented my knowledge in my own time and through classes at MIT, where I've had the privilege of being taught by masters in the discipline.",
@@ -859,7 +1783,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fformal_education%2Fhope_and_hopelessness.mp3?alt=media&token=dff71648-9ebc-46ba-ad54-b59ac3026c0a",
           "dialog" : "music",
-          "path" : "music/projects/formal_education/3",
+          "path" : "content/music/projects/formal_education/3",
           "producer" : "Afika Nyati",
           "project" : "Formal Music Education",
           "text" : "Unlike most music enthusiasts, my formal music education began late in my teens - at the age of sixteen to be precise. Until then, the intricacies of the medium, such as the interplay between harmony and melody, went unnoticed. However, it was only when I felt the need to improve my music production skills with music theory did I begin to appreciate the importance of understanding this language. Subsequently, I've augmented my knowledge in my own time and through classes at MIT, where I've had the privilege of being taught by masters in the discipline.",
@@ -872,7 +1796,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Fformal_education%2Ffly_me_to_the_moon.mp3?alt=media&token=4190dd47-7725-49be-afa6-2e10c00d0643",
           "dialog" : "music",
-          "path" : "music/projects/formal_education/4",
+          "path" : "content/music/projects/formal_education/4",
           "producer" : "Frank Sinatra, Diocesan College Music Deparment",
           "project" : "Formal Music Education",
           "text" : "Unlike most music enthusiasts, my formal music education began late in my teens - at the age of sixteen to be precise. Until then, the intricacies of the medium, such as the interplay between harmony and melody, went unnoticed. However, it was only when I felt the need to improve my music production skills with music theory did I begin to appreciate the importance of understanding this language. Subsequently, I've augmented my knowledge in my own time and through classes at MIT, where I've had the privilege of being taught by masters in the discipline.",
@@ -884,9 +1808,11 @@
         "freshmen" : [ {
           "artist" : "Yungsta and KDBY",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T22:48:58.197Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Ffreshmen%2Fgreat_expectations.mp3?alt=media&token=d68fc78b-b298-407b-b8b5-c197506420b3",
           "dialog" : "music",
-          "path" : "music/projects/freshmen/0",
+          "hearts" : [ "2017-12-18T21:55:18.862Z" ],
+          "path" : "content/music/projects/freshmen/0",
           "producer" : "Peter Muhofa",
           "project" : "Freshmen",
           "text" : "<Italic text={'FRESHMEN'} /> is a collaborative project I completed with one of my good childhood friends, Kabelo Sedibe. Inspired by the Jay-Z and Kanye West collaborative album <Italic text={'Watch the Throne'} />, <Italic text={'FRESHMEN'} /> is a rap project filled with braggadocious punchlines, hard raps, and polished production. The project was intended to be a full LP, but due to scheduling difficulties and a dearth of inspiration, it ended up becoming EP-length.",
@@ -899,7 +1825,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Ffreshmen%2Ffreshman.mp3?alt=media&token=69d5d869-af97-46b9-a6b8-e33a1d26a624",
           "dialog" : "music",
-          "path" : "music/projects/freshmen/1",
+          "path" : "content/music/projects/freshmen/1",
           "producer" : "Kabelo Sedibe",
           "project" : "Freshmen",
           "text" : "<Italic text={'FRESHMEN'} /> is a collaborative project I completed with one of my good childhood friends, Kabelo Sedibe. Inspired by the Jay-Z and Kanye West collaborative album <Italic text={'Watch the Throne'} />, <Italic text={'FRESHMEN'} /> is a rap project filled with braggadocious punchlines, hard raps, and polished production. The project was intended to be a full LP, but due to scheduling difficulties and a dearth of inspiration, it ended up becoming EP-length.",
@@ -912,7 +1838,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Ffreshmen%2Fsuperman_music.mp3?alt=media&token=d26e9ce0-682d-4574-9fa7-db273611f886",
           "dialog" : "music",
-          "path" : "music/projects/freshmen/2",
+          "path" : "content/music/projects/freshmen/2",
           "producer" : "Peter Muhofa",
           "project" : "Freshmen",
           "text" : "<Italic text={'FRESHMEN'} /> is a collaborative project I completed with one of my good childhood friends, Kabelo Sedibe. Inspired by the Jay-Z and Kanye West collaborative album <Italic text={'Watch the Throne'} />, <Italic text={'FRESHMEN'} /> is a rap project filled with braggadocious punchlines, hard raps, and polished production. The project was intended to be a full LP, but due to scheduling difficulties and a dearth of inspiration, it ended up becoming EP-length.",
@@ -925,7 +1851,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Ffreshmen%2F1st_place.mp3?alt=media&token=de2f48be-5e30-4cc2-8d9c-875a35949604",
           "dialog" : "music",
-          "path" : "music/projects/freshmen/3",
+          "path" : "content/music/projects/freshmen/3",
           "producer" : "Velaphi Remphele",
           "project" : "Freshmen",
           "text" : "<Italic text={'FRESHMEN'} /> is a collaborative project I completed with one of my good childhood friends, Kabelo Sedibe. Inspired by the Jay-Z and Kanye West collaborative album <Italic text={'Watch the Throne'} />, <Italic text={'FRESHMEN'} /> is a rap project filled with braggadocious punchlines, hard raps, and polished production. The project was intended to be a full LP, but due to scheduling difficulties and a dearth of inspiration, it ended up becoming EP-length.",
@@ -938,7 +1864,7 @@
           "category" : "Audio Music",
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Ffreshmen%2Fthe_heavens.mp3?alt=media&token=c585ab55-7981-4acd-bf63-5edc27d5ab9d",
           "dialog" : "music",
-          "path" : "music/projects/freshmen/4",
+          "path" : "content/music/projects/freshmen/4",
           "producer" : "Afika Nyati",
           "project" : "Freshmen",
           "text" : "<Italic text={'FRESHMEN'} /> is a collaborative project I completed with one of my good childhood friends, Kabelo Sedibe. Inspired by the Jay-Z and Kanye West collaborative album <Italic text={'Watch the Throne'} />, <Italic text={'FRESHMEN'} /> is a rap project filled with braggadocious punchlines, hard raps, and polished production. The project was intended to be a full LP, but due to scheduling difficulties and a dearth of inspiration, it ended up becoming EP-length.",
@@ -950,9 +1876,11 @@
         "lp" : [ {
           "artist" : "The Arrival",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T02:45:42.081Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Flp%2Fintro.mp3?alt=media&token=ee812203-01ed-4b7f-af95-8ca53b7a9626",
           "dialog" : "music",
-          "path" : "music/projects/lp/0",
+          "path" : "content/music/projects/lp/0",
+          "plays" : [ "2017-12-17T02:45:44.140Z" ],
           "producer" : "Afika Nyati",
           "project" : "LP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -963,9 +1891,12 @@
         }, {
           "artist" : "The Arrival",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T02:44:50.789Z", "2017-12-20T07:38:14.843Z", "2017-12-20T19:06:51.634Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Flp%2Fthe_dream.mp3?alt=media&token=24abd224-a509-4785-8ae8-5796c0566399",
           "dialog" : "music",
-          "path" : "music/projects/lp/1",
+          "hearts" : [ "2017-12-18T21:55:08.927Z", "2017-12-18T21:55:54.744Z" ],
+          "path" : "content/music/projects/lp/1",
+          "plays" : [ "2017-12-20T07:38:24.665Z", "2017-12-20T19:06:56.027Z" ],
           "producer" : "Afika Nyati",
           "project" : "LP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -976,9 +1907,10 @@
         }, {
           "artist" : "The Arrival",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T02:34:00.215Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Flp%2Fdichotomy.mp3?alt=media&token=20685257-c6ea-4f3a-a309-e966d7d667d0",
           "dialog" : "music",
-          "path" : "music/projects/lp/2",
+          "path" : "content/music/projects/lp/2",
           "producer" : "Afika Nyati",
           "project" : "LP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -989,9 +1921,11 @@
         }, {
           "artist" : "The Arrival",
           "category" : "Audio Music",
+          "clicks" : [ "2017-12-17T02:51:12.625Z" ],
           "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/music%2Fprojects%2Flp%2Fserenity.mp3?alt=media&token=7b00ff42-590d-47d6-87b4-b362376977c9",
           "dialog" : "music",
-          "path" : "music/projects/lp/3",
+          "hearts" : [ "2017-12-17T02:52:53.558Z" ],
+          "path" : "content/music/projects/lp/3",
           "producer" : "Afika Nyati",
           "project" : "LP",
           "text" : "<Italic text={'The Arrival'} />, a play on my name, is a moniker I adopted when I begun my foray into music composition. The music I compose under this name is inspired by an eclectic collection of musical sounds, both old and contemporary. It's primarily written to be played by instruments, hence the absence of synthetic sounds. Thematically, most tracks are poignant; my goal has always been to manipulate emotional states through the medium of sound. My adeptness in the discipline started from modest beginnings, but it continues to improve yearly.",
@@ -1012,7 +1946,7 @@
           "category" : "Written Music",
           "date" : "March 2016",
           "dialog" : "article",
-          "path" : "music/scores/cobalt_blues",
+          "path" : "content/music/scores/cobalt_blues",
           "thumbnail" : "-1",
           "title" : "Cobalt Blues"
         },
@@ -1026,7 +1960,7 @@
           "category" : "Written Music",
           "date" : "August 2014",
           "dialog" : "article",
-          "path" : "music/scores/dream",
+          "path" : "content/music/scores/dream",
           "thumbnail" : "-1",
           "title" : "The Dream"
         },
@@ -1040,7 +1974,7 @@
           "category" : "Written Music",
           "date" : "May 2017",
           "dialog" : "article",
-          "path" : "music/scores/game_of_chase",
+          "path" : "content/music/scores/game_of_chase",
           "thumbnail" : "-1",
           "title" : "A Game of Chase"
         },
@@ -1052,9 +1986,10 @@
             "type" : "slider"
           } ],
           "category" : "Written Music",
+          "clicks" : [ "2017-12-17T02:51:03.114Z" ],
           "date" : "May 2015",
           "dialog" : "article",
-          "path" : "music/scores/hope",
+          "path" : "content/music/scores/hope",
           "thumbnail" : "-1",
           "title" : "Hope and Hopelessness"
         },
@@ -1068,7 +2003,7 @@
           "category" : "Written Music",
           "date" : "April 2016",
           "dialog" : "article",
-          "path" : "music/scores/misty",
+          "path" : "content/music/scores/misty",
           "thumbnail" : "-1",
           "title" : "Misty"
         }
@@ -1077,10 +2012,12 @@
     "resume" : {
       "education" : {
         "category" : "Resumé",
+        "clicks" : [ "2017-12-18T22:16:24.404Z", "2017-12-18T22:29:47.842Z", "2017-12-20T23:35:12.284Z", "2017-12-23T01:04:40.012Z", "2017-12-25T01:36:48.326Z", "2017-12-26T10:38:57.003Z" ],
+        "date" : "2045",
         "dialog" : "education",
         "institutes" : [ {
           "date" : "2014 – 2018",
-          "path" : "resume/education/institutes/mit",
+          "path" : "content/resume/education/institutes/mit",
           "semesters" : [ {
             "classes" : [ {
               "grade" : "A",
@@ -1228,30 +2165,58 @@
           }, {
             "classes" : [ {
               "grade" : "TBD",
-              "number" : "6.806",
-              "title" : "Advanced Natural Language Processing"
-            }, {
-              "grade" : "TBD",
               "number" : "6.819",
               "title" : "Advances in Computer Vision"
             }, {
-              "grade" : "TBD",
+              "grade" : "J",
+              "number" : "6.UAR",
+              "title" : "Seminar in Undergraduate Advanced Research"
+            }, {
+              "grade" : "Listener",
+              "number" : "6.806",
+              "title" : "Advanced Natural Language Processing"
+            }, {
+              "grade" : "P",
               "number" : "2.S972",
               "title" : "Founder's Journey: Virtual Reality and the Quest for Realism"
             }, {
-              "grade" : "TBD",
+              "grade" : "A",
               "number" : "24M.341",
               "title" : "Jazz Composition"
             } ],
             "date" : "September 2017 - December 2017",
             "title" : "Fall 2017"
+          }, {
+            "classes" : [ {
+              "grade" : "TBD",
+              "number" : "6.813",
+              "title" : "User Interface Design and Implementation"
+            }, {
+              "grade" : "TBD",
+              "number" : "6.011",
+              "title" : "Signals, Systems and Inference"
+            }, {
+              "grade" : "TBD",
+              "number" : "6.UAR",
+              "title" : "Seminar in Undergraduate Advanced Research"
+            }, {
+              "grade" : "TBD",
+              "number" : "4.032",
+              "title" : "Design Studio: Information and Visualization"
+            }, {
+              "grade" : "TBD",
+              "number" : "4.110",
+              "title" : "Design Across Scales and Disciplines"
+            } ],
+            "date" : "February 2018 - May 2018",
+            "title" : "Spring 2018"
           } ],
           "subtitle" : "Candidate for Bachelor of Science in Electrical Engineering and Computer Science",
           "thumbnail" : "assets/images/logos/mit.png",
           "title" : "Massachusetts Institute of Technology, MIT"
         }, {
           "date" : "2014 - 2014",
-          "path" : "resume/education/institutes/uct",
+          "path" : "content/resume/education/institutes/uct",
           "semesters" : [ {
             "classes" : [ {
               "grade" : "DNF",
@@ -1282,7 +2247,7 @@
           "title" : "University of Cape Town, UCT"
         }, {
           "date" : "2009 – 2013",
-          "path" : "resume/education/institutes/bishops",
+          "path" : "content/resume/education/institutes/bishops",
           "semesters" : [ {
             "classes" : [ {
               "grade" : "97%",
@@ -1359,16 +2324,17 @@
           "thumbnail" : "assets/images/logos/bishops.png",
           "title" : "Diocesan College, Bishops"
         } ],
-        "path" : "resume/education",
+        "path" : "content/resume/education",
         "thumbnail" : "-1",
         "title" : "Education"
       },
       "skills" : {
         "category" : "Resumé",
+        "clicks" : [ "2017-12-18T22:16:35.991Z", "2017-12-18T22:16:57.387Z", "2017-12-23T01:04:51.335Z", "2017-12-23T01:05:23.200Z", "2017-12-25T01:36:55.557Z" ],
+        "date" : "2045",
         "dialog" : "skills",
-        "path" : "resume/skills",
+        "path" : "content/resume/skills",
         "skills" : [ {
-          "color" : "light-purple",
           "data" : "assets/images/logos/art/oil_paint.png",
           "proficiency" : "Advanced",
           "text" : "Oil Paint",
@@ -1533,6 +2499,11 @@
           "proficiency" : "Intermediate",
           "text" : "ROS",
           "value" : 2
+        }, {
+          "data" : "assets/images/logos/tensorflow.png",
+          "proficiency" : "Beginner",
+          "text" : "TensorFlow",
+          "value" : 1
         } ],
         "thumbnail" : "-1",
         "title" : "Skills"
@@ -1542,53 +2513,181 @@
       "creativity_quote" : {
         "category" : "standalone",
         "data" : "Creativity is a careful blend of knowledge, imagination, and beauty, finished with a touch of serendipity.",
-        "path" : "resume/standalones",
+        "date" : "2015",
+        "path" : "content/standalones/creativity_quote",
         "thumbnail" : "-1",
         "title" : "\"Creativity is a careful blend of knowledge, imagination, and beauty, finished with a touch of serendipity.\""
       },
       "font_quote" : {
         "category" : "standalone",
         "data" : "I like fonts!",
-        "path" : "resume/standalones",
+        "date" : "2015",
+        "path" : "content/standalones/font_quote",
         "thumbnail" : "-1",
         "title" : "\"I like fonts!\""
       },
       "interest_quote" : {
         "category" : "standalone",
         "data" : "I am drawn to any process by which knowledge and creative intervention result in the emergence of some novel product.",
-        "path" : "resume/standalones",
+        "date" : "2017",
+        "path" : "content/standalones/interest_quote",
         "thumbnail" : "-1",
         "title" : "\"I am drawn to any process through which knowledge and creative intervention result in the emergence of some novel product.\""
       },
       "name_quote" : {
         "category" : "standalone",
         "data" : "My name translates to, 'he has arrived'.",
-        "path" : "resume/standalones",
+        "date" : "2011",
+        "path" : "content/standalones/name_quote",
         "thumbnail" : "-1",
         "title" : "\"My name translates to, 'he has arrived'.\""
       },
       "oculus_portait" : {
         "category" : "standalone",
         "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fresume%2Foculus.png?alt=media&token=88b95a55-f3e5-41c4-ada5-432d3a2754fd",
-        "path" : "resume/standalones",
+        "date" : "2017",
+        "path" : "content/standalones/oculus/portrait",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fresume%2Foculus.png?alt=media&token=88b95a55-f3e5-41c4-ada5-432d3a2754fd"
       },
       "regular_portrait" : {
         "category" : "standalone",
         "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fresume%2Fafika.jpg?alt=media&token=cca08ef1-13a3-4540-aec1-0140e5b05efc",
-        "path" : "resume/standalones",
+        "date" : "2017",
+        "path" : "content/standalones/regular_portrait",
         "thumbnail" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/thumbnails%2Fresume%2Fafika.jpg?alt=media&token=cca08ef1-13a3-4540-aec1-0140e5b05efc"
       },
       "resume_download" : {
         "category" : "standalone resume",
-        "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/documents%2Fafika_nyati_resume.pdf?alt=media&token=5d7c7d96-b309-46c5-84b2-42e9d110af87",
+        "clicks" : [ "2017-12-18T22:24:09.395Z", "2017-12-18T22:32:29.263Z", "2017-12-20T20:34:40.347Z", "2017-12-20T23:35:09.165Z", "2017-12-23T01:05:40.301Z" ],
+        "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/documents%2Fafika_nyati_resume.pdf?alt=media&token=47f96362-1607-4892-8a9f-3a249196f954",
+        "date" : "2045",
         "dialog" : "resume",
-        "path" : "resume/standalones",
+        "path" : "content/standalones/resume_download",
         "thumbnail" : "-1",
         "title" : "Resumé Download"
       }
     },
     "vr" : {
+      "eschereality" : {
+        "assets" : [ {
+          "asset" : {
+            "data" : "In my final year of undergraduate studies at MIT, I was fortunate enough to get the opportunity to participate in a first-of-its-kind course at the institute that sought to connect students from both MIT and Berklee College of Music to explore the subject of immersive technology. With a focus on the audio domain, <Italic text={'Founders Journey: Virtual Reality and the Quest for Realism'} /> explored various topics related to spatial computing, immersive worlds, and the role of sound in aiding to induce presence and realism in virtual environments. Throughout the class, students were grouped into teams and tasked with ideating and prototyping novel experiences made with the intention to push the medium forward, explore new creative space or leverage the constraint-free canvas afforded by mixed reality."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality-vr.jpg?alt=media&token=09ae5e3b-8c06-465c-81e2-3a383e25efbd",
+            "layout" : "elongated"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "The concept for <Italic text={'Eschereality'} /> came from one of my group's discussions around the possibilities enabled by Virtual Reality to be liberated from the Laws of Physics. The medium effectively presents it's designer a blank canvas to create anything. Traditional notions of Physics such as  those concerning space, time, scale, gravity, and motion can all be disregarded or rewritten. Ideation around the these topics lead me to draw inspiration from surrealist art that often sought to redefine the norms of reality, which lead to a convergence on the work of M. C. Escher. The work of Escher is famous for featuring mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry and tessellations. No work is a better exemplar of this than Escher's Relativity."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "Relativity. M. C. Escher, Lithograph, 1953.",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Fescher-relativity.jpg?alt=media&token=d7fae443-4d07-4898-b728-7bd4ed77a46c",
+            "layout" : "standard"
+          },
+          "type" : "image"
+        }, {
+          "asset" : {
+            "data" : "<Italic text={'Relativity'} /> is a lithograph print that depicts a world in which the normal laws of gravity do not apply. There are three sources of gravity, each being orthogonal to the two others. The apparent confusion of the lithograph print comes from the fact that the three gravity sources are depicted in the same space. As a group, we loved the idea of placing the user of our experience at the center of this world. Thus, Eschereality was born."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_1.mp4?alt=media&token=3df98d07-fbab-4f1e-b040-dc8827eb2fb9"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "Eschereality built using <Italic text={'Unity'} /> and the <Italic text={'Oculus Rift'} />, finds the user spawned into Escher's Relativity. Intended to be used with Oculus' Touch controllers, the user feels a great sense of presence in the experience afforded by the controllers' precise gesture recognition and tracking. Owing to the importance of locomotion and its significant role in defining gameplay, we spent significant time discussing how best to enable the user to traverse this world. After some experimentation, we decided to select teleportation as our primary means of locomotion. This choice simply further emphasized the lawbreaking nature of the experience by allowing the user to instantaneously travel through space at the touch of a button. Consequently, with a three-sensor room-scale Oculus set up the user could walk to areas within close vicinity but also transport to far off areas of the map using teleportation."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_2.mp4?alt=media&token=e9b50f23-a715-4edc-95c2-59cb869e0186"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "As described before, Escher's Relativity consists of three sources of gravity - we wanted to exploit this property. As a result, our teleportation not only enables the user to transport to distant areas, but it also enables the user to change their ground frame (and henceforth their gravity frame) by positioning the teleportation marker onto walls or roofs or any flat surface that lies at odds to the current ground frame. At the click of a button the user is instantaneously teleported to the selected area with the appropriate ground plane governing their new point of reference."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_3.mp4?alt=media&token=f0fb11e7-c054-4784-b849-716cb58b7c31"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "To increase interactivity, we populated the world with large geometric objects decorated with a mirror-polished stainless-steel finish reminiscent of Jeff Koon's <Link src={'http://www.jeffkoons.com/artwork/celebration/balloon-dog-0'} text={'Balloon Dog'} />. Various areas of the map inhabit ghosts that the user can exterminate through strike."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_4.mp4?alt=media&token=59a9ca1c-2dd6-4997-b5dd-246bbd0d3b9d"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "Overall, we were very impressed with the degree of presence and pleasure of our final prototype. Although the class is over and the group has disbanded, I hope to improve the gameplay and feature set of the experience to create a more complete experience in the future."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_5.mp4?alt=media&token=1882d65e-2eb4-4051-a3c2-a9b6c15251c8"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_6.mp4?alt=media&token=01dd3806-3271-44f4-a11e-156dfb405005"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_7.mp4?alt=media&token=4d3895c8-aaa3-43f5-ab09-f946e30c3220"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_8.mp4?alt=media&token=016a552d-1084-4ad4-936e-978b337ff518"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_9.mp4?alt=media&token=f35b1674-4c29-442e-9a2d-9e60568e1f70"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Feschereality%2Feschereality_10.mp4?alt=media&token=24c85ba8-105d-4fb8-885c-d73a05dfa736"
+          },
+          "type" : "video"
+        } ],
+        "category" : "VR",
+        "clicks" : [ "2017-12-18T01:31:18.350Z", "2017-12-18T01:33:45.935Z", "2017-12-18T04:12:34.265Z", "2017-12-18T21:21:23.101Z", "2017-12-20T07:18:42.676Z", "2017-12-23T00:24:03.962Z" ],
+        "date" : "November 2017",
+        "dialog" : "design",
+        "path" : "content/vr/eschereality",
+        "subtitle" : "A VR Experiment.",
+        "thumbnail" : "-1",
+        "title" : "Eschereality"
+      },
       "ruminations_on_a_plane" : {
         "assets" : [ {
           "asset" : {
@@ -1604,7 +2703,7 @@
         }, {
           "asset" : {
             "image" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fruminations_on_a_plane%2Fafika_ortho.jpg?alt=media&token=d5dafc08-105b-48c5-b1f6-a9b45636a361",
-            "text" : "In order to ground the learning process, I decided to structure my VR education around the development of a virtual reality short film, based off of the actual event that occurred in the quiet aisles of an airplane cabin over my winter break in December. Titled <Italic text={'Ruminations on a Plane'} />, the experience pits the viewer adjacent to a photorealistic CG model of myself who overwhelmed by thoughts stirred by the film, <Italic text={'Mr. Nobody'} />, opens up to them. In my extended soliloquy, I touch on the topics of parenthood, education, class, relationships, and the general human experience."
+            "text" : "In order to ground the learning process, I decided to structure my VR education around the development of a virtual reality short film, based off of an actual event that occurred in the quiet aisles of an airplane cabin over my winter break in December. Titled <Italic text={'Ruminations on a Plane'} />, the experience pits the viewer adjacent to a photorealistic CG model of myself who overwhelmed by thoughts stirred by the film, <Italic text={'Mr. Nobody'} />, opens up to them. In my extended soliloquy, I touch on the topics of parenthood, education, class, relationships, and the general human experience."
           },
           "type" : "right_block"
         }, {
@@ -1647,12 +2746,118 @@
           "type" : "image"
         } ],
         "category" : "VR",
+        "clicks" : [ "2017-12-17T10:51:28.606Z", "2017-12-20T07:16:17.035Z" ],
         "date" : "September 2017",
         "dialog" : "design",
-        "path" : "vr/ruminations_on_a_plane",
+        "hearts" : [ "2017-12-17T10:51:31.661Z", "2017-12-17T10:51:33.584Z" ],
+        "path" : "content/vr/ruminations_on_a_plane",
         "subtitle" : "A VR Short Film.",
         "thumbnail" : "-1",
         "title" : "Ruminations on a Plane"
+      },
+      "synesthete" : {
+        "assets" : [ {
+          "asset" : {
+            "data" : "In my final year of undergraduate studies at MIT, I was fortunate enough to get the opportunity to participate in a first-of-its-kind course at the institute that sought to connect students from both MIT and Berklee College of Music to explore the subject of immersive technology. With a focus on the audio domain, <Italic text={'Founders Journey: Virtual Reality and the Quest for Realism'} /> explored various topics related to spatial computing, immersive worlds, and the role of sound in aiding to induce presence and realism in virtual environments. Throughout the class, students were grouped into teams and tasked with ideating and prototyping novel experiences made with the intention to push the medium forward, explore new creative space or leverage the constraint-free canvas afforded by mixed reality."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "data" : "Owing to the fact that the class strived to create a focus around immersive audio, my group for the class' final project felt the desire to center our project around the concept of audio. From a general survey of the virtual reality experience landscape, it's easy to conclude that most experiences endeavor to create a sense of presence through the exploitation of virtual reality's visual channel. As the most understood and most information dense interface between the physical world and our minds, it makes sense that many developers would be inclined to leverage it for the purpose of invoking immersion, however often times less attention to detail is placed on an equally as important sensory input - audition."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_1.mp4?alt=media&token=95890428-00e4-4868-93ea-15f5da58afde"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "With <Italic text={'Synesthete'} />, we sought to upend this. The experience is based on the concept of depriving specific senses to call for the use of others to achieve a particular goal. To be more specific, we decided to tone down the magnitude of visual information presented to the user in favor of calling attention to another, in our case auditory information. The user of the experience to an extent has lost the capability to see; their field of sight is for the most part stark black. As a result they have to rely on their sense of sound as wayfinding tool and a means of placing objects in physical space. In some sense, they are placed in the shoes of the visually impaired."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_2.mp4?alt=media&token=5e97edc9-0182-4fc7-b079-c590e6c05451"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "In spite of this supposed handicap, the user exhibits an additional ‘hidden' sense. Their auditory pathway is inextricably connected to their visual one, consequently exposure to sound not only stimulates their auditory system, but also evokes momentary visual phenomena. All sounds created in the experience propagate sonic waves that can be visualized too. For this reason, these waves can be exploited as a means of echolocation."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_3.mp4?alt=media&token=6928a25c-dff0-4049-8b8b-590b5e5d579f"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "The game itself is based on the premise that your house has been breached by unidentifiable figures, and your goal is to exit the house without catching their attention and making contact with them. The challenge is to do this all while relying on your sense of sound and echolocation to orient yourself in physical space and navigate from place to place. Sound-emitting objects are scattered throughout the house to create points of reference for map building, and fleeting wave patterns can be created at the point source of object collisions to generate on-demand wave signals when needed."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_4.mp4?alt=media&token=05835748-8b0a-4a37-b5a8-67a304116f1b"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "From a technical standpoint, the VR experience was built using <Italic text={'Unity'} /> for the <Italic text={'Oculus Rift'} /> platform. We utilized Oculus' touch controllers to deepen the sense of presence and present an natural interface with which the user could interact with this virtual world. Accordingly, the player can grab objects, shatter glass, play the piano in the home, amongst other examples of expected behavior."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_5.mp4?alt=media&token=45ebd6ff-a160-4f6e-8f8d-599c3da039fd"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "Locomotion was of significant importance for the game. In particular, we wanted to employ locomotion control that would not break from the sense of presence created by the other aspects of the game. We explored various types of locomotion, but ultimately we decided to make use of the <Italic text={'Oculus Touch'} /> controller thumbsticks, in spite of the general consensus against it. The left thumbstick managed the user's orientation, while the right thumbstick managed translation in space. We didn't want to use teleportation, the principle means of locomotion in most established VR experiences today, because we felt that it impaired gameplay; it made it all too easy to progress past the intruders, did not fit the realism of the premise, and enabled the user to be less reliant on sound as a guiding mechanism. Furthermore, through experimentation we discovered that the motion sickness normally associated with locomotion via controller thumbtacks did not present itself in our experience owing to the fact that our experience was short of significant visual information. Under these circumstances, there was visual information available for the vestibular system to form a clear sense of the body's dynamics and kinematics."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_6.mp4?alt=media&token=f156a8b6-80ac-4428-8630-9c7c27a1f91c"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "With regards to the separation of duties for the experience's functionality, I was in charge of implementing locomotion and curating the home and all the assets within it. Of the two remaining developers, one was tasked with implementing the behavior and control of the autonomous intruder agents, which followed a random walk by default and switched to “pursuit mode” on sight of the player, while the other was tasked with implementing the echolocation shader. Our two Berklee students managed all sound concerns such as curating a library of sound assets for the game, and conceive of all the scenarios where sound should and can be utilized."
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_7.mp4?alt=media&token=1b22bc0c-b2cc-4b32-bebf-ac074ad39b84"
+          },
+          "type" : "video"
+        }, {
+          "asset" : {
+            "data" : "We were very impressed by the final outcome of our work. The experience was surprisingly scary, meaning we did a fine job on the presence element of the experience. As a final addition to the game, we experimenting with the idea of triggering echolocation through actual sound input from the VR headsets microphones, like a bat. It was surprisingly fun and added a whole new dimension to the the experience. Other improvements we would like to make are improving interactivity and gameplay, coupling the color of the wave ripples with the amplitude of the sound, adding more levels, curating more missions required focused listening to achieve a goal, and possibility blend or focusing attention on other senses to play up the ‘synesthete' element of the experience. In retrospect, we also realized that the concept of our experience to some extent induced a sense of empathy for those visually impaired. Very few mediums possess the potential to challenge and impact to such a degree. I'm excited to see what lies ahead for the medium!"
+          },
+          "type" : "paragraph"
+        }, {
+          "asset" : {
+            "caption" : "",
+            "data" : "https://firebasestorage.googleapis.com/v0/b/afika-nyati-website.appspot.com/o/vr%2Fsynesthete%2Fsynesthete_8.mp4?alt=media&token=f773a6e2-9964-41fc-9992-6930ce684805"
+          },
+          "type" : "video"
+        } ],
+        "category" : "VR",
+        "clicks" : [ "2017-12-18T01:32:57.884Z", "2017-12-19T18:32:59.192Z", "2017-12-20T07:19:46.225Z" ],
+        "date" : "November 2017",
+        "dialog" : "design",
+        "path" : "content/vr/synesthete",
+        "subtitle" : "A VR Empathy Experience.",
+        "thumbnail" : "-1",
+        "title" : "Synesthete"
       }
     },
     "writing" : {
@@ -1668,6 +2873,8 @@
           },
           "type" : "paragraph"
         }, {
+          "type" : "section_end"
+        }, {
           "asset" : {
             "data" : "The Universe"
           },
@@ -1680,7 +2887,7 @@
         }, {
           "asset" : {
             "caption" : "",
-            "data" : "4PN5JJDh78I",
+            "data" : "EWPFmdAWRZ0",
             "layout" : "standard"
           },
           "type" : "youtube"
@@ -1719,6 +2926,8 @@
             "reference" : "- Wikipedia, Big Bang, Wikimedia Foundation, Published: March 26, 2017. Date Accessed: March 28, 2017."
           },
           "type" : "quote"
+        }, {
+          "type" : "section_end"
         }, {
           "asset" : {
             "data" : "Humans"
@@ -1819,12 +3028,12 @@
           "type" : "dictionary"
         }, {
           "asset" : {
-            "data" : "Language gives humans the ability to share information in the form of metal contents from one brain to another. This transforms what is initially an isolated agent into a complex network of agents that are able to share information gathered from their physical environment or deduced logically from prior knowledge. This allowed historic <Italic text={'homo sapiens'} /> to signal to other humans imminent danger or to convey novel information about the whereabouts of food, shelter, and other desired resources. Language as a tool has seen its own evolution, starting from its early days as body language to its mature complex manifestation today. This evolution was a necessary change for the most part because of the lack of descriptive potential provided by body language. With spoken language we were provided the faculty to communicate more efficiently, and in more granular detail."
+            "data" : "Language gives humans the ability to share information from one brain to another. This transforms what is initially an isolated agent into a complex network of agents that are able to share information gathered from their physical environment or deduced logically from prior knowledge. This allowed historic <Italic text={'homo sapiens'} /> to signal to other humans imminent danger or to convey novel information about the whereabouts of food, shelter, and other desired resources. Language as a tool has seen its own evolution, starting from its early days as body language to its mature complex manifestation today. This evolution was a necessary change for the most part because of the lack of descriptive potential provided by body language. With spoken language we were provided the faculty to communicate more efficiently, and in more granular detail."
           },
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "The two drawbacks of spoken language as a primary method of information transfer and dissemination were firstly that information was often subject to alteration as information propagated outwards from its source down every <Italic text={'information recipient path'} />, a path composed of a sequence of edges (representing information transfers) connecting a sequence of distinct vertices (representing human minds) together. As information propagated outwards, errors, mistranslations, and loss of information accumulated much like in the children's game, <Italic text={'Broken Telephone'} />. Secondly, there seemed to be a information dissemination limit controlling how far one's information could travel in both space and time. In space, the dissemination potential of information was governed by the size of the union set comprised of all the unique humans involved in a recursive traversal of an information source's human network. In simpler terms, the information known by all the humans in the information source's network, aggregated with all the humans in these humans' networks, ad infinitum. For the most part, this was geography-limited, so information became geographically-trapped. In time, information could not be transferred from the dead to the living, and as a result the likelihood of successful information transfers was highest during the living moments of the information source. What was humanity's solution to these problems? The transcription of spoken to written language."
+            "data" : "The two drawbacks of spoken language as a primary method of information transfer and dissemination were firstly that information was often subject to alteration as information propagated outwards from its source down every <Italic text={'information recipient path'} />, a path composed of a sequence of edges (representing information transfers) connecting a sequence of distinct vertices (representing human minds) together. As information propagated outwards, errors, mistranslations, and loss of information accumulated much like in the children's game, <Italic text={'Broken Telephone'} />. Secondly, there seemed to be a information dissemination limit controlling how far one's information could travel in both space and time. In the space domain, the dissemination potential of information was governed by the size of the union set comprised of all the unique humans involved in a recursive traversal of an information source's human network. In simpler terms, the information known by all the humans in the information source's network, aggregated with all the humans in these humans' networks, ad infinitum. For the most part, this was geography-limited, so information became geographically-trapped. In the time domain, information could not be transferred from the dead to the living, and as a result the likelihood of successful information transfers was highest during the living moments of the information source. What was humanity's solution to these problems? The transcription of spoken to written language."
           },
           "type" : "paragraph"
         }, {
@@ -1867,7 +3076,7 @@
           "asset" : {
             "definitions" : [ [ "A stock or supply of money, materials, staff, and other assets that can be drawn on by a person or organization in order to function effectively.", "A country's collective means of supporting itself or becoming wealthier, as represented by its reserves of minerals, land, and other natural assets.", "A source of help or information." ], "<Italic text={\"Economics\"} /> Land, labor, capital, and entrepreneurship/novel ideas." ],
             "phonetic" : "/ ˈrēˌsôrs rəˈsôrs / noun",
-            "term" : "The Environment"
+            "term" : "Resource"
           },
           "type" : "dictionary"
         }, {
@@ -1886,7 +3095,7 @@
           "type" : "dictionary"
         }, {
           "asset" : {
-            "data" : "Since the dawn of life on earth, humans and all other living organisms have been at an all out battle for survival. Energy is the universe's absolute currency, and all life has been in a never-ending battle to attain it. But why battle for energy? You will recall a principle you once learnt in high school, namely the law of <Italic text={'Conservation of Energy'} />. It states: energy cannot be created or destroyed, but can be altered from one form to another. Consequently, there is a finite amount of energy in the universe and on earth; so us organisms have been forced to battle for this finite energy."
+            "data" : "Since the dawn of life on earth, humans and all other living organisms have been at an all out battle for survival. Energy is the universe's absolute currency, and all life has been in a never-ending battle to attain it. But why battle for energy? You will recall a principle you once learnt in high school, namely the law of <Italic text={'Conservation of Energy'} />. It states: energy cannot be created or destroyed, but can be altered from one form to another. Consequently, there is a finite amount of useful energy in the universe and on earth; so us organisms have been forced to battle for this finite energy."
           },
           "type" : "paragraph"
         }, {
@@ -1914,6 +3123,8 @@
             "data" : "So human civilization was now composed of large settled groups of humans focused on contributing to their community by collecting, producing, or providing a single resource that would earn them financial resources to spend on desired resources to satisfy their personal needs. A consequence of such a society was the concept of ownership. Because resources were traded for other resources, naturally this resulted in a society that advocated and perpetuated ownership of property over the sharing of resources. Where a concept such as \"owning\" exists, concepts such as \"loss\" and \"theft\" exist too. This is the basis on which theft is built. If one owned property and it wasn't acquired by a second party through mutually-consented conditions, their property was by definition stolen. I highlight this to show that loss and theft are consequences of ownership, and as a result cannot exist without it. But ownership is a by-product of scarcity, therefore it must follow that there is no such thing as loss or theft without scarcity. \"But there's no way you can eliminate scarcity\". Don't jump to conclusions, all will be revealed soon young <Link src={'http://olympiafencingcenter.com/wp-content/uploads/2014/02/padawan.jpg'} text={'padawan'} />…"
           },
           "type" : "paragraph"
+        }, {
+          "type" : "section_end"
         }, {
           "asset" : {
             "data" : "Information"
@@ -1993,7 +3204,7 @@
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "Like most of you, at the age of eighteen I was immediately expected to discover my life's purpose and pursue it over the course of the rest of my life, so I did what was only sensible — set about completing this stressful task. What followed was an intense reflective period during which I thought deeply about my life, my interests, and society at large. What were my fundamental interests? What were my strengths? What will the future look like? and how could I contribute to its betterment? I quickly ran into problem. I liked a lot of things, I had many strengths, and I did not know with certainty what the future had in store. I liked to paint. I liked to build. I liked to compose music. In essence, I was and still am drawn to any process by which knowledge and creative intervention result in the emergence of some novel product. You could literally copy-paste that onto a plethora of present day professions. The future was also likely to spawn a slew of other exciting professions that would pique my interest."
+            "data" : "Like most of you, at the age of eighteen I was immediately expected to discover my life's purpose and pursue it over the course of the rest of my life, so I did what was only sensible — set about completing this stressful task. What followed was an intense reflective period during which I thought deeply about my life, my interests, and society at large. What were my fundamental interests? What were my strengths? What will the future look like? and how could I contribute to its betterment? I quickly ran into problem. I liked a lot of things, I had many strengths, and I did not know with certainty what the future had in store. I liked to paint. I liked to build. I liked to compose music. In essence, I was and still am drawn to any process through which knowledge and creative intervention result in the emergence of some novel product. You could literally copy-paste that onto a plethora of present day professions. The future was also likely to spawn a slew of other exciting professions that would pique my interest."
           },
           "type" : "paragraph"
         }, {
@@ -2022,12 +3233,12 @@
           "type" : "dictionary"
         }, {
           "asset" : {
-            "data" : "We live in a zero-sum society where the gains of few are at the cost of many, and if it's not at the expense of people, it's at the expense of the natural environment. This is not our fault. We are simply optimizing modern society's utility function; the more financial wealth you attain, the more influence you gain in society and the closer you get to achieving self-actualization on the hierarchy of needs. There are no terms in the function that penalize you for damaging the physical environment, negatively affecting the lives of others, or over-consuming. More so, financial wealth can be inherited through time, so it makes sense to strive to arbitrarily maximize one's financial wealth so that one's progeny may reap the benefits too and focus on self-actualization needs in their lifetime instead of concerning themselves with basic ones. The problem with inheritance is that it often presents its beneficiaries power in the absence of wisdom. It's essentially entrusting a child (in wisdom) the influence to make decisions that could be significant enough to make a lasting impact on humanity's eventual trajectory."
+            "data" : "We live in a zero-sum society where the gains of few are at the cost of many, and if it's not at the expense of people, it's at the expense of the natural environment. This is not our fault. We are simply optimizing modern society's utility function; the more financial wealth you attain, the more influence you gain in society and the closer you get to achieving self-actualization on the hierarchy of needs. There are no terms in the function that penalize you for damaging the physical environment, negatively affecting the lives of others indirectly, or over-consuming. More so, financial wealth can be inherited through time, so it makes sense to strive to arbitrarily maximize one's financial wealth so that one's progeny may reap the benefits too and focus on self-actualization needs in their lifetime instead of concerning themselves with basic ones. The problem with inheritance is that it often presents its beneficiaries power in the absence of wisdom. It's essentially entrusting a child (in wisdom) the influence to make decisions that could be significant enough to make a lasting impact on humanity's eventual trajectory."
           },
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "Education, the acquisition of information, seems to be the only way to succeed if one is born in unfavorable circumstances. The problem with education is that it requires considerable activation energy, a threshold of resources, to entertain. It also requires time to acquire. Converting transactive memory into mental contents is a prolonged process. This needs to be done all while satisfying all your basic needs, because as Maslow remarked, higher-level needs cannot be easily met unless lower-level needs are satisfied. All this needs to be achieved before you die, because nature's objective function does not factor in knowledge acquisition and transfer as essential for survival. As a result, one must acquire, act on, and accumulate financial wealth all while satisfying their basic needs."
+            "data" : "Education, the acquisition of information, seems to be the only way to succeed if one is born into unfavorable circumstances. The problem with education is that it requires considerable activation energy, a threshold of resources, to entertain. It also requires time to acquire. Converting transactive memory into mental contents is a prolonged process. This needs to be done all while satisfying all your basic needs, because as Maslow remarked, higher-level needs cannot be easily met unless lower-level needs are satisfied. All this needs to be achieved before you die, because nature's objective function does not factor in knowledge acquisition and transfer as essential for survival. As a result, one must acquire, act on, and accumulate financial wealth all while satisfying their basic needs."
           },
           "type" : "paragraph"
         }, {
@@ -2043,7 +3254,7 @@
           "type" : "quote"
         }, {
           "asset" : {
-            "data" : "It all leads back to the fact that we live in a world fraught with scarcity. While we are able to organize ourselves and collectively work to drive the machine when our needs are met, as soon as we lack resources we regress to a <Italic text={'survival of the fittest'} />survival of the fittest mentality and a fight for available resources."
+            "data" : "It all leads back to the fact that we live in a world fraught with scarcity. While we are able to organize ourselves and collectively work to drive the machine when our needs are met, as soon as we lack resources we regress to a <Italic text={'survival of the fittest'} /> mentality and a fight for available resources."
           },
           "type" : "paragraph"
         }, {
@@ -2343,12 +3554,12 @@
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "In addition to the points I've raised beforehand about this topic, I think it's of greater importance to the make the transition to a post-scarcity society due to the fact that many prospective technologies would ruin humanity if rolled out in our current capitalist society. Gene Editing and Artificial Intelligence are two such technologies. Only the rich would be able to afford such technologies, which in the case of Gene Editing would make it possible for the rich to become stronger, faster, more intelligent, and better in every way to a regular human. Do you want to know what this would do? It would further exacerbate the inequality gap and likely create literal tiers of human, with the poor who are unable to afford the technology being relegated to the lowest humanity class. A similar result would likely happen with the introduction of a true Artificial Intelligence."
+            "data" : "In addition to the points I've raised beforehand about this topic, I think it's of greater importance to the make the transition to a post-scarcity society due to the fact that many prospective technologies would ruin humanity if rolled out in our current capitalist society. Gene Editing and Artificial Intelligence are two such technologies. Only the rich would be able to afford such technologies, which in the case of Gene Editing would make it possible for the rich to become stronger, faster, more intelligent, and better in every way to a regular human. Do you want to know what this would do? It would further exacerbate the inequality gap and likely create literal biological classes of human, with the poor who are unable to afford the technology being relegated to the lowest humanity class. A similar result would likely happen with the introduction of a true Artificial Intelligence."
           },
           "type" : "paragraph"
         }, {
           "asset" : {
-            "data" : "\"I see your argument, but how exactly would we transition to such a world?\". I think the first step is to collectively acknowledge this vision as better world. Once we are all in agreement, the transition will be significantly easier. There will need to be cross-disciplinary discussion and intervention, especially in ideating ways to support those who face labor displacement due to automation. Nonetheless, I want to express that I don't think this process will be effortless. We have been entrenched in a capitalist society for quite some time now, and our minds have been conditioned to this societal system. In fact, the brain-computer interface might even be an easier problem given it is purely technical, while the post-scarcity problem involves imperfect entities. The vision might seem overly ambitious, but isolated areas of society already function in this way: libraries are governed by a culture of shared resources used on-demand — the same can be said of the internet. We're even witnessing in real-time a shift in the automotive industry from human-driven and distinctly-owned automobiles to the adoption of <Link src={'https://www.tesla.com/blog/master-plan-part-deux'} text={'shared autonomously-driven electric automobile fleets'} />, similar to those mentioned in my visioning exercise. This eventual shift will result in better utilization of city space due to a lower need for parking space, less accidents on the road, better utilization and reduction of commute time, and cleaner transportation systems. There's also been talks of instating a policy called <Bold text={'<Link src={'https://futurism.com/images/universal-basic-income-answer-automation/'} text={'Universal Basic Income'} />'} /> (UBI). Briefly, UBI is a form of social security in which all citizens or residents of a country regularly receive an unconditional sum of money, either from a government or some other public institution, in addition to any income received from elsewhere. It sounds like an outlandish idea, but there's been serious considerations made by countries worldwide to implement or test such a system. In fact, some countries, such as <Link src={'https://www.cnbc.com/2017/01/03/finland-experiments-universal-basic-income.html'} text={'Finland'} />, are already experimenting with it. However while I am a proponent for the utilization of UBI, I see it as an intermediary to a more radical economic system such as the resource-based economy mentioned in '<Link src={'https://www.youtube.com/watch?v=Yb5ivvcTvRQ'} text={'The Choice Is Ours'} />' documentary above."
+            "data" : "\"I see your argument, but how exactly would we transition to such a world?\". I think the first step is to collectively acknowledge this vision as better world. Once we are all in agreement, the transition will be significantly easier. There will need to be cross-disciplinary discussion and intervention, especially in ideating ways to support those who face labor displacement due to automation. Nonetheless, I want to express that I don't think this process will be effortless. We have been entrenched in a capitalist society for quite some time now, and our minds have been conditioned to this societal system. In fact, the brain-computer interface might even be an easier problem given it is purely technical, while the post-scarcity problem involves imperfect entities. The vision might seem overly ambitious, but isolated areas of society already function in this way: libraries are governed by a culture of shared resources used on-demand — the same can be said of the internet. We're even witnessing in real-time a shift in the automotive industry from human-driven and distinctly-owned automobiles to the adoption of <Link src={'https://www.tesla.com/blog/master-plan-part-deux'} text={'shared autonomously-driven electric automobile fleets'} />, similar to those mentioned in my visioning exercise. This eventual shift will result in better utilization of city space due to a lower need for parking space, less accidents on the road, better utilization and reduction of commute time, and cleaner transportation systems. There's also been talks of instating a policy called <Link src={'https://futurism.com/images/universal-basic-income-answer-automation/'} text={'Universal Basic Income'} /> (UBI). Briefly, UBI is a form of social security in which all citizens or residents of a country regularly receive an unconditional sum of money, either from a government or some other public institution, in addition to any income received from elsewhere. It sounds like an outlandish idea, but there's been serious considerations made by countries worldwide to implement or test such a system. In fact, some countries, such as <Link src={'https://www.cnbc.com/2017/01/03/finland-experiments-universal-basic-income.html'} text={'Finland'} />, are already experimenting with it. However while I am a proponent for the utilization of UBI, I see it as an intermediary to a more radical economic system such as the resource-based economy mentioned in '<Link src={'https://www.youtube.com/watch?v=Yb5ivvcTvRQ'} text={'The Choice Is Ours'} />' documentary above."
           },
           "type" : "paragraph"
         }, {
@@ -2393,9 +3604,11 @@
           "type" : "list"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-17T12:41:21.166Z", "2017-12-17T12:41:54.619Z", "2017-12-17T12:42:00.561Z", "2017-12-17T12:42:08.065Z", "2017-12-17T22:36:23.348Z", "2017-12-17T22:40:59.278Z", "2017-12-17T22:42:07.367Z", "2017-12-17T22:45:13.999Z", "2017-12-18T21:21:34.047Z", "2017-12-19T18:31:42.944Z" ],
         "date" : "April 2017",
         "dialog" : "article",
-        "path" : "writing/envision_future",
+        "hearts" : [ "2017-12-17T12:41:18.275Z", "2017-12-17T12:41:33.217Z" ],
+        "path" : "content/writing/envision_future",
         "subtitle" : "How humans work, how they interact with their environment, and what they need to do in order to fulfill their collective needs.",
         "thumbnail" : "-1",
         "title" : "Modeling Reality and Envisioning the Future"
@@ -2443,9 +3656,10 @@
           "type" : "paragraph"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-20T07:52:47.931Z", "2017-12-20T23:33:06.308Z" ],
         "date" : "October 2013",
         "dialog" : "article",
-        "path" : "writing/first_love",
+        "path" : "content/writing/first_love",
         "subtitle" : "An ode to my first passion.",
         "thumbnail" : "-1",
         "title" : "My First Love"
@@ -2545,9 +3759,10 @@
           "type" : "paragraph"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-20T07:53:18.158Z" ],
         "date" : "April 2014",
         "dialog" : "article",
-        "path" : "writing/impact_sa",
+        "path" : "content/writing/impact_sa",
         "subtitle" : "Personal reflections post-high school. ",
         "thumbnail" : "-1",
         "title" : "What Impact Can I Have On South African Youth?"
@@ -2638,7 +3853,7 @@
         "category" : "Writing",
         "date" : "December 2015",
         "dialog" : "article",
-        "path" : "writing/mind_and_machine",
+        "path" : "content/writing/mind_machine",
         "subtitle" : "Understanding the distinction between the conscious and unconscious.",
         "thumbnail" : "-1",
         "title" : "Mind and Machine"
@@ -2676,9 +3891,10 @@
           "type" : "paragraph"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-17T02:33:31.110Z" ],
         "date" : "March 2013",
         "dialog" : "article",
-        "path" : "writing/outsider",
+        "path" : "content/writing/outsider",
         "subtitle" : "A fictional written piece about the struggles of solitude.",
         "thumbnail" : "-1",
         "title" : "The Internal Story of an Outsider"
@@ -2716,9 +3932,11 @@
           "type" : "paragraph"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-20T23:33:05.162Z" ],
         "date" : "August 2017",
         "dialog" : "article",
-        "path" : "writing/personal_statement",
+        "hearts" : [ "2017-12-17T02:33:02.284Z" ],
+        "path" : "content/writing/personal_statement",
         "subtitle" : "A meditation on my professional goals prior to the commencement of my final undergraduate year.",
         "thumbnail" : "-1",
         "title" : "A Personal Statement"
@@ -2996,9 +4214,10 @@
           "type" : "quote"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-20T07:57:26.875Z" ],
         "date" : "August 2016",
         "dialog" : "article",
-        "path" : "writing/react",
+        "path" : "content/writing/react",
         "subtitle" : "Introducing the first intuitive front-end web framework.",
         "thumbnail" : "-1",
         "title" : "React: The UI Paintbrush You've Been Searching For"
@@ -3013,7 +4232,7 @@
         "category" : "Writing",
         "date" : "February 2013",
         "dialog" : "article",
-        "path" : "writing/tech_in_society",
+        "path" : "content/writing/tech_in_society",
         "subtitle" : "A presentation on the history of technology prepared for Bishops' Ten Club.",
         "thumbnail" : "-1",
         "title" : "Technology and it's Role in Society"
@@ -3026,9 +4245,10 @@
           "type" : "slider"
         } ],
         "category" : "Writing",
+        "clicks" : [ "2017-12-20T07:57:59.873Z" ],
         "date" : "August 2013",
         "dialog" : "article",
-        "path" : "writing/vcs_essay",
+        "path" : "content/writing/vcs_essay",
         "subtitle" : "A comparison and contrast of two visual artists.",
         "thumbnail" : "-1",
         "title" : "Hopper + Pemba"

@@ -292,7 +292,7 @@ button {
 
 .nav-verb {
     position: relative;
-    top: -1px;
+    top: 4px;
     left: -15px;
     display: inline-block;
     margin: 0;
@@ -3083,7 +3083,7 @@ span.code {
 
 }
 
-@media (max-width: 995px) {
+@media (max-width: 1119px) {
     .nav-verb {
         display: none;
     }

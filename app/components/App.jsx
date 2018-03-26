@@ -1,6 +1,6 @@
 /*
  *  Root of afikanyati.com: Web framework build on
- *  Firebase+ReactJS, written in JS ES6 compiled with babelJS,
+ *  Firebase + ReactJS, written in JS ES6 compiled with babelJS,
  *  Bundled with webpack and NPM.
  *  written by Afika Nyati.
  */
@@ -535,6 +535,7 @@ export default class App extends React.Component {
     sortFeed = () => {
         let feed = this.state.feed;
         let heartWeight = 5;
+        let playWeight = 5;
         let clickWeight = 1;
 
         if (this.state.sortByPopularity) {
@@ -542,8 +543,10 @@ export default class App extends React.Component {
             feed.sort((a,b) => {
                 let aClicks = 0;
                 let aHearts = 0;
+                let aPlays = 0;
                 let bClicks = 0;
                 let bHearts = 0;
+                let bPlays = 0;
 
                 if (a.clicks) {
                     aClicks = a.clicks.length;
@@ -551,6 +554,10 @@ export default class App extends React.Component {
 
                 if (a.hearts) {
                     aHearts = a.hearts.length;
+                }
+
+                if (a.plays) {
+                    aPlays = a.plays.length;
                 }
 
                 if (b.clicks) {
@@ -561,8 +568,12 @@ export default class App extends React.Component {
                     bHearts = b.hearts.length;
                 }
 
-                a = clickWeight * aClicks + heartWeight * aHearts;
-                b = clickWeight * bClicks + heartWeight * bHearts;
+                if (b.plays) {
+                    bPlays = b.plays.length;
+                }
+
+                a = clickWeight * aClicks + heartWeight * aHearts + playWeight * aPlays;
+                b = clickWeight * bClicks + heartWeight * bHearts + playWeight * bPlays;
 
                 return b - a;
             });

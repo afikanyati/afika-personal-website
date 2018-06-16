@@ -4,7 +4,7 @@
  */
 
 export default {
-    VR: 'vr',
+    XR: 'xr',
     ART: 'art',
     MUSIC: 'music',
     DESIGN: 'design',

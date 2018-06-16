@@ -85,7 +85,6 @@ export default class ScrollButton extends React.Component {
             this.scrollTo(elementID, to, duration - 10);
         }, 10);
     }
-
 }
 
 // ============= PropTypes ==============

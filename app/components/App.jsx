@@ -67,10 +67,10 @@ export default class App extends React.Component {
         navItems: [                         // Stores a list of all items in Hidden Navigation
             {
                 id   : uuid.v4(),
-                item : 'vr',
+                item : 'xr',
                 verb : 'experience',
                 contentVisible: false,
-                href : ContentTypes.VR
+                href : ContentTypes.XR
             },
             {
                 id   : uuid.v4(),
@@ -292,7 +292,7 @@ export default class App extends React.Component {
         let feed = [];
 
         let map = [
-            {"ref": "content/vr","navItemIndex": 0},
+            {"ref": "content/xr","navItemIndex": 0},
             {"ref": "content/music/projects/ep","navItemIndex": 2},
             {"ref": "content/music/projects/lp","navItemIndex": 2},
             {"ref": "content/music/projects/formal_education","navItemIndex": 2},

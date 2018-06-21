@@ -2292,6 +2292,7 @@ span.code {
     background: var(--light-purple);
     padding: 0;
     margin: 10px;
+    cursor: pointer;
 }
 
 .prev-button,
@@ -2302,7 +2303,7 @@ span.code {
 
 .prev-button.disable,
 .next-button.disable {
-    cursor: default;
+    cursor: not-allowed;
 }
 
 .play-button,

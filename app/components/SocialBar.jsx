@@ -50,7 +50,7 @@ export default class SocialBar extends React.Component {
                 </a>
                 <a
                     className="social-button"
-                    href="https://www.linkedin.com/afikanyati"
+                    href="https://www.linkedin.com/in/afikanyati"
                     target="_blank">
                     <svg
                         version="1.1"

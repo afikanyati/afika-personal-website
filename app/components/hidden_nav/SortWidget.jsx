@@ -55,7 +55,11 @@ export default class SortWidget extends React.Component {
             	            c0,9.456-8.506,17.162-21.39,28.87L25,47.953z"/>
                         </svg>
                 </OverlayTrigger>
-                <input id="sort-widget" className="button slide-square" type="checkbox" />
+                <input
+                    id="sort-widget"
+                    className="button slide-square"
+                    checked={!this.props.sortByPopularity}
+                    type="checkbox" />
                 <label
                     onClick={this.props.toggleSort}
                     htmlFor="sort-widget" />

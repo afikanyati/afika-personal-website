@@ -1720,9 +1720,12 @@ input.slide-square.small:checked + label:after {
 }
 
 .design-title,
-.design-description,
 .design-date-wrapper {
     max-width: none;
+    text-align: center;
+}
+
+.design-description {
     text-align: center;
 }
 

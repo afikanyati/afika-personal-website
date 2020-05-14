@@ -127,6 +127,7 @@ export default class DesignAsset extends React.Component {
                     {...('autoPlay' in this.props.asset.asset ?
                         {
                             autoPlay: this.props.asset.asset.autoPlay,
+                            controls: !this.props.asset.asset.autoPlay,
                         }
                         :
                         {
@@ -214,6 +215,7 @@ export default class DesignAsset extends React.Component {
                         {...('autoPlay' in this.props.asset.asset ?
                             {
                                 autoPlay: this.props.asset.asset.autoPlay,
+                                controls: !this.props.asset.asset.autoPlay,
                             }
                             :
                             {
@@ -238,6 +240,7 @@ export default class DesignAsset extends React.Component {
                         {...('autoPlay' in this.props.asset.asset ?
                             {
                                 autoPlay: this.props.asset.asset.autoPlay,
+                                controls: !this.props.asset.asset.autoPlay,
                             }
                             :
                             {
@@ -273,6 +276,7 @@ export default class DesignAsset extends React.Component {
                         {...('autoPlay' in this.props.asset.asset ?
                             {
                                 autoPlay: this.props.asset.asset.autoPlay,
+                                controls: !this.props.asset.asset.autoPlay,
                             }
                             :
                             {
@@ -330,6 +334,7 @@ export default class DesignAsset extends React.Component {
                         {...('autoPlay' in this.props.asset.asset ?
                             {
                                 autoPlay: this.props.asset.asset.autoPlay,
+                                controls: !this.props.asset.asset.autoPlay,
                             }
                             :
                             {
@@ -379,6 +384,7 @@ export default class DesignAsset extends React.Component {
                             {...('autoPlay' in this.props.asset.asset ?
                                 {
                                     autoPlay: this.props.asset.asset.autoPlay,
+                                    controls: !this.props.asset.asset.autoPlay,
                                 }
                                 :
                                 {
@@ -451,6 +457,8 @@ export default class DesignAsset extends React.Component {
                             {...('autoPlay' in this.props.asset.asset ?
                                 {
                                     autoPlay: this.props.asset.asset.autoPlay,
+                                    controls: !this.props.asset.asset.autoPlay,
+
                                 }
                                 :
                                 {

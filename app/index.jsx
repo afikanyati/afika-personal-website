@@ -1,12 +1,12 @@
 // Libs
-import React    from 'react';
-import ReactDOM from 'react-dom';
-import App      from './components/App.jsx';
+import React                        from 'react';
+import ReactDOM                     from 'react-dom';
+import App                          from './components/App.jsx';
+import { HashRouter as Router }     from 'react-router-dom';
 
 // Stylesheets
 import './assets/stylesheets/style.css';
 import './assets/stylesheets/spinkit.css';
-
 
 /**
  * RenderDOM connects the root JSX logic (App.jsx) to the root HTML id, and
@@ -15,5 +15,7 @@ import './assets/stylesheets/spinkit.css';
  * @return {[type]}   [description]
  */
 ReactDOM.render((
-    <App />
+    <Router>
+        <App />
+    </Router>
 ), document.getElementById('root'));

@@ -2,6 +2,7 @@
 import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
+import { Link }         from "react-router-dom";
 
 /**
  * The close button is a button that is primarily used within the Dialog components
@@ -29,19 +30,21 @@ export default class CloseButton extends React.Component {
         }
 
         return (
-            <button
-                onClick={this.props.onClick}
-                className="close-button"
-                style={{
-                    position: this.props.position,
-                    top: this.props.top,
-                    bottom: this.props.bottom,
-                    left: this.props.left,
-                    right: this.props.right,
-                    transform: transform
-                }}>
-                Close
-            </button>
+            <Link to={"/"}>
+                <button
+                    onClick={this.props.onClick}
+                    className="close-button"
+                    style={{
+                        position: this.props.position,
+                        top: this.props.top,
+                        bottom: this.props.bottom,
+                        left: this.props.left,
+                        right: this.props.right,
+                        transform: transform
+                    }}>
+                    Close
+                </button>
+            </Link>
         );
     }
 

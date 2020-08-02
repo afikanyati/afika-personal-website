@@ -3,6 +3,7 @@ import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
 import Img              from 'react-image';
+import { Link }         from "react-router-dom";
 
 // Components
 import ImagePlaceholder from './ImagePlaceholder';
@@ -83,74 +84,76 @@ export default class FeedItem extends React.Component {
         let category = this.props.item.path.split("/")[1];
 
         return (
-            <article
-                className={
-                    this.props.item.category == "standalone" ?
-                        "feed-item no-thumbnail animated fadeInUp standalone"
-                    :
-                        "feed-item no-thumbnail animated fadeInUp"}
-                onClick={this.handleItemClick}>
-                <div
+            <Link to={this.props.item.path.replace("content", "")}>
+                <article
                     className={
-                    this.props.item.category == "standalone" ?
-                        `generate-thumb ${this.state.randomColor} standalone`
-                    :
-                        `generate-thumb ${this.state.randomColor}`}>
-                    <div className="thumb-writing-wrapper">
-                        <h3
-                            className={`thumb-writing ${this.state.randomFontColor}`}>
-                            {this.props.item.title}
-                        </h3>
-                    </div>
+                        this.props.item.category == "standalone" ?
+                            "feed-item no-thumbnail animated fadeInUp standalone"
+                        :
+                            "feed-item no-thumbnail animated fadeInUp"}
+                    onClick={this.handleItemClick}>
                     <div
                         className={
-                            this.props.item.category != "standalone" && this.props.item.category != "standalone resume" ?
-                                "feed-overlay-info"
-                            :
-                                "remove"}>
-                        <div className="feed-overlay-icon">
-                            {this.state.randomColor == "dark-purple" ?
-                                <img src ={`assets/images/icons/${category}_purple.svg`} />
-                            :
-                                <img src ={`assets/images/icons/${category}_cream.svg`} />
-                            }
-                        </div>
-                        {this.state.randomColor == "dark-purple" ?
-                            <div
-                                className="feed-overlay-text">
-                                <h4 className="feed-overlay-title no-thumbnail cream">{this.props.item.category}</h4>
-                            </div>
+                        this.props.item.category == "standalone" ?
+                            `generate-thumb ${this.state.randomColor} standalone`
                         :
-                        <div
-                            className={`feed-overlay-text ${this.state.randomColor}`}>
-                            <h4 className="feed-overlay-title no-thumbnail">{this.props.item.category}</h4>
+                            `generate-thumb ${this.state.randomColor}`}>
+                        <div className="thumb-writing-wrapper">
+                            <h3
+                                className={`thumb-writing ${this.state.randomFontColor}`}>
+                                {this.props.item.title}
+                            </h3>
                         </div>
-                        }
-                        <div className="feed-overlay-hearts">
-                            <svg
-                                onClick={this.handleHeartClick}
-                                version="1.1"
-                                id="heart-icon"
-                                x="0px"
-                                y="0px"
-                                width="50px"
-                                height="50px"
-                                viewBox="-1 0 50 50"
-                                enableBackground="new -1 0 50 50">
-                                <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
-	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
-	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
-                            </svg>
-                            <h3 className="heart-count">{
-                                    this.props.item.hearts ?
-                                        this.props.item.hearts.length
-                                    :
-                                        "0"
-                                }</h3>
+                        <div
+                            className={
+                                this.props.item.category != "standalone" && this.props.item.category != "standalone resume" ?
+                                    "feed-overlay-info"
+                                :
+                                    "remove"}>
+                            <div className="feed-overlay-icon">
+                                {this.state.randomColor == "dark-purple" ?
+                                    <img src ={`assets/images/icons/${category}_purple.svg`} />
+                                :
+                                    <img src ={`assets/images/icons/${category}_cream.svg`} />
+                                }
+                            </div>
+                            {this.state.randomColor == "dark-purple" ?
+                                <div
+                                    className="feed-overlay-text">
+                                    <h4 className="feed-overlay-title no-thumbnail cream">{this.props.item.category}</h4>
+                                </div>
+                            :
+                            <div
+                                className={`feed-overlay-text ${this.state.randomColor}`}>
+                                <h4 className="feed-overlay-title no-thumbnail">{this.props.item.category}</h4>
+                            </div>
+                            }
+                            <div className="feed-overlay-hearts">
+                                <svg
+                                    onClick={this.handleHeartClick}
+                                    version="1.1"
+                                    id="heart-icon"
+                                    x="0px"
+                                    y="0px"
+                                    width="50px"
+                                    height="50px"
+                                    viewBox="-1 0 50 50"
+                                    enableBackground="new -1 0 50 50">
+                                    <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
+                                     c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
+                                     c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
+                                </svg>
+                                <h3 className="heart-count">{
+                                        this.props.item.hearts ?
+                                            this.props.item.hearts.length
+                                        :
+                                            "0"
+                                    }</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </Link>
         );
     }
 
@@ -162,57 +165,59 @@ export default class FeedItem extends React.Component {
         let category = this.props.item.path.split("/")[1];
 
         return (
-            <article
-                className={
-                    this.props.item.category == "standalone resume" ?
-                        "feed-item animated fadeInUp standalone resume"
-                    :
-                        this.props.item.category == "standalone" ?
-                            "feed-item animated fadeInUp standalone"
+            <Link to={this.props.item.path.replace("content", "")}>
+                <article
+                    className={
+                        this.props.item.category == "standalone resume" ?
+                            "feed-item animated fadeInUp standalone resume"
                         :
-                            "feed-item animated fadeInUp"}
-                onClick={this.handleItemClick}>
-                <div className="feed-image">
-                    <Img
-                        src={this.props.item.thumbnail}
-                        loader={<ImagePlaceholder category={category} height={"30vw"}/>} />
-                </div>
-                <div
-                    className={this.props.item.category != "standalone" ? "feed-overlay" : "remove"}>
-                    <div className="feed-overlay-info">
-                        <div className="feed-overlay-icon">
-                            <img src ={`assets/images/icons/${category}_cream.svg`} />
-                        </div>
-                        <div
-                            className="feed-overlay-text">
-                            <h3 className="feed-overlay-title">{this.props.item.title}</h3>
-                            <h4 className="feed-overlay-description">{this.props.item.category}</h4>
-                        </div>
-                        <div className="feed-overlay-hearts">
-                            <svg
-                                onClick={this.handleHeartClick}
-                                version="1.1"
-                                id="heart-icon"
-                                x="0px"
-                                y="0px"
-                                width="50px"
-                                height="50px"
-                                viewBox="-1 0 50 50"
-                                enableBackground="new -1 0 50 50">
-                                <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
-	                             c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
-	                             c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
-                            </svg>
-                            <h3 className="heart-count">{
-                                    this.props.item.hearts ?
-                                        this.props.item.hearts.length
-                                    :
-                                        "0"
-                                }</h3>
+                            this.props.item.category == "standalone" ?
+                                "feed-item animated fadeInUp standalone"
+                            :
+                                "feed-item animated fadeInUp"}
+                    onClick={this.handleItemClick}>
+                    <div className="feed-image">
+                        <Img
+                            src={this.props.item.thumbnail}
+                            loader={<ImagePlaceholder category={category} height={"30vw"}/>} />
+                    </div>
+                    <div
+                        className={this.props.item.category != "standalone" ? "feed-overlay" : "remove"}>
+                        <div className="feed-overlay-info">
+                            <div className="feed-overlay-icon">
+                                <img src ={`assets/images/icons/${category}_cream.svg`} />
+                            </div>
+                            <div
+                                className="feed-overlay-text">
+                                <h3 className="feed-overlay-title">{this.props.item.title}</h3>
+                                <h4 className="feed-overlay-description">{this.props.item.category}</h4>
+                            </div>
+                            <div className="feed-overlay-hearts">
+                                <svg
+                                    onClick={this.handleHeartClick}
+                                    version="1.1"
+                                    id="heart-icon"
+                                    x="0px"
+                                    y="0px"
+                                    width="50px"
+                                    height="50px"
+                                    viewBox="-1 0 50 50"
+                                    enableBackground="new -1 0 50 50">
+                                    <path id ="heart-fill" fill="#FFFFFF" d="M24,47.953l-3.627-3.302C7.489,32.968-1.017,25.263-1.017,15.806c0-7.705,6.054-13.759,13.759-13.759
+                                     c4.353,0,8.531,2.026,11.258,5.229c2.727-3.202,6.905-5.229,11.258-5.229c7.705,0,13.759,6.054,13.759,13.759
+                                     c0,9.456-8.506,17.162-21.39,28.87L24,47.953z"/>
+                                </svg>
+                                <h3 className="heart-count">{
+                                        this.props.item.hearts ?
+                                            this.props.item.hearts.length
+                                        :
+                                            "0"
+                                    }</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </Link>
         );
     }
 

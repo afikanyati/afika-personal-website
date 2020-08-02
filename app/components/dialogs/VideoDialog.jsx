@@ -43,13 +43,22 @@ export default class VideoDialog extends React.Component {
     render() {
         let showLeftArrow;
         let showRightArrow;
+        let leftPath = ""
+        let rightPath = ""
 
         if (this.props.currentItem.path) {
             let str = this.props.currentItem.path;
             let lastSlash = str.lastIndexOf("/");
             let videoIndex = parseInt(str.substring(lastSlash + 1, str.length));
+            let pathSplit = this.props.currentItem.path.split("/");
+            for (let i = 0; i < pathSplit.length - 1; i++) {
+                leftPath += `${pathSplit[i]}/`
+                rightPath += `${pathSplit[i]}/`
+            }
             showLeftArrow = videoIndex > 0;
             showRightArrow = videoIndex < this.state.lengthVideoList - 1;
+            leftPath += parseInt(pathSplit[pathSplit.length - 1]) - 1
+            rightPath += parseInt(pathSplit[pathSplit.length - 1]) + 1
         }
 
         return (
@@ -169,6 +178,7 @@ export default class VideoDialog extends React.Component {
                                 direction="left"
                                 vertCenter={true}
                                 horCenter={false}
+                                path={leftPath}
                                 onClick={this.handleArrowClick.bind({}, "left")} />
                         :
                             null
@@ -183,6 +193,7 @@ export default class VideoDialog extends React.Component {
                                 direction="right"
                                 vertCenter={true}
                                 horCenter={false}
+                                path={rightPath}
                                 onClick={this.handleArrowClick.bind({}, "right")} />
                             :
                                 null

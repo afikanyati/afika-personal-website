@@ -13,6 +13,7 @@ import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import uuid                 from 'uuid';
 import initReactFastclick   from 'react-fastclick';
+import { withRouter }       from 'react-router-dom';
 
 // Initializing to enable Touch Tap events. It is global
 // Used by Material UI
@@ -48,7 +49,7 @@ import ResumeDialog         from './dialogs/ResumeDialog';
  * The majority of the web application's logic and state variables are housed in this
  * component. It is the topmost component in the App tree.
  */
-export default class App extends React.Component {
+class App extends React.Component {
     state = {
         navIsOpen: false,                   // Used to track whether Hidden Navigation is open
         contactIsOpen: false,               // Used to track whether the ContactView is open
@@ -64,6 +65,7 @@ export default class App extends React.Component {
         resumeDialogIsOpen: false,          // Used to track whether Resume Download Dialog is open
         currentItem: {},                    // Stores the data of the the current item in a dialog
         sortByPopularity: false,             // Used to track which sort algorithm is used for Feed content
+        showFeedItemAtPath: null,           // Used to show a feed item that's waiting for feed results
         navItems: [                         // Stores a list of all items in Hidden Navigation
             {
                 id   : uuid.v4(),
@@ -117,9 +119,44 @@ export default class App extends React.Component {
     componentWillMount() {
         // console.log("-----App");
         console.log("You are no ordinary web surfer. Catch me in the console, how bow dah?");
+
+        if (this.props.location.pathname.length > 1) {
+            this.toggleNav();
+            const content = this.props.location.pathname.split("/")[1];
+            let index;
+            switch (content) {
+                case "xr":
+                    index = 0;
+                    break;
+                case "art":
+                    index = 1;
+                    break;
+                case "music":
+                    index = 2;
+                    break;
+                case "design":
+                    index = 3;
+                    break;
+                case "resume":
+                case "standalones":
+                    index = 4;
+                    break;
+                case "writing":
+                    index = 5;
+                    break;
+                default:
+                    break;
+            }
+
+            this.toggleContent(index);
+            this.setState({
+                showFeedItemAtPath: `content${this.props.location.pathname}`
+            });
+        }
     }
 
     render() {
+
         return(
             <div className={this.state.navIsOpen ? "main" : "main white"}>
                 <HamburgerIcon
@@ -219,6 +256,26 @@ export default class App extends React.Component {
         this.populateFeed();
     }
 
+    componentWillUpdate(nextProps, nextState) {
+        if (nextState.showFeedItemAtPath && nextState.feed.length > 0) {
+            const path = nextState.showFeedItemAtPath;
+            let item;
+            for (let i = 0; i < nextState.feed.length; i++) {
+                const itemPath = nextState.feed[i].path;
+                if (path === itemPath) {
+                    item = nextState.feed[i];
+                    break;
+                }
+            }
+
+            this.openItem(item);
+            this.incrementor("clicks", item);
+            this.setState({
+                showFeedItemAtPath: null,
+            });
+        }
+    }
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.rerender);
     }
@@ -257,7 +314,6 @@ export default class App extends React.Component {
             navItems: navItems,
             feed: []
         }, () => {this.populateFeed()});
-
     }
 
     /**
@@ -723,3 +779,5 @@ export default class App extends React.Component {
     }
 
 } //END App
+
+export default withRouter(App);

@@ -2,6 +2,7 @@
 import React            from 'react';
 import firebase         from 'firebase';
 import PropTypes        from 'prop-types';
+import { Link }         from "react-router-dom";
 
 /**
  * The arrow button is a button that is primarily used within the Dialog components
@@ -18,7 +19,7 @@ export default class ArrowButton extends React.Component {
         // console.log("+++++ArrowButton");
     }
 
-    render() {
+    renderButton = () => {
         let transform = "none";
         if (this.props.vertCenter && this.props.horCenter) {
             transform = "translate(-50%, -50%)";
@@ -66,7 +67,19 @@ export default class ArrowButton extends React.Component {
                     </svg>
                 }
             </button>
-        );
+        )
+    }
+
+    render() {
+        if (this.props.path) {
+            return (
+                <Link to={this.props.path.replace("content", "")}>
+                    {this.renderButton()}
+                </Link>
+            )
+        }
+
+        return this.renderButton()
     }
 
     componentDidMount() {

@@ -643,14 +643,6 @@ input.slide-square.small:checked + label:after {
     background: var(--dark-gray);
 }
 
-.feed-item:first-child {
-    border-top: none;
-}
-
-.feed-item:last-child {
-    border-bottom: none;
-}
-
 .feed-item.no-thumbnail {
     width: 100%;
 }

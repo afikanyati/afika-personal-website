@@ -64,7 +64,7 @@ class App extends React.Component {
         educationDialogIsOpen: false,       // Used to track whether Education Dialog is open
         resumeDialogIsOpen: false,          // Used to track whether Resume Download Dialog is open
         currentItem: {},                    // Stores the data of the the current item in a dialog
-        sortByPopularity: false,             // Used to track which sort algorithm is used for Feed content
+        sortByPopularity: true,             // Used to track which sort algorithm is used for Feed content
         showFeedItemAtPath: null,           // Used to show a feed item that's waiting for feed results
         navItems: [                         // Stores a list of all items in Hidden Navigation
             {
